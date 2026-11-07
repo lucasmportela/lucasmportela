@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de controle de reposição e análise de estoque de seis produtos industriais.">
+  <title>Controle de Reposição | Almoxarifado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div class="brand-mark">A<span>.</span></div>
+      <div class="brand-copy">
+        <span class="eyebrow">GESTÃO DE MATERIAIS</span>
+        <h1>Controle de <em>Almoxarifado</em></h1>
+        <p>Monitoramento de estoque e reposição industrial</p>
+      </div>
+      <div class="live"><i></i> CONTROLE ATIVO</div>
+    </header>
+
+    <section class="intro">
+      <div><span class="eyebrow">01 / INVENTÁRIO</span><h2>Saldo dos produtos</h2>
+      <p>Informe os códigos e as quantidades atuais dos seis itens industriais.</p></div>
+      <span class="count">06 PRODUTOS</span>
+    </section>
+
+    <form id="stock-form">
+      <section class="product-grid">
+        <article class="product-card"><div class="card-head"><b>PRODUTO 01</b><span>01 / 06</span></div><div class="fields"><label>Código do produto<input name="codigo-0" type="number" min="0" step="1" placeholder="Ex.: 1001" required></label><label>Saldo em estoque<input name="saldo-0" type="number" min="0" step="1" placeholder="Quantidade" required></label></div></article>
+        <article class="product-card"><div class="card-head"><b>PRODUTO 02</b><span>02 / 06</span></div><div class="fields"><label>Código do produto<input name="codigo-1" type="number" min="0" step="1" placeholder="Ex.: 1002" required></label><label>Saldo em estoque<input name="saldo-1" type="number" min="0" step="1" placeholder="Quantidade" required></label></div></article>
+        <article class="product-card"><div class="card-head"><b>PRODUTO 03</b><span>03 / 06</span></div><div class="fields"><label>Código do produto<input name="codigo-2" type="number" min="0" step="1" placeholder="Ex.: 1003" required></label><label>Saldo em estoque<input name="saldo-2" type="number" min="0" step="1" placeholder="Quantidade" required></label></div></article>
+        <article class="product-card"><div class="card-head"><b>PRODUTO 04</b><span>04 / 06</span></div><div class="fields"><label>Código do produto<input name="codigo-3" type="number" min="0" step="1" placeholder="Ex.: 1004" required></label><label>Saldo em estoque<input name="saldo-3" type="number" min="0" step="1" placeholder="Quantidade" required></label></div></article>
+        <article class="product-card"><div class="card-head"><b>PRODUTO 05</b><span>05 / 06</span></div><div class="fields"><label>Código do produto<input name="codigo-4" type="number" min="0" step="1" placeholder="Ex.: 1005" required></label><label>Saldo em estoque<input name="saldo-4" type="number" min="0" step="1" placeholder="Quantidade" required></label></div></article>
+        <article class="product-card"><div class="card-head"><b>PRODUTO 06</b><span>06 / 06</span></div><div class="fields"><label>Código do produto<input name="codigo-5" type="number" min="0" step="1" placeholder="Ex.: 1006" required></label><label>Saldo em estoque<input name="saldo-5" type="number" min="0" step="1" placeholder="Quantidade" required></label></div></article>
+      </section>
+
+      <section class="minimum-panel">
+        <div><span class="eyebrow">02 / PARÂMETRO DE SEGURANÇA</span><h2>Estoque mínimo</h2><p>Defina o saldo mínimo de referência aplicado a todos os produtos.</p></div>
+        <label>Estoque mínimo de segurança<input id="minimum" type="number" min="0" step="1" placeholder="Ex.: 20" required></label>
+      </section>
+      <div class="actions"><button class="primary" id="analyze" type="submit">Analisar estoque <span>→</span></button><button class="outline" type="reset">Limpar dados</button></div>
+    </form>
+
+    <section id="report" class="report" hidden>
+      <div class="report-heading"><div><span class="eyebrow">03 / DIAGNÓSTICO</span><h2>Relatório do almoxarifado</h2></div><span class="report-label">ANÁLISE CONCLUÍDA</span></div>
+      <div id="status" class="status-box"></div>
+      <div class="summary">
+        <article class="summary-card"><span>MENOR SALDO</span><strong id="lowest">—</strong><small id="lowest-code">—</small></article>
+        <article class="summary-card"><span>MAIOR SALDO</span><strong id="highest">—</strong><small id="highest-code">—</small></article>
+        <article class="summary-card"><span>ABAIXO DO MÍNIMO</span><strong id="low-count">—</strong><small>Produtos que precisam de atenção</small></article>
+      </div>
+      <article class="panel"><h3>Produtos que precisam de reposição</h3><div id="alerts"></div></article>
+      <article class="panel table-panel"><h3>Inventário analisado</h3><div class="table-scroll"><table><thead><tr><th>Produto</th><th>Código</th><th>Saldo</th><th>Situação</th></tr></thead><tbody id="inventory"></tbody></table></div></article>
+    </section>
+    <div id="feedback" class="feedback" role="status" aria-live="polite">Preencha os seis produtos e informe o estoque mínimo para executar a análise.</div>
+    <footer>PROJETO EDUCACIONAL · PYTHON + FLASK + JAVASCRIPT</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

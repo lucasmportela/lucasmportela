@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{color-scheme:dark;--bg:#0a101b;--panel:#121d2d;--line:#29394f;--muted:#91a0b6;--text:#edf3fc;--accent:#70dfbd;--red:#ff8992}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:34px 18px;color:var(--text);background:radial-gradient(ellipse at 50% -15%,#1c3551 0%,var(--bg) 58%);font-family:Manrope,sans-serif}
+.app{width:min(1080px,100%);margin:auto}.topbar{display:flex;align-items:center;gap:15px;margin-bottom:28px}.brand-mark{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:var(--accent);color:#092018;font-size:22px;font-weight:800}.eyebrow{color:var(--accent);font:500 10px 'DM Mono',monospace;letter-spacing:1.8px}h1{margin:3px 0 0;font-size:25px;letter-spacing:-1px}.live{margin-left:auto;color:#9eb2c8;font:10px 'DM Mono',monospace;letter-spacing:1px}.live span{display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}.metric,.card{border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#152236,#101a29)}.metric{padding:19px 21px}.metric>span,.list-head{color:#91a3bb;font:10px 'DM Mono',monospace;letter-spacing:1px}.metric strong{display:block;margin:10px 0 4px;font-size:25px;letter-spacing:-1px}.metric small{color:var(--muted);font-size:11px}
+.workspace{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}.card{padding:25px}.section-heading{display:flex;justify-content:space-between;align-items:center;gap:12px}h2{margin:5px 0;font-size:20px;letter-spacing:-.5px}.tag{padding:6px 9px;border:1px solid #2e6958;border-radius:20px;color:var(--accent);font:9px 'DM Mono',monospace}.muted{margin:8px 0 24px;color:var(--muted);font-size:12px;line-height:1.6}
+label{display:block;margin-bottom:9px;color:#c5d1e1;font-size:11px;font-weight:700}.input-row{display:flex;align-items:center;gap:10px;padding:6px;border:1px solid #354861;border-radius:11px;background:#0b1422}.input-row>span{padding-left:9px;color:var(--muted);font:13px 'DM Mono',monospace}.input-row input{width:100%;min-width:0;padding:9px 0;border:0;outline:0;color:var(--text);background:transparent;font:16px 'DM Mono',monospace}.input-row button,button{border:0;border-radius:8px;cursor:pointer;font:700 11px Manrope,sans-serif}.input-row button{padding:12px 14px;white-space:nowrap;color:#071a14;background:var(--accent)}button:disabled{opacity:.35;cursor:not-allowed}.list-head{display:flex;justify-content:space-between;margin-top:28px;padding:0 0 12px;border-bottom:1px solid var(--line)}.product-list{min-height:100px}.product-row{display:flex;justify-content:space-between;padding:12px 3px;border-bottom:1px solid #223148;font-size:12px}.product-row span:first-child{color:var(--muted)}.product-row b{font:12px 'DM Mono',monospace}.empty{padding:27px 5px;color:#6f8097;text-align:center;font-size:11px}.text-button{margin-top:12px;padding:8px 0;color:#a8b5c7;background:transparent}.text-button:hover{color:var(--red)}
+.discount-note{display:flex;gap:11px;align-items:center;margin:20px 0;padding:13px;border:1px solid #31594f;border-radius:10px;background:#10251f}.discount-note>span{color:var(--accent);font-size:20px}.discount-note b,.discount-note small{display:block}.discount-note b{font-size:11px}.discount-note small{margin-top:4px;color:#9eb9b0;font-size:9px;line-height:1.5}select{width:100%;padding:13px;border:1px solid #354861;border-radius:9px;outline:0;color:var(--text);background:#0b1422;font:12px Manrope,sans-serif}.primary{width:100%;margin-top:12px;padding:14px;color:#071a14;background:var(--accent)}.primary span{float:right;font-size:16px}.totals{margin-top:22px;padding-top:17px;border-top:1px solid var(--line)}.totals>div{display:flex;justify-content:space-between;margin:11px 0;color:var(--muted);font-size:11px}.totals b{color:#dbe5f2;font:12px 'DM Mono',monospace}.totals .discount{color:var(--accent)}.totals .grand{align-items:center;margin-top:17px;padding-top:15px;border-top:1px solid var(--line);color:var(--text)}.grand strong{font-size:22px}.installments{margin-top:14px;padding:12px;border:1px solid #31594f;border-radius:9px;background:#10251f}.installments b{display:block;margin-bottom:8px;color:var(--accent);font-size:11px}.installment-line{display:flex;justify-content:space-between;padding:4px 0;color:#c5d8d1;font:10px 'DM Mono',monospace}.finalize{margin-top:15px}.feedback{margin-top:17px;padding:13px 15px;border:1px solid var(--line);border-radius:10px;color:#c6d2e2;background:#0e1827;font-size:11px}.feedback.success{border-color:#31594f;color:var(--accent)}.feedback.error{border-color:#75404a;color:var(--red)}footer{padding:20px;color:#60718b;text-align:center;font:9px 'DM Mono',monospace;letter-spacing:1.5px}
+@media(max-width:760px){.workspace{grid-template-columns:1fr}.summary-grid{grid-template-columns:1fr}.metric{padding:15px 18px}.metric strong{font-size:22px}.card{padding:20px}.live{font-size:8px}}@media(max-width:420px){body{padding:22px 12px}.topbar{gap:10px}.brand-mark{width:40px;height:40px}h1{font-size:20px}.live{display:none}}
+
+
+
+/* NOVA IDENTIDADE: ponto de venda — areia, terracota e azul petróleo */
+:root{color-scheme:light;--bg:#f4eee6;--panel:#fffaf4;--line:#e5d8c9;--muted:#857b70;--text:#293a3b;--accent:#c45d42;--red:#b94747}
+*{box-sizing:border-box}
+body{background:#f4eee6;color:#293a3b;font-family:Verdana,Arial,sans-serif}
+.app{width:min(1100px,100%);margin:28px auto;padding:0 18px}
+.topbar{padding:18px 21px;border-radius:8px;background:#24484a;color:#fff;box-shadow:0 8px 0 #d9cbb9}
+.brand-mark{background:#e8a17d;color:#24484a;border-radius:7px}
+.eyebrow{color:#e7a17f;font-family:Verdana,sans-serif;font-size:10px;letter-spacing:1.5px}
+h1{font-size:25px}.live{color:#d6e3dc}
+.live span{background:#8cc7a4;box-shadow:0 0 8px #8cc7a4}
+.summary-grid{gap:12px;margin:25px 0 19px}
+.metric,.card{border:1px solid var(--line);border-radius:8px;background:#fffaf4;box-shadow:0 5px 18px #533d2610}
+.metric{padding:19px}.metric>span,.list-head{color:#857b70;font-family:Verdana,sans-serif}
+.metric strong{color:#24484a;font-size:25px}.metric small{color:#92877c}
+.workspace{grid-template-columns:1.2fr .8fr;gap:14px}
+.card{padding:23px}
+h2{font-size:19px;color:#24484a}
+.tag{border:1px solid #d7e4d8;border-radius:4px;color:#34724e;background:#edf5ed}
+.muted{color:#857b70;line-height:1.6}
+label{color:#5b6965}
+.input-row{border:1px solid #d8cabb;border-radius:6px;background:#fff}
+.input-row>span{color:#c45d42}
+.input-row input{color:#293a3b;background:transparent}
+.input-row button,button{border-radius:5px}
+.input-row button{background:#c45d42;color:white}
+.input-row button:hover{background:#a94a33}
+.list-head{border-bottom:1px solid var(--line)}
+.product-row{border-bottom:1px solid #eee5da}
+.product-row span:first-child{color:#82796f}
+.product-row b{color:#24484a}
+.empty{color:#9b9187}
+.text-button{color:#b84f3a}
+.discount-note{border:1px solid #e8d2b8;border-radius:6px;background:#fbf0df}
+.discount-note>span{color:#c45d42}
+.discount-note small{color:#8e7659}
+select{border:1px solid #d8cabb;border-radius:6px;background:#fff;color:#293a3b}
+.primary{background:#24484a;color:#fff;border-radius:6px}
+.primary:hover{background:#173739}
+.totals{border-color:var(--line)}
+.totals>div{color:#82796f}
+.totals b{color:#24484a}
+.totals .discount{color:#38835c}
+.grand strong{color:#c45d42}
+.installments{border:1px solid #d5e5d8;border-radius:6px;background:#eff6ef}
+.installments b{color:#34724e}
+.installment-line{color:#47614f}
+.finalize{background:#c45d42;color:#fff}
+.finalize:hover{background:#a94a33}
+.feedback{border:1px solid var(--line);border-radius:6px;background:#fffaf4;color:#53615d}
+.feedback.success{border-color:#b8d6bf;color:#34724e}
+.feedback.error{border-color:#e4b9b5;color:#b94747}
+footer{color:#a0968b}
+@media(max-width:760px){.app{margin:17px auto}.workspace{grid-template-columns:1fr}.summary-grid{grid-template-columns:1fr}.topbar{flex-wrap:wrap}.live{margin-left:0}}

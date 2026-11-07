@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Vendas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark">V.</div>
+      <div><div class="eyebrow">GESTÃO COMERCIAL</div><h1>Sistema de Vendas</h1></div>
+      <div class="live"><span></span> SESSÃO ATIVA</div>
+    </header>
+
+    <section class="summary-grid">
+      <article class="metric"><span>FATURAMENTO ACUMULADO</span><strong id="revenue">R$ 0,00</strong><small>Vendas finalizadas nesta sessão</small></article>
+      <article class="metric"><span>ITENS NA VENDA</span><strong id="item-count">0</strong><small>Produtos adicionados</small></article>
+      <article class="metric"><span>SUBTOTAL ATUAL</span><strong id="subtotal">R$ 0,00</strong><small>Antes dos descontos</small></article>
+    </section>
+
+    <div class="workspace">
+      <section class="card register">
+        <div class="section-heading"><div><div class="eyebrow">01 / REGISTRO</div><h2>Adicionar produtos</h2></div><span class="tag" id="sale-status">VENDA ABERTA</span></div>
+        <p class="muted">Informe o valor de cada produto. Adicione quantos itens forem necessários.</p>
+        <form id="product-form" class="product-form">
+          <label for="product-value">Valor do produto</label>
+          <div class="input-row"><span>R$</span><input id="product-value" type="number" min="0.01" step="0.01" placeholder="0,00" required><button type="submit" id="add-button">Adicionar <b>+</b></button></div>
+        </form>
+        <div class="list-head"><span>PRODUTOS DA VENDA</span><span id="list-total">0 ITENS</span></div>
+        <div id="product-list" class="product-list"><div class="empty">Nenhum produto adicionado ainda.</div></div>
+        <button class="text-button" id="cancel-button" type="button">Cancelar venda atual</button>
+      </section>
+
+      <aside class="card checkout">
+        <div class="eyebrow">02 / PAGAMENTO</div><h2>Fechamento</h2>
+        <div class="discount-note"><span>◇</span><div><b>Descontos automáticos</b><small>Acima de R$ 100: 5% · Acima de R$ 200: 10%</small></div></div>
+        <form id="checkout-form">
+          <label for="installments">Quantidade de parcelas</label>
+          <select id="installments" required>
+            <option value="1">1 parcela</option><option value="2">2 parcelas</option><option value="3">3 parcelas</option><option value="4">4 parcelas</option><option value="5">5 parcelas</option><option value="6">6 parcelas</option>
+          </select>
+          <button type="submit" class="primary" id="close-button" disabled>Calcular pagamento <span>→</span></button>
+        </form>
+        <div class="totals">
+          <div><span>Subtotal</span><b id="checkout-subtotal">R$ 0,00</b></div>
+          <div><span>Desconto</span><b class="discount" id="discount">− R$ 0,00</b></div>
+          <div class="grand"><span>Total da venda</span><strong id="total">R$ 0,00</strong></div>
+        </div>
+        <div id="installment-result" class="installments" hidden></div>
+        <button id="finalize-button" class="primary finalize" type="button" disabled>Finalizar venda <span>✓</span></button>
+      </aside>
+    </div>
+    <div id="feedback" class="feedback" role="status" aria-live="polite">Adicione produtos para começar uma venda.</div>
+    <footer>PROJETO EDUCACIONAL · PYTHON + FLASK + JAVASCRIPT</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
