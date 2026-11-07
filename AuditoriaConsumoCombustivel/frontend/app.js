@@ -2,6 +2,10 @@ const form = document.querySelector("#vehicle-form");
 const feedback = document.querySelector("#feedback");
 const submitButton = document.querySelector("#submit-button");
 
+// Capturando os elementos do painel de resultado
+const emptyResult = document.querySelector("#empty-result");
+const vehicleResult = document.querySelector("#vehicle-result");
+
 let vehicleCount = 0;
 let totalKm = 0;
 let sumConsumptions = 0;
@@ -57,8 +61,11 @@ form.addEventListener("submit", async event => {
     sumConsumptions += data.consumo;
     updateMetrics();
 
-    document.querySelector("#empty-result").hidden = true;
-    document.querySelector("#vehicle-result").hidden = false;
+    // --- CORREÇÃO AQUI ---
+    // Usar style.display garante que o CSS (display: flex) não sobreponha a ação
+    emptyResult.style.display = "none";
+    vehicleResult.style.display = "block";
+
     document.querySelector("#result-consumption").innerHTML = `${format(data.consumo)} <small>km/l</small>`;
     document.querySelector("#classification").textContent = data.classificacao;
     document.querySelector("#classification").className = `classification ${data.nivel}`;
@@ -118,8 +125,12 @@ document.querySelector("#new-shift").addEventListener("click", () => {
   form.querySelectorAll("input, button").forEach(element => element.disabled = false);
   document.querySelector("#finish-button").disabled = false;
   document.querySelector("#closing").hidden = true;
-  document.querySelector("#vehicle-result").hidden = true;
-  document.querySelector("#empty-result").hidden = false;
+  
+  // --- CORREÇÃO AQUI (Reset para novo turno) ---
+  // Restaura o estado vazio e esconde o resultado
+  vehicleResult.style.display = "none";
+  emptyResult.style.display = "flex"; 
+
   updateMetrics();
   notify("Novo turno iniciado. Registre o primeiro veículo.");
   document.querySelector("#km").focus();

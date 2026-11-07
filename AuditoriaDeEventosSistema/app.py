@@ -36,7 +36,7 @@ def registrar_evento(usuario, acao, status):
     )
 
     with LOCK_LOG:
-        # Usa o caminho absoluto do projeto e uma quebra de linha real.
+        # Garante a codificação UTF-8 ao gravar
         with ARQUIVO_LOG.open("a", encoding="utf-8", newline="\n") as arquivo:
             arquivo.write(linha + "\n")
 
@@ -44,15 +44,18 @@ def registrar_evento(usuario, acao, status):
 
 
 def ler_eventos():
-    """Lê os eventos mais recentes primeiro, inclusive logs antigos concatenados."""
+    """Lê os eventos mais recentes primeiro, corrigindo problemas de encoding antigos."""
     if not ARQUIVO_LOG.exists():
         return []
 
     with LOCK_LOG:
-        conteudo = ARQUIVO_LOG.read_text(encoding="utf-8")
+        # O parâmetro errors="replace" evita que o Flask quebre se houver caracteres corrompidos no arquivo antigo
+        conteudo = ARQUIVO_LOG.read_text(encoding="utf-8", errors="replace")
 
-    # Corrige em memória registros antigos que foram gravados com os
-    # dois caracteres literais \ e n, em vez de uma quebra de linha.
+    # Corrige problemas de encoding comuns (Mojibake) no arquivo legado
+    conteudo = conteudo.replace("UsuĂĄrio", "Usuário").replace("AĂ§ĂŁo", "Ação")
+    
+    # Corrige registros antigos que foram gravados com os dois caracteres literais \ e n
     conteudo = conteudo.replace("\\n", "\n").replace("\r\n", "\n")
 
     eventos = []

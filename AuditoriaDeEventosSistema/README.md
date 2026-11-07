@@ -2,6 +2,16 @@
 
 Aplicação web didática para registrar e consultar ações realizadas por usuários em um sistema corporativo. O projeto nasceu de um exercício de Python sobre gravação de logs.
 
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o registro do primeiro evento.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### 2. Histórico de Eventos
+Painel exibindo os eventos registrados, os contadores atualizados (Total, Sucessos e Falhas) e os cartões de cada operação com data, hora, usuário e status.
+![Histórico de Eventos](docs/screenshots/tela-historico.png)
+
 ## Tecnologias
 - **Backend:** Python 3 e Flask
 - **Frontend:** HTML5, CSS3 e JavaScript
@@ -119,4 +129,20 @@ Exemplo de linha gravada:
 ```
 
 ## Nota de segurança
-Projeto para estudo. Um arquivo local editável não garante uma trilha de auditoria inviolável. Em produção, implemente autenticação e controle de acesso, armazenamento centralizado, proteção contra adulteração, rotação e retenção de logs, sincronização de horário e monitoração. O servidor Flask deste projeto usa modo de desenvolvimento e não deve ser exposto diretamente à internet.
+Projeto para estudo. Um arquivo local editável não garante uma trilha de auditoria inviolável. Em produção, implemente autenticação e controle de acesso, armazenamento centralizado, proteção contra adulteração, rotação e retenção de logs, sincronização de horário e monitoração. O servidor Flask deste projeto usa modo de desenvolvimento e não deve ser exposto diretamente à internet.    
+
+## 📸 Demonstração Visual
+
+Aqui estão algumas telas da aplicação em funcionamento:
+
+### Tela Inicial
+Aguardando o registro do primeiro veículo.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Resultado do Veículo
+Painel de desempenho exibindo o cálculo e a classificação do veículo.
+![Resultado do Veículo](docs/screenshots/tela-resultado.png)
+
+### Fechamento do Turno
+Resumo geral da frota após encerrar o expediente.
+![Fechamento do Turno](docs/screenshots/tela-fechamento.png)

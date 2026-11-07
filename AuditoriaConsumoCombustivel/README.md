@@ -18,6 +18,24 @@ O projeto transforma um exercício de lógica em Python em uma aplicação com f
 - Fechamento do turno com média geral de consumo da frota.
 - Opção para iniciar uma nova auditoria.
 
+## 📸 Demonstração Visual
+
+Aqui estão algumas telas da aplicação em funcionamento:
+
+### Tela Inicial
+Aguardando o registro do primeiro veículo.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Resultado do Veículo
+Painel de desempenho exibindo o cálculo e a classificação do veículo.
+![Resultado do Veículo](docs/screenshots/tela-resultado.png)
+
+### Fechamento do Turno
+Resumo geral da frota após encerrar o expediente.
+![Fechamento do Turno](docs/screenshots/tela-fechamento.png)
+
+---
+
 ## Tecnologias utilizadas
 
 - **Backend:** Python 3 e Flask.
@@ -120,3 +138,4 @@ Como se trata de uma aplicação web, os dados ficam somente em memória durante
 ## Autor
 
 Projeto desenvolvido para praticar lógica de programação, estruturas de repetição, validação de entradas, acumuladores, operações aritméticas, Python, Flask e integração frontend/backend.
+
