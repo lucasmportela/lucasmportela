@@ -120,14 +120,3 @@ Este projeto é educacional e demonstra fluxo de autenticação. A sessão é ma
 ## Autor
 
 Desenvolvido como projeto de estudo de lógica de programação, Python, APIs e desenvolvimento web.
-
-
-## 📸 Capturas de tela
-
-As capturas reais da aplicação podem ser adicionadas em `docs/screenshots/`. Depois de incluir as imagens, insira-as aqui, por exemplo:
-
-```markdown
-![Tela inicial](docs/screenshots/tela-inicial.png)
-```
-
-Nenhuma imagem demonstrativa foi inventada; registre a aplicação em execução para documentar a interface real.
