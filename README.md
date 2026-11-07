@@ -155,7 +155,7 @@ Estou sempre buscando novos desafios, aprendizados e oportunidades para transfor
 ⭐ Obrigado por visitar meu perfil!
 ## 📫 Vamos nos conectar?
 
-[![GitHub](https://img.shields.io/badge/GitHub-lucasmportela--hash-181717?style=for-the-badge&logo=github)](https://github.com/lucasmportela-hash)
+[![GitHub](https://img.shields.io/badge/GitHub-lucasmportela?style=for-the-badge&logo=github)](https://github.com/lucasmportela-hash)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Lucas_Martins_Portela-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/lucasmartinsportela/)
 
