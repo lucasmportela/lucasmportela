@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    container_name: thermal-backend
+    restart: unless-stopped
+    environment:
+      PORT: 3001
+    expose:
+      - "3001"
+
+  frontend:
+    build: ./frontend
+    container_name: thermal-frontend
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
