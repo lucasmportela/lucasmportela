@@ -94,34 +94,45 @@ Janeiro/2021 – Junho/2021
 
 ---
 
-## 🛠️ Projetos acadêmicos e pessoais
+## 🚀 Projetos em destaque
 
-### 🌐 Plataforma Web Full-Stack
-Desenvolvimento de uma aplicação completa com frontend, backend e banco de dados.
+Confira alguns dos projetos que desenvolvi para praticar programação, desenvolvimento Full-Stack, automação e resolução de problemas reais.
 
-**Funcionalidades:**
-- Autenticação de usuários.
-- Feed de postagens.
-- Chat para troca de mensagens.
-- Integração com banco de dados.
-- Modelagem e consultas SQL.
+### 🖥️ Desenvolvimento Back-end e Full-Stack
 
-**Tecnologias:** Node.js, React e MySQL.
+| Projeto | Tecnologias | Descrição |
+|---|---|---|
+| Monitoramento Hack Data Center | Node.js, React, Docker | Monitoramento de infraestrutura de Data Centers. |
+| Sistema de Faturamento de Produtos | Python, Flask, React, JSON | Cadastro de produtos, controle de estoque e faturamento. |
+| Sistema de Vendas | Python, Flask, JavaScript | Gerenciamento de vendas, descontos e parcelamentos. |
+| Sentinela – Auditoria de Eventos | Python, Flask, JavaScript | Registro, consulta e auditoria de eventos do sistema. |
+| Sistema de Autenticação | Python, Flask, JavaScript | Autenticação, controle de tentativas e gerenciamento de sessões. |
+| VoltWatch – Monitoramento de Baterias | Python, Flask, React | Monitoramento de carga e gerenciamento de baterias. |
 
-### 🎮 Jogo de Conhecimentos Gerais
-Desenvolvimento de um jogo interativo utilizando Programação Orientada a Objetos.
+### 📊 Sistemas de Gestão e Auditoria
 
-**Funcionalidades:**
-- Implementação de lógica de negócio.
-- Integração com banco de dados.
-- Armazenamento de perguntas e pontuações.
+- **Auditoria de Consumo de Combustível:** análise de eficiência e consumo de veículos.
+- **Auditoria Energética Industrial:** monitoramento do consumo energético de máquinas.
+- **Controle de Reposição de Almoxarifado:** gerenciamento de estoque mínimo e reposição.
+- **Cadastro de Funcionários:** cadastro, consulta e gerenciamento de funcionários utilizando SQLite.
 
-**Tecnologias:** C# e SQLite.
+### 🎮 Lógica de Programação e Aplicações
 
-### 🏢 Projeto Miniempresa
-Desenvolvimento de uma marca e identidade visual, criação de um produto e sua manufatura, organização de cargos e gestão interna, com foco em trabalho em equipe.
+- **Jogo de Adivinhação:** jogo interativo com três rodadas, pontuação e desafios.
+- **Calculadora React:** operações matemáticas, histórico de cálculos e interface responsiva.
+
+### 🎨 Desenvolvimento Web e Interfaces
+
+- Advocacia Premium
+- Clínica Premium
+- Imobiliária Premium
+- Jurupizza
+
+Projetos desenvolvidos utilizando HTML5, CSS3 e JavaScript.
 
 ---
+
+⭐ Todos os projetos fazem parte da minha jornada de aprendizado e evolução em desenvolvimento de software.
 
 ## 🌎 Idiomas
 
