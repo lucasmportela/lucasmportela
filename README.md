@@ -102,8 +102,8 @@ Selected projects from my portfolio. Visit each project folder for source code a
 ## 📫 Contato | Contact
 
 - **GitHub:** [@lucasmportela](https://github.com/lucasmportela)
-- **LinkedIn:** <!-- Insira aqui a URL pública do seu LinkedIn. -->
-- **E-mail:** <!-- Insira aqui um e-mail profissional que você queira divulgar. -->
+- **LinkedIn:** [lucasmartinsportela](https://www.linkedin.com/in/lucasmartinsportela/)
+- **E-mail:** lucmartport@hotmail.com
 
 <div align="center">
 
