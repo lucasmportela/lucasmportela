@@ -129,14 +129,3 @@ O banco `funcionarios.db` e a tabela de funcionários são criados automaticamen
 ## Observações
 
 Este projeto é uma aplicação didática para estudo de Python, APIs, frontend e banco de dados. Para uso em produção, recomenda-se adicionar autenticação, autorização, testes automatizados e configurações de segurança.
-
-
-## 📸 Capturas de tela
-
-As capturas reais da aplicação podem ser adicionadas em `docs/screenshots/`. Depois de incluir as imagens, insira-as aqui, por exemplo:
-
-```markdown
-![Tela inicial](docs/screenshots/tela-inicial.png)
-```
-
-Nenhuma imagem demonstrativa foi inventada; registre a aplicação em execução para documentar a interface real.

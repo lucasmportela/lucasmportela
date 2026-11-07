@@ -127,14 +127,3 @@ Este projeto tem finalidade educacional. Os dados são processados pela API e n�
 ## Autor
 
 Projeto desenvolvido para praticar lógica de programação, vetores paralelos, laços de repetição, índices, validação de dados, Python e desenvolvimento web.
-
-
-## 📸 Capturas de tela
-
-As capturas reais da aplicação podem ser adicionadas em `docs/screenshots/`. Depois de incluir as imagens, insira-as aqui, por exemplo:
-
-```markdown
-![Tela inicial](docs/screenshots/tela-inicial.png)
-```
-
-Nenhuma imagem demonstrativa foi inventada; registre a aplicação em execução para documentar a interface real.

@@ -20,8 +20,3 @@ Não é necessário instalar dependências ou executar backend.
 ## Antes de publicar
 
 Confirme com a pizzaria se preços, tamanhos, promoções, horários, telefone, e-mail e endereço continuam atualizados. As imagens de comida são carregadas de URLs externas do Unsplash e precisam de conexão com a internet. Substitua-as por fotos próprias da pizzaria quando disponíveis. Não foram mantidas avaliações ou depoimentos inventados.
-
-
-## 📸 Capturas de tela
-
-Adicione capturas reais do site em `docs/screenshots/` e documente-as aqui. Nenhuma imagem fictícia foi incluída.

@@ -94,14 +94,3 @@ Exemplo de JSON enviado para registrar um palpite:
 A aplicação mantém o número secreto e o estado da partida no backend. O jogo utiliza variáveis individuais para rodada, tentativa e pontuação, sem armazenar as rodadas em listas ou vetores. A pontuação da quinta tentativa é de 10 pontos, conforme a fórmula e as regras do exercício.
 
 Projeto educacional para praticar `for`, `while`, `if/elif/else`, números aleatórios, validação de entradas, Python, Flask e integração frontend/backend.
-
-
-## 📸 Capturas de tela
-
-As capturas reais da aplicação podem ser adicionadas em `docs/screenshots/`. Depois de incluir as imagens, insira-as aqui, por exemplo:
-
-```markdown
-![Tela inicial](docs/screenshots/tela-inicial.png)
-```
-
-Nenhuma imagem demonstrativa foi inventada; registre a aplicação em execução para documentar a interface real.

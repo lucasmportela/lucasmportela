@@ -120,14 +120,3 @@ Exemplo de linha gravada:
 
 ## Nota de segurança
 Projeto para estudo. Um arquivo local editável não garante uma trilha de auditoria inviolável. Em produção, implemente autenticação e controle de acesso, armazenamento centralizado, proteção contra adulteração, rotação e retenção de logs, sincronização de horário e monitoração. O servidor Flask deste projeto usa modo de desenvolvimento e não deve ser exposto diretamente à internet.
-
-
-## 📸 Capturas de tela
-
-As capturas reais da aplicação podem ser adicionadas em `docs/screenshots/`. Depois de incluir as imagens, insira-as aqui, por exemplo:
-
-```markdown
-![Tela inicial](docs/screenshots/tela-inicial.png)
-```
-
-Nenhuma imagem demonstrativa foi inventada; registre a aplicação em execução para documentar a interface real.
