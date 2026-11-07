@@ -148,9 +148,9 @@ Estou sempre buscando novos desafios, aprendizados e oportunidades para transfor
 
 ## 📊 Estatísticas do GitHub
 
-![GitHub Stats](https://github-stats-extended.vercel.app/api?username=lucasmportela-hash&show_icons=true&theme=tokyonight&include_all_commits=true)
+![GitHub Stats](https://github-stats-extended.vercel.app/api?username=lucasmportela&show_icons=true&theme=tokyonight&include_all_commits=true)
 
-![Top Languages](https://github-stats-extended.vercel.app/api/top-langs/?username=lucasmportela-hash&layout=compact&theme=tokyonight)
+![Top Languages](https://github-stats-extended.vercel.app/api/top-langs/?username=lucasmportela&layout=compact&theme=tokyonight)
 
 ⭐ Obrigado por visitar meu perfil!
 ## 📫 Vamos nos conectar?
