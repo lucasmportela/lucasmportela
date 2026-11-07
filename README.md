@@ -1,179 +1,48 @@
-# 👋 Olá! Eu sou Lucas Martins Portela
+# Portfólio de Projetos — Lucas Martins Portela
 
-### 💻 Desenvolvedor Back-end Júnior | Técnico de Informática | Analista de Dados
+Repositório de estudos e aplicações desenvolvidas para praticar programação, desenvolvimento web, APIs, automação, auditoria e interfaces.
 
-Sou formado em Ciência da Computação pela Universidade Estácio de Sá e Técnico em Informática, com conhecimentos em desenvolvimento de software, análise de dados, modelagem de bancos de dados e infraestrutura de TI.
+## Projetos
 
-Tenho experiência prática com desenvolvimento Web Full-Stack, manutenção de hardware, suporte técnico e organização de dados.
+### Back-end, Full-Stack e sistemas de gestão
 
-Meu objetivo é desenvolver soluções eficientes, escaláveis e que resolvam problemas reais, sempre buscando aprimorar meus conhecimentos e evoluir profissionalmente.
+| Projeto | Descrição |
+|---|---|
+| AuditoriaConsumoCombustivel | Auditoria de consumo de combustível de frota. |
+| AuditoriaDeEventosSistema | Registro e consulta de eventos de auditoria. |
+| AuditoriaEnergeticaIndustrial | Análise de consumo energético de máquinas. |
+| CadastroFuncionariosEscola | Cadastro e gerenciamento de funcionários. |
+| CalculadoraSimples | Calculadora desenvolvida com React. |
+| ControleReposicaoAlmoxarifado | Controle de estoque e reposição. |
+| JogoAdivinhacao | Jogo de adivinhação com interface web. |
+| MonitoramenteHackDataCenter | Monitoramento de infraestrutura de Data Center. |
+| MonitoramentoDeBaterias | Monitoramento de carga de baterias. |
+| SistemaAutenticacao | Demonstração de autenticação e controle de tentativas. |
+| SistemaDeFaturamentoDeProdutos | Cadastro de produtos e controle de estoque/faturamento. |
+| SistemaVendas | Carrinho, descontos, parcelamento e faturamento. |
 
----
-
-## 🚀 Tecnologias e ferramentas
-
-### Linguagens de programação
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-
-### Desenvolvimento Web
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-
-### Banco de dados
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-
-### Ferramentas e tecnologias
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-
-### Infraestrutura e sistemas
-- Windows e Linux
-- Configuração de redes locais (TCP/IP, DNS e DHCP)
-- Suporte técnico e manutenção de hardware
-- Infraestrutura de redes e sistemas CFTV
-
----
-
-## 📚 Formação acadêmica
-
-🎓 **Bacharelado em Ciência da Computação**  
-Universidade Estácio de Sá — Conclusão: Dezembro/2025
-
-🎓 **Técnico em Desenvolvimento de Sistemas**  
-SENAI — Conclusão prevista: Dezembro/2027
-
-🎓 **Técnico em Informática**  
-Escola Técnica do Rio de Janeiro (ETERJ) — Conclusão: Novembro/2020
-
----
-
-## 📜 Certificações e cursos
-
-- **Cloud Essentials** — Avera (2025) | Computação em Nuvem e Infraestrutura Cloud
-- **Python para Cloud, IoT e Big Data** — Estácio (2025) | Python aplicado a ambientes Cloud e dados
-- **Algoritmos e Estruturas de Dados** — Estácio (2024) | Otimização e análise de complexidade
-- **Análise de Problemas Computacionais** — Estácio (2023) | Álgebra Linear e Métodos Numéricos
-- **Modelagem e Banco de Dados** — Estácio (2023) | Modelagem de Dados e Tecnologias Web
-- **Programação de Sistemas de Informação** — Estácio (2023) | Lógica e Modelagem de Sistemas
-- **Programação para Internet** — Estácio (2023) | Desenvolvimento Web e Paradigmas de Linguagem
-
----
-
-## 💼 Experiência profissional
-
-**Técnico de TI — Sampaio Advocacia**  
-Março/2025 – Janeiro/2026
-
-- Manutenção de hardware (computadores e impressoras) e infraestrutura (sistema CFTV e cabeamento estruturado).
-- Organização digital de processos jurídicos e gestão documental, garantindo rastreabilidade e conformidade.
-- Controle financeiro de honorários e custas processuais utilizando Excel e Power BI (fórmulas, tabelas dinâmicas, validações).
-- Atendimento ao cliente (presencial e telefônico), realizando triagem inicial, agendamento de consultas e orientação sobre procedimentos.
-- Manipulação e organização de dados administrativos, assegurando precisão e cumprimento de prazos.
-
-**Designer Gráfico — Gráfica Pontual**  
-Janeiro/2021 – Junho/2021
-
-- Criação de artes digitais para campanhas promocionais utilizando CorelDRAW e Photoshop.
-- Desenvolvimento de identidade visual para clientes, com foco em usabilidade e comunicação visual.
-- Atendimento ao cliente para ajustes de projetos e gestão de prazos de entrega.
-- Controle financeiro e fluxo de caixa utilizando planilhas Excel.
-
----
-
-## 🚀 Projetos em destaque
-
-Confira alguns dos projetos que desenvolvi para praticar programação, desenvolvimento Full-Stack, automação e resolução de problemas reais.
-
-### 🖥️ Desenvolvimento Back-end e Full-Stack
-
-| Projeto | Tecnologias | Descrição |
-|---|---|---|
-| Monitoramento Hack Data Center | Node.js, React, Docker | Monitoramento de infraestrutura de Data Centers. |
-| Sistema de Faturamento de Produtos | Python, Flask, React, JSON | Cadastro de produtos, controle de estoque e faturamento. |
-| Sistema de Vendas | Python, Flask, JavaScript | Gerenciamento de vendas, descontos e parcelamentos. |
-| Sentinela – Auditoria de Eventos | Python, Flask, JavaScript | Registro, consulta e auditoria de eventos do sistema. |
-| Sistema de Autenticação | Python, Flask, JavaScript | Autenticação, controle de tentativas e gerenciamento de sessões. |
-| VoltWatch – Monitoramento de Baterias | Python, Flask, React | Monitoramento de carga e gerenciamento de baterias. |
-
-### 📊 Sistemas de Gestão e Auditoria
-
-- **Auditoria de Consumo de Combustível:** análise de eficiência e consumo de veículos.
-- **Auditoria Energética Industrial:** monitoramento do consumo energético de máquinas.
-- **Controle de Reposição de Almoxarifado:** gerenciamento de estoque mínimo e reposição.
-- **Cadastro de Funcionários:** cadastro, consulta e gerenciamento de funcionários utilizando SQLite.
-
-### 🎮 Lógica de Programação e Aplicações
-
-- **Jogo de Adivinhação:** jogo interativo com três rodadas, pontuação e desafios.
-- **Calculadora React:** operações matemáticas, histórico de cálculos e interface responsiva.
-
-### 🎨 Desenvolvimento Web e Interfaces
+### Desenvolvimento Web — Projeto Verxiona
 
 - Advocacia Premium
 - Clínica Premium
 - Imobiliária Premium
 - Jurupizza
 
-Projetos desenvolvidos utilizando HTML5, CSS3 e JavaScript.
+## Como utilizar
 
----
+Cada pasta de projeto contém seu próprio `README.md` com as tecnologias e instruções de execução disponíveis. Entre na pasta desejada e siga o respectivo guia.
 
-⭐ Todos os projetos fazem parte da minha jornada de aprendizado e evolução em desenvolvimento de software.
+## Organização e documentação
 
-## 🌎 Idiomas
+- Cada projeto possui um `.gitignore` para evitar versionar ambientes virtuais, dependências instaladas, arquivos locais e builds.
+- A pasta `docs/screenshots/` está preparada para receber capturas reais da aplicação.
+- As imagens não foram geradas artificialmente: adicione screenshots depois de executar cada projeto.
 
-- 🇧🇷 Português — Nativo
-- 🇺🇸 Inglês — Avançado
-- 🇪🇸 Espanhol — Intermediário
+## Observações
 
----
+Este conjunto reúne projetos acadêmicos e pessoais. Antes de publicar cada pasta como repositório independente, revise configurações, dependências, segredos, dados de exemplo e instruções de execução.
 
-## 🎯 Objetivos profissionais
+## Autor
 
-Atualmente, busco oportunidades nas áreas de:
-
-- Desenvolvimento Back-end.
-- Desenvolvimento Full-Stack.
-- Análise de Dados.
-- Desenvolvimento de APIs.
-- Banco de Dados e SQL.
-- Infraestrutura e Suporte de TI.
-
-Estou sempre buscando novos desafios, aprendizados e oportunidades para transformar conhecimento em soluções práticas.
-
----
-
-## 📊 Estatísticas do GitHub
-
-![GitHub Stats](https://github-stats-extended.vercel.app/api?username=lucasmportela&show_icons=true&theme=tokyonight&include_all_commits=true)
-
-![Top Languages](https://github-stats-extended.vercel.app/api/top-langs/?username=lucasmportela&layout=compact&theme=tokyonight)
-
-⭐ Obrigado por visitar meu perfil!
-## 📫 Vamos nos conectar?
-
-[![GitHub](https://img.shields.io/badge/GitHub-lucasmportela?style=for-the-badge&logo=github)](https://github.com/lucasmportela)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Lucas_Martins_Portela-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/lucasmartinsportela/)
-
-📧 E-mail: lucmartport@hotmail.com  
-📱 Telefone: (21) 96762-1173  
-📍 Endereço: Rua da Fábrica, 661, Bangu – Rio de Janeiro
-
----
-
-⭐ *Obrigado por visitar meu perfil! Estou sempre aberto a aprender, compartilhar conhecimentos e desenvolver novos projetos.*
+**Lucas Martins Portela**  
+[GitHub](https://github.com/lucasmportela)

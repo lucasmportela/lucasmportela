@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Auditoria de consumo de combustível da frota durante o turno operacional.">
+  <title>Auditoria de Combustível | Frota</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div class="brand-mark">F<span>.</span></div>
+      <div class="brand-copy">
+        <span class="eyebrow">GESTÃO DE FROTA</span>
+        <h1>Auditoria de <em>Combustível</em></h1>
+        <p>Eficiência operacional e consumo por veículo</p>
+      </div>
+      <div class="live"><i></i> TURNO EM ANDAMENTO</div>
+    </header>
+
+    <section class="metrics">
+      <article class="metric"><span>VEÍCULOS AUDITADOS</span><strong id="vehicle-count">0</strong><small>Registros neste turno</small></article>
+      <article class="metric"><span>QUILOMETRAGEM TOTAL</span><strong id="km-total">0,0 km</strong><small>Distância acumulada pela frota</small></article>
+      <article class="metric"><span>MÉDIA DE CONSUMO</span><strong id="average">0,00 km/l</strong><small>Média dos consumos individuais</small></article>
+    </section>
+
+    <section class="workspace">
+      <article class="panel entry-panel">
+        <div class="section-head"><div><span class="eyebrow">01 / REGISTRO</span><h2>Auditar veículo</h2></div><span class="tag">NOVO REGISTRO</span></div>
+        <p class="description">Informe a distância percorrida e o combustível consumido pelo veículo que retornou à base.</p>
+        <form id="vehicle-form">
+          <label>Distância percorrida (km)<input id="km" type="number" min="0.01" step="any" placeholder="Ex.: 150" required></label>
+          <label>Combustível consumido (litros)<input id="litros" type="number" min="0.01" step="any" placeholder="Ex.: 12,5" required></label>
+          <button class="primary" id="submit-button" type="submit">Calcular consumo <span>→</span></button>
+        </form>
+        <div class="stop-note"><b>ENCERRAR TURNO</b><p>Informe <strong>0 km</strong> como distância percorrida para finalizar a auditoria e visualizar o resumo do expediente.</p></div>
+        <button id="finish-button" class="finish-button" type="button">Encerrar turno <span>■</span></button>
+      </article>
+
+      <article class="panel result-panel">
+        <div class="section-head"><div><span class="eyebrow">02 / DESEMPENHO</span><h2>Resultado do veículo</h2></div></div>
+        <div id="empty-result" class="empty-state"><div class="empty-icon">↗</div><p>Nenhum veículo processado ainda.</p><small>O resultado da auditoria aparecerá aqui.</small></div>
+        <div id="vehicle-result" hidden>
+          <span class="result-label">CONSUMO MÉDIO CALCULADO</span>
+          <strong class="consumption-value" id="result-consumption">0,00 <small>km/l</small></strong>
+          <div id="classification" class="classification"></div>
+          <div class="result-details"><div><span>Distância</span><b id="result-km">—</b></div><div><span>Combustível</span><b id="result-litros">—</b></div></div>
+        </div>
+        <div class="legend">
+          <div><i class="dot green"></i><span><b>Econômico</b><small>12 km/l ou mais</small></span></div>
+          <div><i class="dot yellow"></i><span><b>Padrão</b><small>De 9 até menos de 12 km/l</small></span></div>
+          <div><i class="dot red"></i><span><b>Alto Consumo</b><small>Abaixo de 9 km/l</small></span></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="closing" class="closing panel" hidden>
+      <div class="section-head"><div><span class="eyebrow">03 / FECHAMENTO</span><h2>Resumo do turno</h2></div><span class="closed-tag">TURNO ENCERRADO</span></div>
+      <div class="closing-grid">
+        <div><span>VEÍCULOS AUDITADOS</span><strong id="final-count">0</strong></div>
+        <div><span>QUILOMETRAGEM DA FROTA</span><strong id="final-km">0 km</strong></div>
+        <div><span>MÉDIA GERAL DE CONSUMO</span><strong id="final-average">0,00 km/l</strong></div>
+      </div>
+      <p class="closing-message">Auditoria do expediente finalizada. Os indicadores acima representam os veículos registrados neste turno.</p>
+      <button id="new-shift" class="outline" type="button">Iniciar novo turno</button>
+    </section>
+
+    <div id="feedback" class="feedback" role="status" aria-live="polite">Registre um veículo para iniciar a auditoria da frota.</div>
+    <footer>PROJETO EDUCACIONAL · PYTHON + FLASK + JAVASCRIPT</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

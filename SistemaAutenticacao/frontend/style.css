@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root { color-scheme: dark; --bg:#090e18; --panel:#111a2a; --line:#26344a; --muted:#91a0b8; --text:#edf3ff; --accent:#72e0c0; --danger:#ff7d89; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; display:grid; place-items:center; padding:28px 16px; color:var(--text); background:radial-gradient(ellipse at 50% 0%,#1b3150 0%,var(--bg) 58%); font-family:Manrope, sans-serif; }
+.shell { width:min(100%,720px); }
+.panel { padding:clamp(24px,5vw,48px); border:1px solid #2a3a52; border-radius:22px; background:linear-gradient(145deg,rgba(22,34,53,.98),rgba(13,21,35,.98)); box-shadow:0 28px 90px #0008; }
+.eyebrow,.boot-heading { color:var(--accent); font:500 11px 'DM Mono',monospace; letter-spacing:2px; }
+.status-dot { display:inline-block; width:7px; height:7px; margin-right:8px; border-radius:50%; background:var(--accent); box-shadow:0 0 12px var(--accent); }
+h1 { margin:20px 0 8px; font-size:clamp(28px,5vw,42px); line-height:1.12; letter-spacing:-1.8px; }
+h1 span { color:var(--accent); }
+.subtitle,.step p { color:var(--muted); line-height:1.6; font-size:14px; }
+.subtitle { margin:0 0 34px; }
+.step { display:grid; grid-template-columns:38px 1fr; gap:16px; padding:22px 0; border-top:1px solid var(--line); }
+.step-number { width:34px; height:34px; display:grid; place-items:center; border:1px solid #3a526b; border-radius:10px; color:var(--accent); font:12px 'DM Mono',monospace; }
+.step h2 { margin:3px 0 4px; font-size:17px; }
+.step p { margin:0 0 18px; }
+label { display:block; margin:0 0 8px; color:#cbd6e7; font-size:12px; font-weight:700; }
+input { width:100%; padding:14px 16px; border:1px solid #354761; border-radius:10px; outline:none; color:var(--text); background:#0b1321; font:20px 'DM Mono',monospace; letter-spacing:8px; }
+input:focus { border-color:var(--accent); box-shadow:0 0 0 3px #72e0c01c; }
+button { width:100%; margin-top:12px; padding:14px 16px; border:0; border-radius:10px; color:#071510; background:var(--accent); font:800 13px Manrope,sans-serif; cursor:pointer; transition:transform .15s,opacity .15s; }
+button:hover:not(:disabled) { transform:translateY(-1px); }
+button:disabled { opacity:.35; cursor:not-allowed; }
+button span { float:right; font-size:18px; line-height:14px; }
+.locked { opacity:.55; }
+.attempts { margin-top:10px; color:var(--muted); font:11px 'DM Mono',monospace; }
+.feedback { margin-top:14px; padding:13px 15px; border:1px solid var(--line); border-radius:10px; color:#cbd6e7; background:#0b1321; font-size:12px; line-height:1.5; }
+.feedback.success { border-color:#286e5b; color:var(--accent); }
+.feedback.error { border-color:#75404a; color:var(--danger); }
+.boot { margin-top:18px; padding:20px; border:1px solid #286e5b; border-radius:12px; text-align:center; background:#0b201d; }
+.count { margin:10px 0; color:var(--accent); font:500 56px 'DM Mono',monospace; }
+.boot p { color:#a8cfc2; font-size:12px; }
+.boot-track { height:5px; overflow:hidden; border-radius:10px; background:#1b4039; }
+.boot-progress { width:0; height:100%; background:var(--accent); transition:width .4s; }
+.reset { margin-top:22px; border:1px solid #354761; color:#cbd6e7; background:transparent; }
+footer { padding:18px; color:#60718b; text-align:center; font:10px 'DM Mono',monospace; letter-spacing:1.5px; }
+[hidden] { display:none !important; }
+@media(max-width:480px) { .step { grid-template-columns:30px 1fr; gap:12px; } .step-number { width:28px;height:28px; } }
+
+
+
+/* NOVA IDENTIDADE: terminal de segurança — preto, branco e vermelho */
+:root{color-scheme:dark;--bg:#111;--panel:#1c1c1c;--line:#393939;--muted:#aaa;--text:#f5f5f5;--accent:#ff5a4e;--danger:#ff5a4e}
+*{box-sizing:border-box}
+body{background:#111;color:#f5f5f5;font-family:Consolas,"Courier New",monospace}
+.shell{width:min(100%,760px)}
+.panel{padding:clamp(24px,5vw,48px);border:1px solid #414141;border-radius:5px;background:#1c1c1c;box-shadow:12px 12px 0 #080808}
+.eyebrow,.boot-heading{color:#ff766d;font-family:Consolas,monospace;letter-spacing:2px}
+.status-dot{background:#ff5a4e;box-shadow:0 0 10px #ff5a4e}
+h1{font-family:Arial,sans-serif;font-weight:800;letter-spacing:-1.5px}
+h1 span{color:#ff766d}
+.subtitle,.step p{color:#aaa}
+.step{border-top:1px dashed #444}
+.step-number{border:1px solid #ff766d;border-radius:3px;color:#ff766d}
+.step h2{font-family:Arial,sans-serif}
+label{color:#ddd;font-family:Arial,sans-serif}
+input{border:1px solid #555;border-radius:3px;background:#101010;color:#fff;font-family:Consolas,monospace;letter-spacing:5px}
+input:focus{border-color:#ff5a4e;box-shadow:0 0 0 2px #ff5a4e22}
+button{border-radius:3px;background:#ff5a4e;color:#171717;text-transform:uppercase;font-family:Consolas,monospace;letter-spacing:.6px}
+button:hover:not(:disabled){background:#ff8178}
+button:disabled{background:#555;color:#999}
+.locked{opacity:.4}
+.attempts{color:#ffb5ad}
+.feedback{border:1px solid #444;border-radius:3px;background:#141414;color:#ddd}
+.feedback.success{border-color:#3c8b63;color:#8de0ae}
+.feedback.error{border-color:#b34c4c;color:#ff9999}
+.boot{border-top:1px dashed #444}
+.boot-track{background:#333;border-radius:0}
+.boot-progress{background:#ff5a4e}
+.reset{background:transparent;color:#ff766d;border:1px solid #ff766d}
+footer{color:#777}
+@media(max-width:560px){.panel{padding:22px 17px}h1{font-size:30px}}

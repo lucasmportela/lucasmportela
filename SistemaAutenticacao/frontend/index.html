@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Autenticação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="panel">
+      <div class="eyebrow"><span class="status-dot"></span> CENTRAL DE SEGURANÇA</div>
+      <h1>Sistema de <span>Autenticação</span></h1>
+      <p class="subtitle">Cadastre sua senha e confirme sua identidade para inicializar o sistema.</p>
+
+      <div class="step" id="setup-section">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h2>Definir senha</h2>
+          <p>Escolha uma senha numérica de 4 dígitos.</p>
+          <form id="setup-form">
+            <label for="new-password">Nova senha</label>
+            <input id="new-password" type="password" inputmode="numeric" maxlength="4"
+                   pattern="[0-9]{4}" placeholder="••••" autocomplete="new-password" required>
+            <button type="submit">Cadastrar senha <span>→</span></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="step locked" id="login-section">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h2>Confirmar acesso</h2>
+          <p>O sistema está bloqueado. Confirme sua senha para continuar.</p>
+          <form id="login-form">
+            <label for="password">Senha cadastrada</label>
+            <input id="password" type="password" inputmode="numeric" maxlength="4"
+                   pattern="[0-9]{4}" placeholder="••••" autocomplete="current-password" required disabled>
+            <div class="attempts" id="attempts">3 tentativas disponíveis</div>
+            <button type="submit" id="login-button" disabled>Desbloquear sistema <span>→</span></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="feedback" id="feedback" role="status" aria-live="polite">Aguardando cadastro da senha.</div>
+      <div class="boot" id="boot" hidden>
+        <div class="boot-heading">INICIALIZANDO SISTEMA</div>
+        <div class="count" id="count">5</div>
+        <div class="boot-track"><div class="boot-progress" id="progress"></div></div>
+        <p id="boot-message">Preparando ambiente seguro...</p>
+      </div>
+
+      <button class="reset" id="reset-button" type="button">Reiniciar demonstração</button>
+    </section>
+    <footer>PROJETO EDUCACIONAL · PYTHON + FLASK</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

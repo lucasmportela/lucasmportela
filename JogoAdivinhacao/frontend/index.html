@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jogo de adivinhação em três rodadas contra a máquina.">
+<title>Jogo de Adivinhação</title><link rel="stylesheet" href="style.css">
+</head>
+<body><main class="shell">
+<header><div class="logo">?</div><div class="brand"><span class="eyebrow">DESAFIO DE LÓGICA</span><h1>Jogo de <em>Adivinhação</em></h1><p>Descubra o número secreto e vença a máquina.</p></div><div class="status"><i></i><span id="status">AGUARDANDO PARTIDA</span></div></header>
+<section class="stats">
+<div><span>RODADA</span><strong id="round">— / 3</strong><small>Melhor de três rodadas</small></div>
+<div><span>PONTUAÇÃO</span><strong id="score">0</strong><small>Pontos acumulados</small></div>
+<div><span>TENTATIVAS</span><strong id="attempts">5</strong><small>Disponíveis nesta rodada</small></div>
+</section>
+<section class="layout">
+<article class="card">
+<div class="heading"><div><span class="eyebrow">01 / SUA JOGADA</span><h2>Qual é o número?</h2></div><span class="range">01 — 50</span></div>
+<p class="intro">A máquina escolheu um número secreto entre 1 e 50. Você tem até cinco chances para acertar em cada rodada.</p>
+<div class="secret"><b>?</b><small>NÚMERO SECRETO</small></div>
+<form id="form"><label for="guess">Seu palpite</label><div class="guess"><input id="guess" type="number" min="1" max="50" placeholder="Digite de 1 a 50" required disabled><button id="send" disabled>Enviar →</button></div></form>
+<button id="start" class="start">Iniciar partida <span>▶</span></button>
+<div id="feedback" class="feedback" role="status" aria-live="polite">Clique em “Iniciar partida” para começar.</div>
+</article>
+<aside class="card">
+<span class="eyebrow">02 / COMO JOGAR</span><h2>Regras do desafio</h2>
+<div class="rule"><b>01</b><p>São <strong>3 rodadas</strong>, com até 5 tentativas em cada uma.</p></div>
+<div class="rule"><b>02</b><p>Receba dicas se o palpite for maior ou menor que o número secreto.</p></div>
+<div class="rule"><b>03</b><p>Acerte o número para ganhar pontos. Quanto menos tentativas, maior a pontuação.</p></div>
+<div class="points"><span>PONTOS POR ACERTO</span><p>1ª tentativa <b>100</b></p><p>2ª tentativa <b>75</b></p><p>3ª tentativa <b>50</b></p><p>4ª tentativa <b>25</b></p><p>5ª tentativa <b>10</b></p></div>
+</aside></section>
+<section id="final" class="card final" hidden><span class="eyebrow">03 / RESULTADO FINAL</span><h2 id="classification">Partida encerrada</h2><strong id="final-score">0 pontos</strong><p id="final-message"></p><button id="restart" class="start">Jogar novamente ↻</button></section>
+<footer>PROJETO EDUCACIONAL · PYTHON + FLASK + JAVASCRIPT</footer>
+</main><script src="app.js"></script></body></html>
