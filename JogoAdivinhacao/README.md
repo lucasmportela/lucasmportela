@@ -11,6 +11,16 @@ Jogo web em que o usuário disputa três rodadas contra a máquina para descobri
 - Soma da pontuação e classificação final: Excelente (acima de 200), Bom (100 a 200) ou Tente Novamente (abaixo de 100).
 - Reinício da partida.
 
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o registro do primeiro evento com as regras do jogo.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Resultado
+Resultado do jogo com quantidade total de pontos e classificação da pontuação.
+![Resultado](docs/screenshots/tela-resultado.png)
+
 ## Tecnologias
 
 - Python 3 + Flask (backend).

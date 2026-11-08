@@ -1,0 +1,120 @@
+# Auditoria de Consumo de Combustível da Frota
+
+Aplicação web para registrar veículos que retornam à base operacional, calcular o consumo médio de combustível e acompanhar os indicadores acumulados da frota.
+
+O projeto transforma um exercício de lógica em Python em uma aplicação com frontend e backend, mantendo as regras de cálculo e classificação.
+
+## Funcionalidades
+
+- Registro de vários veículos durante a utilização da aplicação.
+- Entrada da distância percorrida em quilômetros e do combustível consumido em litros.
+- Validação para aceitar somente valores numéricos maiores que zero.
+- Cálculo do consumo médio individual em km/l.
+- Classificação automática do desempenho:
+  - **Econômico:** consumo maior ou igual a 12 km/l.
+  - **Padrão:** consumo maior ou igual a 9 e menor que 12 km/l.
+  - **Alto Consumo:** consumo inferior a 9 km/l.
+- Indicadores acumulados de quantidade de veículos, quilometragem total e média dos consumos individuais.
+
+## Tecnologias utilizadas
+
+- **Backend:** Python 3 e Flask.
+- **Frontend:** HTML5, CSS3 e JavaScript.
+- **Comunicação:** API HTTP com JSON.
+
+## Estrutura de pastas
+
+```text
+AuditoriaConsumoCombustivel/
+├── backend/
+│   ├── app.py
+│   └── requirements.txt
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+├── docs/
+│   └── screenshots/
+└── README.md
+```
+
+## Como executar
+
+### Pré-requisitos
+
+- Python 3.10 ou superior.
+- pip.
+
+### 1. Acesse a pasta do projeto
+
+```bash
+cd AuditoriaConsumoCombustivel
+```
+
+### 2. (Opcional) Crie um ambiente virtual
+
+No Windows PowerShell:
+
+```powershell
+python -m venv .venv
+.venv\\Scripts\\Activate.ps1
+```
+
+### 3. Instale as dependências
+
+```bash
+pip install -r backend/requirements.txt
+```
+
+### 4. Inicie o backend
+
+```bash
+python backend/app.py
+```
+
+### 5. Abra no navegador
+
+Acesse:
+
+```text
+http://127.0.0.1:5000
+```
+
+> Acesse pelo endereço do Flask. Não abra o `index.html` diretamente nem utilize o Live Server, pois a interface precisa se comunicar com a API.
+
+## Regras de negócio
+
+| Regra | Comportamento |
+|---|---|
+| Distância | Deve ser maior que zero para registrar um veículo |
+| Combustível | Deve ser maior que zero |
+| Econômico | Consumo maior ou igual a 12 km/l |
+| Padrão | Consumo maior ou igual a 9 e menor que 12 km/l |
+| Alto Consumo | Consumo inferior a 9 km/l |
+| Média dos consumos | Soma dos consumos individuais dividida pela quantidade de veículos |
+
+A média exibida segue a regra do exercício: média aritmética dos consumos individuais registrados, e não a divisão da quilometragem total pelo total de litros.
+
+## API
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/` | Carrega a interface web. |
+| POST | `/api/auditoria/processar` | Calcula e classifica o consumo de um veículo. |
+
+Exemplo de requisição para processar um veículo:
+
+```json
+{
+  "km": 150,
+  "litros": 12.5
+}
+```
+
+## Observações técnicas
+
+Os indicadores acumulados são mantidos em memória no JavaScript durante o uso da página. Os dados não são persistidos em banco de dados; ao recarregar a página, os acumuladores são reiniciados.
+
+## Autor
+
+Projeto desenvolvido para praticar lógica de programação, validação de entradas, acumuladores, operações aritméticas, Python, Flask e integração entre frontend e backend.

@@ -15,6 +15,20 @@ O projeto transforma um exercício de lógica de programação em uma aplicaçã
 - Relatório visual com a situação individual de cada produto.
 - Validação dos dados no backend.
 
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o registro do primeiro evento.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Preenchimento 
+Todos os campos preenchidos com o código e quantidade para o processamento dos produtos e o parãmetro de segurança com a quantidade de mínima de estoque.
+![Preenchimento](docs/screenshots/tela-preenchimento.png)
+
+### Diagnóstico 
+Resultado do diagnóstico com o relatório do almoxarifado indicando maior e menor saldo e quantidade de produtos abaixo do estoque mínimo e quais são. Inventário analisado com os nomes, códigos , quantidade e situação de todos os produtos
+![Diagnóstico](docs/screenshots/tela-Diagnóstico.png)
+
 ## Tecnologias utilizadas
 
 - **Backend:** Python 3 e Flask.

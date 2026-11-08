@@ -12,6 +12,16 @@ Aplicação web para cadastrar baterias industriais, acompanhar o nível de carg
 - Remoção de baterias cadastradas.
 - Validações realizadas no backend em Python.
 
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o registro das primeiras baterias.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Preenchido
+tela com as baterias cadastradas para o monitoramento com as opções de descarregar, carregar e remover.
+![Preenchido](docs/screenshots/tela-preenchida.png)
+
 ## Tecnologias
 
 - **Backend:** Python 3, Flask e Flask-CORS.

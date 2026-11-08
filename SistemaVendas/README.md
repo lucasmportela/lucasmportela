@@ -15,6 +15,20 @@ Aplicação web desenvolvida a partir de um exercício de Programação Orientad
 - Cancelar a venda atual sem alterar o faturamento já registrado.
 - Interface responsiva para desktop e dispositivos móveis.
 
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o cadastro da senha.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Tela Fechamennto
+Tela com o total de faturamento acumulado de todas as vendas, quantidade total de itens na venda atual e o seu subtotal com cada produtos adicionado e seu valor.
+![Tela Fechamento](docs/screenshots/tela-fechamento.png)
+
+### Tela Pagamento
+Desconto automático de compras e quantidade de parcelas a serem efetuadas no pagamento, subtotal, valor do desconto adequado e o total da venda com as quantidade e valor de parcelas.
+![Tela Pagamento](docs/screenshots/tela-Pagamento.png)
+
 ## Tecnologias
 
 - **Backend:** Python 3 e Flask.

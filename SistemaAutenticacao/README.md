@@ -14,6 +14,24 @@ O usuário cadastra uma senha numérica de quatro dígitos. Em seguida, o sistem
 - Reinicialização da demonstração.
 - Senha armazenada como hash na sessão, em vez de texto puro.
 
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o cadastro da senha.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Tela Cadastro
+Tela após o cadastramento da senha.
+![Tela Cadastro](docs/screenshots/tela-cadastro.png)
+
+### Tela Sucesso
+Sucesso ao colocar a senha correspondente e inicializar o sistema.
+![Tela Sucesso](docs/screenshots/tela-sucesso.png)
+
+### Tela Bloqueio
+Bloqueamento de conta após 3 tentativas sem exito ao digitar a senha.
+![Tela Bloqueio](docs/screenshots/tela-bloqueio.png)
+
 ## Tecnologias
 
 - **Backend:** Python e Flask.

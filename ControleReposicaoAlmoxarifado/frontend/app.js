@@ -54,7 +54,7 @@ form.addEventListener("submit", async event => {
     }).join("");
 
     report.hidden = false;
-    notify("Análise concluída. Consulte o diagnóstico do almoxarifado abaixo.", "success");
+    notify("Análise concluída. Consulte o diagnóstico do almoxarifado acima.", "success");
     report.scrollIntoView({behavior: "smooth", block: "start"});
   } catch (error) {
     notify(error.message === "Failed to fetch"

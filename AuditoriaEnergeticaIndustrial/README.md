@@ -13,6 +13,21 @@ Aplicação web baseada no exercício de lógica de programação que audita o c
 - Relatório visual com situação individual de cada máquina.
 - Mensagem **“Operação Dentro dos Parâmetros de Eficiência”** quando nenhuma máquina ultrapassa o teto.
 
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o registro do primeiro evento.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Entrada dos dados
+Campos preenchidos com as informações necessárias para o processamento.
+![Entrada dos dados](docs/screenshots/tela-processamento.png)
+
+### Resultado do processamento
+Resultado do processamento detalhado com o nome, código, consumo e situação de cada máquina. Exibição de maior e
+consumo médio da linha e se tem alguma máquina acima dos teto de consumo.
+![Resultado do processamento](docs/screenshots/tela-resultado.png)
+
 ## Tecnologias
 
 - **Backend:** Python 3 e Flask.

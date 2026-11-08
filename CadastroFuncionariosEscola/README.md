@@ -2,6 +2,16 @@
 
 Aplicação web para cadastrar e consultar funcionários de uma escola. O projeto foi desenvolvido a partir de um exercício de Programação Orientada a Objetos em Python.
 
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o registro do primeiro evento.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Histórico de Eventos
+Painel exibindo os eventos registrados, os funcionários registrados, os salários e as observações.
+![Histórico de Eventos](docs/screenshots/tela-final.png)
+
 ## Tecnologias
 
 - **Backend:** Python 3 e Flask

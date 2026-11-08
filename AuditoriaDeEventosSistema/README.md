@@ -2,21 +2,6 @@
 
 Aplicação web didática para registrar e consultar ações realizadas por usuários em um sistema corporativo. O projeto nasceu de um exercício de Python sobre gravação de logs.
 
-## 📸 Demonstração Visual
-
-### Tela Inicial (Vazia)
-Aguardando o registro do primeiro evento.
-![Tela Inicial](docs/screenshots/tela-inicial.png)
-
-### 2. Histórico de Eventos
-Painel exibindo os eventos registrados, os contadores atualizados (Total, Sucessos e Falhas) e os cartões de cada operação com data, hora, usuário e status.
-![Histórico de Eventos](docs/screenshots/tela-historico.png)
-
-## Tecnologias
-- **Backend:** Python 3 e Flask
-- **Frontend:** HTML5, CSS3 e JavaScript
-- **Armazenamento:** arquivo de texto (`auditoria_sistema.log`)
-
 ## Funcionalidades
 - Registrar usuário, ação executada e status da operação.
 - Gerar automaticamente data e hora do registro.
@@ -25,6 +10,21 @@ Painel exibindo os eventos registrados, os contadores atualizados (Total, Sucess
 - Filtrar registros por sucesso ou falha.
 - Exibir totais de eventos, sucessos e falhas.
 - Validar os dados antes de gravar.
+
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o registro do primeiro evento.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Histórico de Eventos
+Painel exibindo os eventos registrados, os contadores atualizados (Total, Sucessos e Falhas) e os cartões de cada operação com data, hora, usuário e status.
+![Histórico de Eventos](docs/screenshots/tela-historico.png)
+
+## Tecnologias
+- **Backend:** Python 3 e Flask
+- **Frontend:** HTML5, CSS3 e JavaScript
+- **Armazenamento:** arquivo de texto (`auditoria_sistema.log`)
 
 ## Estrutura
 ```text

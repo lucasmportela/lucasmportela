@@ -2,7 +2,7 @@
 
 Uma calculadora web desenvolvida com **React**, **JavaScript** e **Webpack**, com interface responsiva e operações matemáticas básicas.
 
-O projeto foi criado para praticar desenvolvimento frontend, componentização com React, gerenciamento de estado com Hooks e configuração de ambiente com Webpack e Babel — sem utilizar Vite.
+O projeto foi criado para praticar desenvolvimento frontend, componentização com React, gerenciamento de estado com Hooks e configuração de ambiente com Webpack e Babel.
 
 ## ✨ Funcionalidades
 
