@@ -18,7 +18,7 @@ O projeto transforma um exercício de lógica de programação em uma aplicaçã
 ## 📸 Demonstração Visual
 
 ### Tela Inicial (Vazia)
-Aguardando o registro do primeiro evento.
+Aguardando o registro dos primeiros códigos de produtos, saldo de estoque e estoque mínimo de segurança.
 ![Tela Inicial](docs/screenshots/tela-inicial.png)
 
 ### Preenchimento 

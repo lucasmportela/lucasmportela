@@ -14,7 +14,7 @@ Jogo web em que o usuário disputa três rodadas contra a máquina para descobri
 ## 📸 Demonstração Visual
 
 ### Tela Inicial (Vazia)
-Aguardando o registro do primeiro evento com as regras do jogo.
+Aguardando o início do jogo e seu primero palpite.
 ![Tela Inicial](docs/screenshots/tela-inicial.png)
 
 ### Resultado

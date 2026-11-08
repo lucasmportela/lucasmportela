@@ -18,7 +18,7 @@ Aplicação web desenvolvida a partir de um exercício de Programação Orientad
 ## 📸 Demonstração Visual
 
 ### Tela Inicial (Vazia)
-Aguardando o cadastro da senha.
+Aguardando o cadastro do valor do primeiro produto.
 ![Tela Inicial](docs/screenshots/tela-inicial.png)
 
 ### Tela Fechamennto

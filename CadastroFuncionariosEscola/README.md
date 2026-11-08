@@ -5,7 +5,7 @@ Aplicação web para cadastrar e consultar funcionários de uma escola. O projet
 ## 📸 Demonstração Visual
 
 ### Tela Inicial (Vazia)
-Aguardando o registro do primeiro evento.
+Aguardando o registro dos primeiros nomes de funcionários, salários e cargos.
 ![Tela Inicial](docs/screenshots/tela-inicial.png)
 
 ### Histórico de Eventos

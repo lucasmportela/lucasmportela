@@ -15,7 +15,7 @@ Aplicação web para cadastrar baterias industriais, acompanhar o nível de carg
 ## 📸 Demonstração Visual
 
 ### Tela Inicial (Vazia)
-Aguardando o registro das primeiras baterias.
+Aguardando as identificações das baterias, carga máxima e carga atual.
 ![Tela Inicial](docs/screenshots/tela-inicial.png)
 
 ### Preenchido

@@ -16,7 +16,7 @@ Aplicação web baseada no exercício de lógica de programação que audita o c
 ## 📸 Demonstração Visual
 
 ### Tela Inicial (Vazia)
-Aguardando o registro do primeiro evento.
+Aguardando o registro das primeiras máquinas, seus respectivos consumos e o teto operacional.
 ![Tela Inicial](docs/screenshots/tela-inicial.png)
 
 ### Entrada dos dados
