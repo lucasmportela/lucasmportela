@@ -13,6 +13,20 @@ Aplicação web para simular o monitoramento térmico de três racks de servidor
 - API REST para processar a matriz de temperaturas.
 - Execução local ou com Docker Compose.
 
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o registro dos valores de temperatura dos sensores dos hack para o monitoramento dos hacks para informar a maior temperatura.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Relatório
+Relatório térmico feito com o resultado da leitura dos registros de temperatura, com temperatura média de cada hack, a matriz de suas temperaturas, a maior temperatura e o status atual do sistema.
+![Relatório](docs/screenshots/tela-relatorio.png)
+
+### Alerta
+Alerta exibido quando alguma tempertaruta de algum hack ultrapassar 75°C
+![Alerta](docs/screenshots/tela-alerta.png)
+
 ## Tecnologias
 
 **Frontend:** React, Vite, JavaScript, CSS e Lucide React.  
