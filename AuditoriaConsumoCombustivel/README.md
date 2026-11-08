@@ -23,7 +23,7 @@ O projeto transforma um exercício de lógica em Python em uma aplicação com f
 Aqui estão algumas telas da aplicação em funcionamento:
 
 ### Tela Inicial
-Aguardando o registro do primeiro veículo.
+Aguardando o registro do primeiro veículo com o seu consumo e quilomentragem.
 ![Tela Inicial](docs/screenshots/tela-inicial.png)
 
 ### Resultado do Veículo
