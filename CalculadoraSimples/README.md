@@ -15,6 +15,16 @@ O projeto foi criado para praticar desenvolvimento frontend, componentização c
 - Opção para limpar o histórico.
 - Interface responsiva para diferentes tamanhos de tela.
 
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Aguardando o registro do primeiro e segundo número e a operação a ser efetuada.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Tela Resultado
+Resultado do cálculo atual com histórico de cálculos realizados.
+![Resultado](docs/screenshots/tela-resultado.png)
+
 ## 🛠️ Tecnologias utilizadas
 
 - [React](https://react.dev/) — construção da interface.
