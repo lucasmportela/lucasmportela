@@ -57,13 +57,20 @@ SistemaVendas/
 - Python 3.10 ou superior.
 - pip.
 
+### 1. Clone o repositório e entre na pasta do projeto
+
+```bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/SistemaVendas
+```
+
 ### 2. Entre na pasta do projeto
 
 ```bash
 cd SistemaVendas
 ```
 
-### 3. (Opcional) Crie e ative um ambiente virtual
+### 4. (Opcional) Crie e ative um ambiente virtual
 
 Windows PowerShell:
 
