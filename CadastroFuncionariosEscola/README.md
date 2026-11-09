@@ -31,7 +31,7 @@ Painel exibindo os eventos registrados, os funcionários registrados, os salári
 ## Estrutura do projeto
 
 ```text
-cadastro-funcionarios-escola/
+CadastroFuncionariosEscola/
 ├── app.py
 ├── requirements.txt
 ├── README.md
@@ -53,55 +53,56 @@ cadastro-funcionarios-escola/
 - Python 3.10 ou superior
 - pip
 
-### 2. Baixe o projeto e entre na pasta
+### 2. Clone o repositório e entre na pasta
 
-```bash
-git clone URL_DO_SEU_REPOSITORIO
-cd cadastro-funcionarios-escola
-```
+\`\`\`bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/CadastroFuncionariosEscola
+\`\`\`
 
-### 3. Crie e ative um ambiente virtual (recomendado)
+### 3. Crie o ambiente virtual e instale as dependências
 
 No Windows (PowerShell):
 
-```powershell
+\`\`\`powershell
 py -m venv .venv
-.venv\Scripts\Activate.ps1
-```
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+\`\`\`
 
 No Windows (Prompt de Comando):
 
-```cmd
+\`\`\`cmd
 py -m venv .venv
-.venv\Scripts\activate.bat
-```
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+\`\`\`
 
 No Linux/macOS:
 
-```bash
+\`\`\`bash
 python3 -m venv .venv
 source .venv/bin/activate
-```
+python -m pip install -r requirements.txt
+\`\`\`
 
-### 4. Instale as dependências
+### 4. Inicie a aplicação
 
-```bash
-pip install -r requirements.txt
-```
+Windows PowerShell:
 
-### 5. Inicie a aplicação
+\`\`\`powershell
+.\.venv\Scripts\python.exe app.py
+\`\`\`
 
-No Windows:
+Windows Prompt de Comando:
 
-```bash
-py app.py
-```
+\`\`\`cmd
+.venv\Scripts\python.exe app.py
+\`\`\`
 
-No Linux/macOS:
+Linux/macOS:
 
-```bash
-python3 app.py
-```
+\`\`\`bash
+python app.py
+\`\`\`
 
 Abra no navegador:
 
