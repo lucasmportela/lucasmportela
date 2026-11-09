@@ -67,6 +67,30 @@ export CORS_ORIGINS="https://app.seu-dominio.com"
 ```
 
 
+## Proteções adicionais da API
+
+A API aplica cabeçalhos HTTP de segurança:
+
+- `X-Content-Type-Options: nosniff`.
+- `X-Frame-Options: DENY`.
+- `Referrer-Policy: strict-origin-when-cross-origin`.
+- `Permissions-Policy` desabilitando câmera, microfone e geolocalização.
+- `Cache-Control: no-store` nas rotas da API.
+- Cabeçalho `X-Powered-By` desabilitado.
+
+O corpo JSON é limitado a **10 KB**. A rota `POST /api/monitoramento` aceita até **60 requisições por IP a cada 60 segundos** por padrão. Ao ultrapassar o limite, a API retorna HTTP `429` e o cabeçalho `Retry-After`.
+
+Os limites podem ser ajustados por variáveis de ambiente:
+
+```env
+RATE_LIMIT_MAX=60
+RATE_LIMIT_WINDOW_MS=60000
+```
+
+No Docker Compose, `TRUST_PROXY=1` permite que o Express identifique o IP original encaminhado pelo Nginx. Em outras implantações, configure a quantidade de proxies confiáveis somente quando houver um proxy reverso controlado por você.
+
+**Limitação:** o contador de requisições fica em memória e é reiniciado quando o processo reinicia. Em implantação com múltiplas instâncias, use um armazenamento compartilhado (por exemplo, Redis) ou aplique o limite no gateway/reverse proxy. Essa proteção básica não substitui autenticação, monitoramento ou um firewall de aplicação.
+
 ## Estrutura do projeto
 
 ```text
@@ -209,7 +233,7 @@ npm install
 npm test
 ```
 
-A suíte cobre **21 cenários**, incluindo:
+A suíte cobre **24 cenários**, incluindo:
 
 - Rota de status da API.
 - Processamento de matriz 3×3 e cálculo das médias.
@@ -219,6 +243,7 @@ A suíte cobre **21 cenários**, incluindo:
 - Matrizes e racks com quantidades incorretas de sensores.
 - Corpos JSON nulos ou malformados e campos ausentes.
 - CORS: origens locais autorizadas, origens externas não autorizadas e requisições preflight.
+- Segurança HTTP: cabeçalhos de proteção, limite de corpo JSON e rate limiting por IP.
 
 ## Melhorias futuras
 
