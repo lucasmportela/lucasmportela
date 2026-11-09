@@ -6,7 +6,9 @@ services:
     container_name: thermal-backend
     restart: unless-stopped
     environment:
+    environment:
       PORT: 3001
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
     expose:
       - "3001"
 
