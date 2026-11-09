@@ -20,11 +20,11 @@ Aguardando o registro dos valores de temperatura dos sensores dos hack para o mo
 ![Tela Inicial](docs/screenshots/tela-inicial.png)
 
 ### Relatório
-Relatório térmico feito com o resultado da leitura dos registros de temperatura, com temperatura média de cada hack, a matriz de suas temperaturas, a maior temperatura e o status atual do sistema.
+Relatório térmico feito com o resultado da leitura dos registros de temperatura, com temperatura média de cada rack, a matriz de suas temperaturas, a maior temperatura e o status atual do sistema.
 ![Relatório](docs/screenshots/tela-relatorio.png)
 
 ### Alerta
-Alerta exibido quando alguma tempertaruta de algum hack ultrapassar 75°C
+Alerta exibido quando alguma temperatura de algum rack ultrapassar 75°C
 ![Alerta](docs/screenshots/tela-alerta.png)
 
 ## Tecnologias
@@ -165,14 +165,5 @@ No PowerShell, se preferir, use `Invoke-RestMethod` ou uma ferramenta como Postm
 ## Autor
 
 Projeto de estudo voltado ao desenvolvimento web, integração frontend/backend e monitoramento de infraestrutura de TI.
-
-
-## 📸 Capturas de tela
-
-As capturas reais da aplicação podem ser adicionadas em `docs/screenshots/`. Depois de incluir as imagens, insira-as aqui, por exemplo:
-
-```markdown
-![Tela inicial](docs/screenshots/tela-inicial.png)
-```
 
 Nenhuma imagem demonstrativa foi inventada; registre a aplicação em execução para documentar a interface real.

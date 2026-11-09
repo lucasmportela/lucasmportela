@@ -61,7 +61,7 @@ Projetos selecionados do meu portfólio. Acesse os repositórios para consultar 
 
 Selected projects from my portfolio. Visit the repositories to explore the source code, documentation, and setup instructions.
 
-### 1. [Monitoramento Hack Data Center](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoHackDataCenter)
+### 1. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoRackDataCenter)
 
 Sistema de monitoramento térmico de racks e sensores, com visualização de temperaturas e alertas.
 
