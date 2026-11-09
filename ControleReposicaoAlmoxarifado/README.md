@@ -63,13 +63,7 @@ git clone https://github.com/lucasmportela/lucasmportela.git
 cd lucasmportela/ControleReposicaoAlmoxarifado
 ```
 
-### 2. Entre na pasta do projeto
-
-```bash
-cd ControleReposicaoAlmoxarifado
-```
-
-### 3. (Opcional) Crie um ambiente virtual
+### 2. (Opcional) Crie um ambiente virtual
 
 No Windows PowerShell:
 
