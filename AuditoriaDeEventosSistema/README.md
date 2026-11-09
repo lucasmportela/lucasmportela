@@ -116,6 +116,18 @@ def registrar_evento(usuario, acao, status):
 
 O modo `a` (*append*) acrescenta a linha ao final do arquivo e preserva os registros anteriores. A interface disponibiliza as ações `LOGIN`, `LOGOUT`, `SAQUE`, `DEPOSITO`, `EXCLUSAO`, `EDICAO` e `CONSULTA`, com status `SUCESSO` ou `FALHA`.
 
+## Testes automatizados
+
+Os testes usam `unittest` e o cliente de testes do Flask. O arquivo de auditoria é redirecionado para um diretório temporário durante os testes, sem alterar o log local.
+
+Execute na raiz do projeto:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+A suíte valida a página inicial, listagem, criação de eventos, validação de campos, ordem dos registros, persistência em arquivo e preservação do histórico. O GitHub Actions executa os testes e a verificação de sintaxe em cada push e pull request.
+
 ## API
 
 | Método | Rota | Descrição |
@@ -138,4 +150,4 @@ Exemplo de linha gravada:
 ```
 
 ## Nota de segurança
-Projeto para estudo. Um arquivo local editável não garante uma trilha de auditoria inviolável. Em produção, implemente autenticação e controle de acesso, armazenamento centralizado, proteção contra adulteração, rotação e retenção de logs, sincronização de horário e monitoração. O servidor Flask deste projeto usa modo de desenvolvimento e não deve ser exposto diretamente à internet.    
+Projeto para estudo. Um arquivo local editável não garante uma trilha de auditoria inviolável. Em produção, implemente autenticação e controle de acesso, armazenamento centralizado, proteção contra adulteração, rotação e retenção de logs, sincronização de horário e monitoração. O Debug fica desativado por padrão e o servidor escuta em `127.0.0.1`. Para habilitá-lo apenas durante o desenvolvimento local, defina `FLASK_DEBUG=true`. Quando `APP_ENV=production`, o Debug permanece desativado. Não exponha o servidor de desenvolvimento diretamente à internet.    
