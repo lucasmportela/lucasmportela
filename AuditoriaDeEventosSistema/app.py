@@ -1,5 +1,6 @@
 from datetime import datetime
 from pathlib import Path
+import os
 import re
 import threading
 
@@ -10,6 +11,14 @@ ARQUIVO_LOG = BASE_DIR / "auditoria_sistema.log"
 LOCK_LOG = threading.Lock()
 
 app = Flask(__name__)
+
+APP_ENV = os.getenv("APP_ENV", "development").strip().lower()
+DEBUG = (
+    APP_ENV != "production"
+    and os.getenv("FLASK_DEBUG", "false").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
+app.config["DEBUG"] = DEBUG
 
 ACOES_PERMITIDAS = {
     "LOGIN", "LOGOUT", "SAQUE", "DEPOSITO",
@@ -123,4 +132,8 @@ def criar_evento():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(
+        host=os.getenv("FLASK_HOST", "127.0.0.1"),
+        port=int(os.getenv("PORT", "5000")),
+        debug=DEBUG,
+    )
