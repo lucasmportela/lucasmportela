@@ -57,7 +57,7 @@ As capturas de tela utilizadas neste README estão armazenadas em `docs/screensh
 ## 📁 Estrutura do projeto
 
 ```text
-SistemaContasBancarias/
+conta-mais/
 ├── app.py
 ├── conta.py
 ├── database.py
@@ -97,8 +97,8 @@ SistemaContasBancarias/
 ### 2. Clone o repositório e entre na pasta do projeto
 
 ```bash
-git clone https://github.com/lucasmportela/lucasmportela.git
-cd lucasmportela/SistemaContasBancarias
+git clone https://github.com/lucasmportela/conta-mais.git
+cd conta-mais
 ```
 
 ### 3. Crie o ambiente virtual e instale as dependências
