@@ -34,7 +34,7 @@ Contem a quantidade de tipos de produtos, unidades, e valor total de estoque. Re
 ## Estrutura
 
 ```text
-sistema-faturamento-produtos/
+SistemaDeFaturamentoDeProdutos/
 ├── backend/
 │   ├── data/
 │   │   └── produtos.json
@@ -71,7 +71,14 @@ sistema-faturamento-produtos/
 - Python 3.10 ou superior
 - Node.js e npm
 
-### 1. Iniciar o backend
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/SistemaDeFaturamentoDeProdutos
+```
+
+### 2. Iniciar o backend
 
 No terminal:
 
@@ -94,7 +101,7 @@ Inicie a API:
 
 Backend: `http://localhost:5000`
 
-### 2. Iniciar o frontend
+### 3. Iniciar o frontend
 
 Abra um segundo terminal:
 
