@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner-github.png" alt="Lucas Martins Portela — Desenvolvedor Back-end Júnior" width="100%" />
+<img src="assets/banner-github-minimalista.png" alt="Lucas Martins Portela — Desenvolvedor Back-end Júnior" width="100%" />
 
 # Olá! Eu sou Lucas Martins Portela 👋
 ### Desenvolvedor Back-end Júnior | Junior Back-end Developer
