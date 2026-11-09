@@ -23,7 +23,7 @@ Aguardando o registro do produto com o seu nome, valor unitário e quantidade.
 ![Tela Inicial](docs/screenshots/tela-inicial.png)
 
 ### Tela Registro
-Contem a quantidade de tipos de produtos, unidades, e valor total de estoque. Registro dos produtos cadastrados contendo um catálogo com preço, estoque e valor total em estoque. Com opções de adicionar, subtrair ou excluir os produtos cadastrados.
+Contém a quantidade de tipos de produtos, unidades e valor total de estoque. Registro dos produtos cadastrados contendo um catálogo com preço, estoque e valor total em estoque. Com opções de adicionar, subtrair ou excluir os produtos cadastrados.
 ![Registro](docs/screenshots/tela-registro.png)
 
 ## Tecnologias
@@ -90,16 +90,16 @@ py -m venv .venv
 Instale as dependências:
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt
 ```
 
 Inicie a API:
 
 ```powershell
-.\.venv\Scripts\python.exe app.py
+.\\.venv\\Scripts\\python.exe app.py
 ```
 
-Backend: `http://localhost:5000`
+Backend: `http://127.0.0.1:5000`
 
 ### 3. Iniciar o frontend
 
@@ -114,6 +114,14 @@ npm.cmd start
 Frontend: `http://localhost:3000`
 
 > No PowerShell do Windows, use `npm.cmd` para evitar o bloqueio de execução do arquivo `npm.ps1`.
+
+## 🔒 Configuração de segurança
+
+- O CORS não aceita qualquer origem. Por padrão, somente `http://localhost:3000` e `http://127.0.0.1:3000` podem acessar a API por chamadas cross-origin.
+- Para autorizar outro endereço, defina `CORS_ORIGINS` com uma lista separada por vírgulas contendo apenas as origens confiáveis. Exemplo no PowerShell: `$env:CORS_ORIGINS = "https://meu-frontend.example.com"`.
+- O modo Debug fica desativado por padrão. `FLASK_DEBUG=true` só deve ser usado em desenvolvimento local; quando `APP_ENV=production`, o Debug permanece desligado.
+- O servidor de desenvolvimento escuta em `127.0.0.1` por padrão. Em produção, use um servidor WSGI apropriado e configure HTTPS, domínio e origens CORS explicitamente.
+- O frontend local utiliza o proxy do Webpack para encaminhar `/api` ao backend; por isso, durante esse fluxo, o navegador normalmente faz requisições same-origin.
 
 ## Endpoints da API
 
