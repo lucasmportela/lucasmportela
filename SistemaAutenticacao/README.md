@@ -54,7 +54,7 @@ SistemaAutenticacao/
 
 ## Como executar
 
-### 1. Pré-requisitos
+### Pré-requisitos
 
 - Python 3.10 ou superior.
 - pip.
@@ -66,13 +66,7 @@ git clone https://github.com/lucasmportela/lucasmportela.git
 cd lucasmportela/SistemaAutenticacao
 ```
 
-### 2. Abra o terminal na pasta do projeto
-
-```bash
-cd SistemaAutenticacao
-```
-
-### 4. Crie e ative um ambiente virtual (recomendado)
+### 3. Crie e ative um ambiente virtual (recomendado)
 
 Windows PowerShell:
 
