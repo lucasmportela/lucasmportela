@@ -36,7 +36,7 @@ Alerta exibido quando alguma temperatura de algum rack ultrapassar 75°C
 ## Estrutura do projeto
 
 ```text
-rack-monitor/
+Rack-Monitor-Monitoramento-Termico-de-Data-Centers/
 ├── backend/
 │   ├── DOCKERFILE
 │   ├── package.json
@@ -76,8 +76,8 @@ rack-monitor/
 ### 1. Clone o repositório e entre na pasta do projeto
 
 ```bash
-git clone https://github.com/lucasmportela/rack-monitor.git
-cd rack-monitor
+git clone https://github.com/lucasmportela/Rack-Monitor-Monitoramento-Termico-de-Data-Centers.git
+cd Rack-Monitor-Monitoramento-Termico-de-Data-Centers
 ```
 
 ### 2. Iniciar o backend
