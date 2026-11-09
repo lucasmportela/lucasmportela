@@ -47,6 +47,12 @@ if ($LASTEXITCODE -ne 0) {
     throw "Faça login no GitHub CLI primeiro, executando: gh auth login"
 }
 
+$GitHubUserId = (& gh api user --jq .id).Trim()
+if ($LASTEXITCODE -ne 0 -or -not $GitHubUserId) {
+    throw "Não foi possível identificar a conta autenticada no GitHub."
+}
+$CommitEmail = "$GitHubUserId+$Owner@users.noreply.github.com"
+
 $RepositoriesToLink = @()
 
 foreach ($Project in $Projects) {
@@ -79,11 +85,19 @@ foreach ($Project in $Projects) {
             Copy-Item -LiteralPath $_.FullName -Destination $TempPath -Recurse -Force
         }
 
+        # Não publica o arquivo de dados local do faturamento; ele é recriado pelo backend.
+        if ($Project.Repository -eq "sistema-faturamento-produtos") {
+            $LocalData = Join-Path $TempPath "backend/data/produtos.json"
+            if (Test-Path -LiteralPath $LocalData) {
+                Remove-Item -LiteralPath $LocalData -Force
+            }
+        }
+
         Invoke-CheckedCommand -Executable "git" -Arguments @("-C", $TempPath, "init", "--initial-branch=main")
         Invoke-CheckedCommand -Executable "git" -Arguments @("-C", $TempPath, "add", "--all")
         Invoke-CheckedCommand -Executable "git" -Arguments @(
             "-C", $TempPath, "-c", "user.name=Lucas Martins Portela",
-            "-c", "user.email=41898282+lucasmportela@users.noreply.github.com",
+            "-c", "user.email=$CommitEmail",
             "commit", "-m", "chore: initial import of $($Project.Repository)"
         )
 
@@ -119,7 +133,7 @@ if ($UpdatedContent -ne $ReadmeContent) {
     Invoke-CheckedCommand -Executable "git" -Arguments @("-C", $RepoRoot, "add", "README.md")
     Invoke-CheckedCommand -Executable "git" -Arguments @(
         "-C", $RepoRoot, "-c", "user.name=Lucas Martins Portela",
-        "-c", "user.email=41898282+lucasmportela@users.noreply.github.com",
+        "-c", "user.email=$CommitEmail",
         "commit", "-m", "docs(profile): link featured projects to standalone repositories"
     )
     Invoke-CheckedCommand -Executable "git" -Arguments @("-C", $RepoRoot, "push", "origin", $BaseBranch)
