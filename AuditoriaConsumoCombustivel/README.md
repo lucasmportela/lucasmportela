@@ -103,7 +103,7 @@ http://127.0.0.1:5000
 | Regra | Comportamento |
 |---|---|
 | Distância | Deve ser maior que zero para registrar um veículo |
-| Encerramento | O botão Encerrar turno representa a entrada de `0` km do exercício |
+| Encerramento | O botão Encerrar turno |
 | Combustível | Deve ser estritamente maior que zero |
 | Econômico | Consumo >= 12 km/l |
 | Padrão | 9 km/l <= consumo < 12 km/l |
