@@ -52,6 +52,22 @@ No Docker Compose, copie `.env.example` para `.env` e ajuste essa variável. Nã
 
 O frontend local e a versão Docker utilizam proxies do Vite e do Nginx para encaminhar as chamadas `/api`; quando a chamada é feita pela mesma origem da página, não é necessário liberar um domínio adicional no CORS.
 
+Para executar o backend localmente com uma origem adicional, defina a variável antes de iniciar o servidor:
+
+**Windows PowerShell:**
+
+```powershell
+$env:CORS_ORIGINS = "https://app.seu-dominio.com"
+```
+
+**Git Bash, Linux ou macOS:**
+
+```bash
+export CORS_ORIGINS="https://app.seu-dominio.com"
+```
+
+Para Docker Compose, copie `.env.example` para `.env` na raiz do projeto e ajuste o valor de `CORS_ORIGINS`.
+
 ## Estrutura do projeto
 
 ```text
@@ -194,7 +210,7 @@ npm install
 npm test
 ```
 
-A suíte cobre **17 cenários**, incluindo:
+A suíte cobre **21 cenários**, incluindo:
 
 - Rota de status da API.
 - Processamento de matriz 3×3 e cálculo das médias.
@@ -203,6 +219,7 @@ A suíte cobre **17 cenários**, incluindo:
 - Alerta abaixo, exatamente em e acima de 75 °C.
 - Matrizes e racks com quantidades incorretas de sensores.
 - Corpos JSON nulos ou malformados e campos ausentes.
+- CORS: origens locais autorizadas, origens externas não autorizadas e requisições preflight.
 
 ## Melhorias futuras
 
