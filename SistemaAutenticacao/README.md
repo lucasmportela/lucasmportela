@@ -66,7 +66,7 @@ git clone https://github.com/lucasmportela/lucasmportela.git
 cd lucasmportela/SistemaAutenticacao
 ```
 
-### 3. Crie e ative um ambiente virtual (recomendado)
+### 2. Crie e ative um ambiente virtual (recomendado)
 
 Windows PowerShell:
 
@@ -77,19 +77,19 @@ python -m venv .venv
 
 Se o PowerShell bloquear a ativação, você pode executar diretamente o pip e o Python do ambiente virtual, ou usar o Prompt de Comando.
 
-### 4. Instale as dependências
+### 3. Instale as dependências
 
 ```bash
 pip install -r backend/requirements.txt
 ```
 
-### 5. Inicie o backend
+### 4. Inicie o backend
 
 ```bash
 python backend/app.py
 ```
 
-### 6. Acesse no navegador
+### 5. Acesse no navegador
 
 Abra:
 
