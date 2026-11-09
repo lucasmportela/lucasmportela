@@ -26,6 +26,8 @@ Aguardando o registro do produto com o seu nome, valor unitário e quantidade.
 Contém a quantidade de tipos de produtos, unidades e valor total de estoque. Registro dos produtos cadastrados contendo um catálogo com preço, estoque e valor total em estoque. Com opções de adicionar, subtrair ou excluir os produtos cadastrados.
 ![Registro](docs/screenshots/tela-registro.png)
 
+Os dados cadastrados são gravados em `backend/data/produtos.json`, criado automaticamente na primeira execução. Esse arquivo contém dados locais e não é enviado ao repositório individual.
+
 ## Tecnologias
 
 **Backend:** Python, Flask, Flask-CORS, JSON.  
@@ -36,8 +38,7 @@ Contém a quantidade de tipos de produtos, unidades e valor total de estoque. Re
 ```text
 sistema-faturamento-produtos/
 ├── backend/
-│   ├── data/
-│   │   └── produtos.json
+│   ├── data/                # criado automaticamente pelo backend
 │   ├── app.py
 │   ├── produto.py
 │   ├── repositorio.py
