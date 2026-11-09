@@ -107,14 +107,14 @@ Windows PowerShell:
 
 ```powershell
 py -m venv .venv
-.\.venv\\Scripts\\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
 Windows Prompt de Comando:
 
 ```cmd
 py -m venv .venv
-.venv\\Scripts\\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
 Linux/macOS:
@@ -130,13 +130,13 @@ python -m pip install -r requirements.txt
 Windows PowerShell:
 
 ```powershell
-.\.venv\\Scripts\\python.exe app.py
+.\.venv\Scripts\python.exe app.py
 ```
 
 Windows Prompt de Comando:
 
 ```cmd
-.venv\\Scripts\\python.exe app.py
+.venv\Scripts\python.exe app.py
 ```
 
 Linux/macOS:
@@ -216,7 +216,7 @@ python -m unittest discover -s tests -v
 No Windows, sem ativar o ambiente virtual:
 
 ```powershell
-.\.venv\\Scripts\\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
 Os mesmos testes são executados automaticamente pelo GitHub Actions a cada push ou pull request direcionado à branch `main`.
