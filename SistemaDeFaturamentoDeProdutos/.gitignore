@@ -16,3 +16,6 @@ npm-debug.log*
 .idea/
 .DS_Store
 Thumbs.db
+
+# Dados locais gerados pela aplicação
+backend/data/produtos.json
