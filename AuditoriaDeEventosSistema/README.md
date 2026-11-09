@@ -28,7 +28,7 @@ Painel exibindo os eventos registrados, os contadores atualizados (Total, Sucess
 
 ## Estrutura
 ```text
-auditoria-eventos-sistema/
+AuditoriaDeEventosSistema/
 ├── app.py
 ├── requirements.txt
 ├── README.md
@@ -47,46 +47,55 @@ auditoria-eventos-sistema/
 - Python 3.10 ou superior
 - pip
 
-### 1. Clone o repositório
+### 1. Clone o repositório e entre na pasta do projeto
 ```bash
-git clone URL_DO_SEU_REPOSITORIO
-cd auditoria-eventos-sistema
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/AuditoriaDeEventosSistema
 ```
 
-### 2. Crie e ative um ambiente virtual
+### 2. Crie o ambiente virtual e instale as dependências
 
-Windows PowerShell:
-```powershell
+No Windows (PowerShell):
+
+\`\`\`powershell
 py -m venv .venv
-.venv\\Scripts\\Activate.ps1
-```
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+\`\`\`
 
-Windows CMD:
-```cmd
+No Windows (Prompt de Comando):
+
+\`\`\`cmd
 py -m venv .venv
-.venv\\Scripts\\activate.bat
-```
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+\`\`\`
 
-Linux/macOS:
-```bash
+No Linux/macOS:
+
+\`\`\`bash
 python3 -m venv .venv
 source .venv/bin/activate
-```
+python -m pip install -r requirements.txt
+\`\`\`
 
-### 3. Instale as dependências
-```bash
-pip install -r requirements.txt
-```
+### 3. Inicie o servidor
 
-### 4. Inicie o servidor
-Windows:
-```bash
-py app.py
-```
+Windows PowerShell:
+
+\`\`\`powershell
+.\.venv\Scripts\python.exe app.py
+\`\`\`
+
+Windows Prompt de Comando:
+
+\`\`\`cmd
+.venv\Scripts\python.exe app.py
+\`\`\`
+
 Linux/macOS:
-```bash
-python3 app.py
-```
+
+\`\`\`bash
+python app.py
+\`\`\`
 
 Abra http://127.0.0.1:5000 no navegador. O arquivo `auditoria_sistema.log` será criado automaticamente no primeiro registro.
 
