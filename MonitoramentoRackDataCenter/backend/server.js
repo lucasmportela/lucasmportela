@@ -17,7 +17,9 @@ app.get("/", (req, res) => {
 
 // Recebe e processa as temperaturas
 app.post("/api/monitoramento", (req, res) => {
-    const { matriz } = req.body;
+    const matriz = req.body && typeof req.body === "object"
+        ? req.body.matriz
+        : undefined;
 
     // Validação da estrutura
     if (
@@ -37,22 +39,21 @@ app.post("/api/monitoramento", (req, res) => {
         }
     }
 
-    let Matriz = [];
-    let TempMediaLista = [];
+    const Matriz = [];
+    const TempMediaLista = [];
 
     let Maior = -Infinity;
     let coordenadai = 0;
     let coordenadaj = 0;
-
     let condicao = false;
 
     // Processamento da matriz com for aninhado
     for (let i = 0; i < 3; i++) {
-        let Linha = [];
+        const Linha = [];
         let TempMedia = 0;
 
         for (let j = 0; j < 3; j++) {
-            let Temp = matriz[i][j];
+            const Temp = matriz[i][j];
 
             // Validação individual dos sensores
             if (
@@ -83,10 +84,7 @@ app.post("/api/monitoramento", (req, res) => {
         }
 
         Matriz.push(Linha);
-
-        TempMediaLista.push(
-            TempMedia / Linha.length
-        );
+        TempMediaLista.push(TempMedia / Linha.length);
     }
 
     // Retorna os resultados para o React
@@ -106,7 +104,11 @@ app.post("/api/monitoramento", (req, res) => {
     });
 });
 
-// Inicialização do servidor
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
-});
+// Permite importar a aplicação nos testes sem abrir uma porta automaticamente.
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Servidor rodando na porta ${PORT}`);
+    });
+}
+
+module.exports = app;

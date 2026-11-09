@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   backend:
-    name: Verificar backend Node.js
+    name: Testes de integração - API Node.js
     runs-on: ubuntu-latest
 
     steps:
@@ -23,8 +23,16 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Instalar dependências do backend
+        working-directory: backend
+        run: npm install --no-audit --no-fund
+
       - name: Verificar sintaxe
         run: node --check backend/server.js
+
+      - name: Executar testes de integração
+        working-directory: backend
+        run: npm test
 
   frontend:
     name: Build React
@@ -41,7 +49,7 @@ jobs:
 
       - name: Instalar dependências
         working-directory: frontend
-        run: npm install
+        run: npm install --no-audit --no-fund
 
       - name: Gerar build
         working-directory: frontend

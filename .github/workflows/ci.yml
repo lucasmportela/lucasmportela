@@ -54,6 +54,30 @@ jobs:
       - name: Executar testes de configuração do Sistema de Faturamento
         run: python -m unittest discover -s SistemaDeFaturamentoDeProdutos/backend/tests -v
 
+  rack-monitor-backend:
+    name: Rack Monitor - testes de integração da API
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências do backend
+        working-directory: MonitoramentoRackDataCenter/backend
+        run: npm install --no-audit --no-fund
+
+      - name: Verificar sintaxe do backend
+        run: node --check MonitoramentoRackDataCenter/backend/server.js
+
+      - name: Executar testes de integração do Rack Monitor
+        working-directory: MonitoramentoRackDataCenter/backend
+        run: npm test
+
   frontend:
     name: Build - ${{ matrix.project }}
     runs-on: ubuntu-latest
