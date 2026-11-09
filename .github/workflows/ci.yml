@@ -34,6 +34,7 @@ jobs:
             SistemaContasBancarias/requirements.txt
             SistemaAutenticacao/backend/requirements.txt
             SistemaDeFaturamentoDeProdutos/backend/requirements.txt
+            AuditoriaDeEventosSistema/requirements.txt
 
       - name: Verificar sintaxe de todos os arquivos Python
         run: python -m compileall -q .
@@ -44,6 +45,7 @@ jobs:
           python -m pip install -r SistemaContasBancarias/requirements.txt
           python -m pip install -r SistemaAutenticacao/backend/requirements.txt
           python -m pip install -r SistemaDeFaturamentoDeProdutos/backend/requirements.txt
+          python -m pip install -r AuditoriaDeEventosSistema/requirements.txt
 
       - name: Executar testes unitários e de integração do Conta+
         run: python -m unittest discover -s SistemaContasBancarias/tests -v
@@ -53,6 +55,9 @@ jobs:
 
       - name: Executar testes de configuração do Sistema de Faturamento
         run: python -m unittest discover -s SistemaDeFaturamentoDeProdutos/backend/tests -v
+
+      - name: Executar testes de integração do Sentinela
+        run: python -m unittest discover -s AuditoriaDeEventosSistema/tests -v
 
   rack-monitor-backend:
     name: Rack Monitor - testes de integração da API
