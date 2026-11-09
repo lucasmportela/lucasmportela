@@ -61,13 +61,24 @@ Projetos selecionados do meu portfólio. Acesse os repositórios para consultar 
 
 Selected projects from my portfolio. Visit the repositories to explore the source code, documentation, and setup instructions.
 
-### 1. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoRackDataCenter)
+### 1. [Conta+ — Sistema de Contas Bancárias](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaContasBancarias)
+
+Aplicação web para cadastro e gerenciamento de contas bancárias, com depósitos, saques, transferências e consulta de extratos. Inclui validações, painel de indicadores e persistência local em SQLite.
+
+**Tecnologias:** Python, Flask, SQLite, HTML5, CSS3 e JavaScript.
+
+<div align="center">
+<img src="SistemaContasBancarias/docs/screenshots/tela-inicial.png" alt="Painel inicial do Conta+" width="80%" />
+<sub><a href="SistemaContasBancarias/docs/screenshots/">Ver capturas de tela</a></sub>
+</div>
+
+### 2. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoRackDataCenter)
 
 Sistema de monitoramento térmico de racks e sensores, com visualização de temperaturas e alertas.
 
 **Tecnologias:** JavaScript, Node.js, React, API REST e Docker.
 
-### 2. [Sistema de Faturamento de Produtos](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaDeFaturamentoDeProdutos)
+### 3. [Sistema de Faturamento de Produtos](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaDeFaturamentoDeProdutos)
 
 Aplicação para cadastro e gerenciamento de produtos, com regras de negócio e operações de faturamento.
 
@@ -78,21 +89,21 @@ Aplicação para cadastro e gerenciamento de produtos, com regras de negócio e 
 <sub><a href="SistemaDeFaturamentoDeProdutos/docs/screenshots/">Ver capturas de tela</a></sub>
 </div>
 
-### 3. [Auditoria de Eventos do Sistema](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaDeEventosSistema)
+### 4. [Auditoria de Eventos do Sistema](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaDeEventosSistema)
 
 Projeto para registrar, consultar e acompanhar eventos do sistema, com operações de API e validações.
 
 **Tecnologias:** Python e Flask.
 
-### 4. [Controle de Reposição de Almoxarifado](https://github.com/lucasmportela/lucasmportela/tree/main/ControleReposicaoAlmoxarifado)
+### 5. [Controle de Reposição de Almoxarifado](https://github.com/lucasmportela/lucasmportela/tree/main/ControleReposicaoAlmoxarifado)
 
 Sistema de apoio ao controle de estoque e identificação de necessidades de reposição.
 
-### 5. [Sistema de Autenticação](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaAutenticacao)
+### 6. [Sistema de Autenticação](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaAutenticacao)
 
 Aplicação demonstrativa de autenticação, validação de senha e controle de tentativas de acesso.
 
-### 6. [Monitoramento de Baterias](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoDeBaterias)
+### 7. [Monitoramento de Baterias](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoDeBaterias)
 
 Projeto de monitoramento de carga de baterias, com validação de valores e regras de negócio.
 
@@ -101,7 +112,7 @@ Projeto de monitoramento de carga de baterias, com validação de valores e regr
 <sub><a href="MonitoramentoDeBaterias/docs/screenshots/">Ver capturas de tela</a></sub>
 </div>
 
-### 7. [Auditoria de Consumo de Combustível](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaConsumoCombustivel)
+### 8. [Auditoria de Consumo de Combustível](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaConsumoCombustivel)
 
 Aplicação para registrar e analisar informações de consumo de combustível.
 
