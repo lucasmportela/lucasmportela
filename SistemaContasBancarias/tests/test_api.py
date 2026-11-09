@@ -15,6 +15,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 import database
 
+_ORIGINAL_DB_PATH = database.DB_PATH
 _TEST_DATABASE_DIRECTORY = tempfile.TemporaryDirectory(
     prefix="conta_plus_api_tests_"
 )
@@ -30,10 +31,12 @@ class TestApiIntegration(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
+        database.DB_PATH = _ORIGINAL_DB_PATH
         _TEST_DATABASE_DIRECTORY.cleanup()
 
     def setUp(self):
         # Cada teste começa com um banco limpo e isolado.
+        database.DB_PATH = Path(_TEST_DATABASE_DIRECTORY.name) / "conta_plus_test.db"
         with database.conectar() as conn:
             conn.execute("DROP TABLE IF EXISTS transacoes")
             conn.execute("DROP TABLE IF EXISTS contas")
