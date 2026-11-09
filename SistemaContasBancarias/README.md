@@ -35,11 +35,9 @@ Operação de movimentação de conta com as opções saque, depósito ou transf
 Informações das contas cadastradas como saldo, nome do titular e número de conta.
 ![Tela Acompanhamento](docs/screenshots/tela-acompanhamento.png)
 
-
 ### Histórico Financeiro
-Extrato de um conta específica exibindo nome do titular, número da conta, saldo atual e transações realizadas com detalhes, data e horário.
+Extrato de uma conta específica exibindo nome do titular, número da conta, saldo atual e transações realizadas com detalhes, data e horário.
 ![Histórico Financeiro](docs/screenshots/historico-financeiro.png)
-
 
 As capturas de tela utilizadas neste README estão armazenadas em `docs/screenshots/`.
 
@@ -76,7 +74,9 @@ SistemaContasBancarias/
 │   └── js/
 │       └── app.js
 ├── tests/
-│   └── test_conta.py
+│   ├── test_conta.py
+│   ├── test_api.py
+│   └── test_database.py
 └── docs/
     └── screenshots/
         ├── tela-inicial.png
@@ -96,54 +96,56 @@ SistemaContasBancarias/
 
 ### 2. Clone o repositório e entre na pasta do projeto
 
-\`\`\`bash
+```bash
 git clone https://github.com/lucasmportela/lucasmportela.git
 cd lucasmportela/SistemaContasBancarias
-\`\`\`
+```
 
 ### 3. Crie o ambiente virtual e instale as dependências
 
 Windows PowerShell:
 
-\`\`\`powershell
+```powershell
 py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-\`\`\`
+.\.venv\\Scripts\\python.exe -m pip install -r requirements.txt
+```
 
 Windows Prompt de Comando:
 
-\`\`\`cmd
+```cmd
 py -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-\`\`\`
+.venv\\Scripts\\python.exe -m pip install -r requirements.txt
+```
 
 Linux/macOS:
 
-\`\`\`bash
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-\`\`\`
+```
 
 ### 4. Inicie o servidor
 
 Windows PowerShell:
 
-\`\`\`powershell
-.\.venv\Scripts\python.exe app.py
-\`\`\`
+```powershell
+.\.venv\\Scripts\\python.exe app.py
+```
 
 Windows Prompt de Comando:
 
-\`\`\`cmd
-.venv\Scripts\python.exe app.py
-\`\`\`
+```cmd
+.venv\\Scripts\\python.exe app.py
+```
 
 Linux/macOS:
 
-\`\`\`bash
+```bash
 python app.py
-\`\`\`
+```
+
+O modo Debug fica desativado por padrão. Para habilitá-lo durante desenvolvimento local, defina `FLASK_DEBUG=true`. Quando `APP_ENV=production`, o modo Debug permanece desativado.
 
 ### 5. Abra a aplicação
 
@@ -199,7 +201,7 @@ O banco SQLite e as tabelas são criados automaticamente na primeira execução.
 
 A suíte utiliza `unittest` e o cliente de testes do Flask. Os testes de integração criam bancos SQLite temporários, isolados dos dados locais da aplicação.
 
-**Cobertura atual:**
+**Cobertura:**
 
 - **Testes unitários (`test_conta.py`):** regras de depósito, saque, transferência e validação de valores.
 - **Testes das rotas (`test_api.py`):** página inicial, health check, cadastro, duplicidade de conta, depósitos, saques, transferências, extratos, resumo e respostas de erro.
@@ -214,7 +216,7 @@ python -m unittest discover -s tests -v
 No Windows, sem ativar o ambiente virtual:
 
 ```powershell
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\\Scripts\\python.exe -m unittest discover -s tests -v
 ```
 
 Os mesmos testes são executados automaticamente pelo GitHub Actions a cada push ou pull request direcionado à branch `main`.
@@ -232,12 +234,13 @@ Os mesmos testes são executados automaticamente pelo GitHub Actions a cada push
 
 ## 🔒 Limitações e segurança
 
-Este projeto foi criado para fins de estudo. Antes de qualquer uso real, seriam necessários, entre outros pontos:
-- autenticação e autorização de usuários;
-- proteção contra CSRF e outras ameaças web;
-- controle de concorrência e auditoria mais robusta;
-- criptografia e gestão segura de dados;
-- testes de integração e implantação com servidor de produção.
+Este projeto foi criado para fins de estudo e não deve ser exposto publicamente como um serviço financeiro.
+
+- **Não há autenticação nem autorização de usuários.** Qualquer pessoa que consiga acessar a aplicação pode listar contas, consultar extratos e realizar operações em todas as contas cadastradas.
+- Não existe isolamento de dados por usuário ou titular.
+- Não insira dados pessoais, bancários ou financeiros reais.
+- O modo Debug fica desativado por padrão; o servidor local escuta em `127.0.0.1`.
+- Antes de qualquer uso real seriam necessários autenticação, autorização por conta, proteção CSRF, controles de concorrência, auditoria, gestão segura de dados, HTTPS e implantação com servidor de produção.
 
 ## 👨‍💻 Autor
 
