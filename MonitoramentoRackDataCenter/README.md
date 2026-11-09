@@ -1,4 +1,4 @@
-rack# 🌡️ Rack Monitor — Monitoramento Térmico de Data Centers
+# 🌡️ Rack Monitor — Monitoramento Térmico de Data Centers
 
 Aplicação web para simular o monitoramento térmico de três racks de servidores, com três sensores por rack. O sistema recebe as temperaturas, calcula a média de cada rack, identifica a maior leitura e alerta quando algum sensor atinge **75 °C ou mais**.
 
@@ -36,7 +36,7 @@ Alerta exibido quando alguma temperatura de algum rack ultrapassar 75°C
 ## Estrutura do projeto
 
 ```text
-MonitoramenterackDataCenter/
+MonitoramentoRackDataCenter/
 ├── backend/
 │   ├── DOCKERFILE
 │   ├── package.json
@@ -71,12 +71,31 @@ MonitoramenterackDataCenter/
 ### Pré-requisitos
 
 - Node.js e npm instalados.
+- Git instalado.
 
-### 1. Iniciar o backend
-
-Abra um terminal na pasta `backend`:
+### 1. Clone o repositório e entre na pasta do projeto
 
 ```bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/MonitoramentoRackDataCenter
+```
+
+### 2. Iniciar o backend
+
+Abra um terminal na raiz do projeto.
+
+**Windows PowerShell:**
+
+```powershell
+cd backend
+npm.cmd install
+npm.cmd run dev
+```
+
+**Git Bash, Linux ou macOS:**
+
+```bash
+cd backend
 npm install
 npm run dev
 ```
@@ -85,11 +104,22 @@ A API ficará disponível em `http://localhost:3001`.
 
 Verifique o status abrindo `http://localhost:3001/` no navegador.
 
-### 2. Iniciar o frontend
+### 3. Iniciar o frontend
 
-Abra outro terminal na pasta `frontend`:
+Abra outro terminal na raiz do projeto.
+
+**Windows PowerShell:**
+
+```powershell
+cd frontend
+npm.cmd install
+npm.cmd run dev
+```
+
+**Git Bash, Linux ou macOS:**
 
 ```bash
+cd frontend
 npm install
 npm run dev
 ```
