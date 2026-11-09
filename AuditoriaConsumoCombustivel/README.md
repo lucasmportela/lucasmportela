@@ -70,13 +70,7 @@ git clone https://github.com/lucasmportela/lucasmportela.git
 cd lucasmportela/AuditoriaConsumoCombustivel
 ```
 
-### 2. Acesse a pasta do projeto
-
-```bash
-cd AuditoriaConsumoCombustivel
-```
-
-### 3. (Opcional) Crie um ambiente virtual
+### 2. (Opcional) Crie um ambiente virtual
 
 No Windows PowerShell:
 
