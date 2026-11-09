@@ -78,7 +78,7 @@ Aplicação web para cadastro e gerenciamento de contas bancárias, com depósit
 
 ### 2. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/Rack-Monitor-Monitoramento-Termico-de-Data-Centers)
 
-Sistema de monitoramento térmico de racks e sensores, com visualização de temperaturas, alertas e API REST validada por 17 testes de integração.
+Sistema de monitoramento térmico de racks e sensores, com visualização de temperaturas, alertas e API REST validada por 24 testes automatizados, incluindo verificações de segurança HTTP, CORS e limitação de requisições.
 
 **Tecnologias:** JavaScript, Node.js, React, API REST e Docker.
 
