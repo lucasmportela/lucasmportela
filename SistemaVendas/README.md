@@ -52,7 +52,7 @@ SistemaVendas/
 
 ## Como executar
 
-### 1. Pré-requisitos
+### Pré-requisitos
 
 - Python 3.10 ou superior.
 - pip.
@@ -64,13 +64,7 @@ git clone https://github.com/lucasmportela/lucasmportela.git
 cd lucasmportela/SistemaVendas
 ```
 
-### 2. Entre na pasta do projeto
-
-```bash
-cd SistemaVendas
-```
-
-### 4. (Opcional) Crie e ative um ambiente virtual
+### 3. (Opcional) Crie e ative um ambiente virtual
 
 Windows PowerShell:
 
