@@ -33,7 +33,7 @@ tela com as baterias cadastradas para o monitoramento com as opções de descarr
 ## Estrutura do projeto
 
 ```text
-monitoramento-baterias/
+MonitoramentoDeBaterias/
 │
 ├── backend/
 │   ├── app.py
@@ -56,49 +56,75 @@ monitoramento-baterias/
 
 ## Como executar
 
-### 1. Clone o repositório
+### 1. Clone o repositório e entre na pasta do projeto
 
-```bash
-git clone https://github.com/SEU-USUARIO/monitoramento-baterias.git
-cd monitoramento-baterias
-```
+\`\`\`bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/MonitoramentoDeBaterias
+\`\`\`
 
-### 2. Crie e ative um ambiente virtual (recomendado)
+### 2. Crie o ambiente virtual
 
-Windows PowerShell:
+Windows (PowerShell ou Prompt de Comando):
 
-```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-```
+\`\`\`powershell
+py -m venv .venv
+\`\`\`
 
-Se o PowerShell bloquear a ativação, você pode executar os comandos usando o Prompt de Comando:
+Linux/macOS:
 
-```cmd
-venv\Scripts\activate.bat
-```
+\`\`\`bash
+python3 -m venv .venv
+source .venv/bin/activate
+\`\`\`
 
 ### 3. Instale as dependências
 
-```bash
-pip install -r backend/requirements.txt
-```
+Windows PowerShell:
+
+\`\`\`powershell
+.\.venv\Scripts\python.exe -m pip install -r backend/requirements.txt
+\`\`\`
+
+Windows Prompt de Comando:
+
+\`\`\`cmd
+.venv\Scripts\python.exe -m pip install -r backend/requirements.txt
+\`\`\`
+
+Linux/macOS:
+
+\`\`\`bash
+python -m pip install -r backend/requirements.txt
+\`\`\`
 
 ### 4. Inicie o servidor
 
-Na pasta principal do projeto:
+Windows PowerShell:
 
-```bash
+\`\`\`powershell
+.\.venv\Scripts\python.exe backend/app.py
+\`\`\`
+
+Windows Prompt de Comando:
+
+\`\`\`cmd
+.venv\Scripts\python.exe backend/app.py
+\`\`\`
+
+Linux/macOS:
+
+\`\`\`bash
 python backend/app.py
-```
+\`\`\`
 
 ### 5. Acesse a aplicação
 
 Abra no navegador:
 
-```text
+\`\`\`text
 http://127.0.0.1:5000
-```
+\`\`\`
 
 ## Rotas da API
 
