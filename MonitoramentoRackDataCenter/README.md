@@ -1,4 +1,4 @@
-# 🌡️ Rack Monitor — Monitoramento Térmico de Data Centers
+rack# 🌡️ Rack Monitor — Monitoramento Térmico de Data Centers
 
 Aplicação web para simular o monitoramento térmico de três racks de servidores, com três sensores por rack. O sistema recebe as temperaturas, calcula a média de cada rack, identifica a maior leitura e alerta quando algum sensor atinge **75 °C ou mais**.
 
@@ -16,7 +16,7 @@ Aplicação web para simular o monitoramento térmico de três racks de servidor
 ## 📸 Demonstração Visual
 
 ### Tela Inicial (Vazia)
-Aguardando o registro dos valores de temperatura dos sensores dos hack para o monitoramento dos hacks para informar a maior temperatura.
+Aguardando o registro dos valores de temperatura dos sensores dos rack para o monitoramento dos racks para informar a maior temperatura.
 ![Tela Inicial](docs/screenshots/tela-inicial.png)
 
 ### Relatório
@@ -36,7 +36,7 @@ Alerta exibido quando alguma temperatura de algum rack ultrapassar 75°C
 ## Estrutura do projeto
 
 ```text
-MonitoramenteHackDataCenter/
+MonitoramenterackDataCenter/
 ├── backend/
 │   ├── DOCKERFILE
 │   ├── package.json
