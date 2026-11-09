@@ -61,7 +61,7 @@ Projetos selecionados do meu portfólio. Acesse os repositórios para consultar 
 
 Selected projects from my portfolio. Visit the repositories to explore the source code, documentation, and setup instructions.
 
-### 1. [Conta+ — Sistema de Contas Bancárias](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaContasBancarias)
+### 1. [Conta+ — Sistema de Contas Bancárias](https://github.com/lucasmportela/conta-mais)
 
 Aplicação web para cadastro e gerenciamento de contas bancárias, com depósitos, saques, transferências e consulta de extratos. Inclui validações, painel de indicadores e persistência local em SQLite.
 
@@ -72,7 +72,7 @@ Aplicação web para cadastro e gerenciamento de contas bancárias, com depósit
 <sub><a href="SistemaContasBancarias/docs/screenshots/">Ver capturas de tela</a></sub>
 </div>
 
-### 2. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoRackDataCenter)
+### 2. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/rack-monitor)
 
 Sistema de monitoramento térmico de racks e sensores, com visualização de temperaturas e alertas.
 
@@ -83,7 +83,7 @@ Sistema de monitoramento térmico de racks e sensores, com visualização de tem
 <sub><a href="MonitoramentoRackDataCenter/docs/screenshots/">Ver capturas de tela</a></sub>
 </div>
 
-### 3. [Sistema de Faturamento de Produtos](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaDeFaturamentoDeProdutos)
+### 3. [Sistema de Faturamento de Produtos](https://github.com/lucasmportela/sistema-faturamento-produtos)
 
 Aplicação para cadastro e gerenciamento de produtos, com regras de negócio e operações de faturamento.
 
@@ -94,7 +94,7 @@ Aplicação para cadastro e gerenciamento de produtos, com regras de negócio e 
 <sub><a href="SistemaDeFaturamentoDeProdutos/docs/screenshots/">Ver capturas de tela</a></sub>
 </div>
 
-### 4. [Auditoria de Eventos do Sistema](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaDeEventosSistema)
+### 4. [Auditoria de Eventos do Sistema](https://github.com/lucasmportela/sentinela-auditoria-eventos)
 
 Projeto para registrar, consultar e acompanhar eventos do sistema, com operações de API e validações.
 
