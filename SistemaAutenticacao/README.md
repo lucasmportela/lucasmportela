@@ -59,13 +59,20 @@ SistemaAutenticacao/
 - Python 3.10 ou superior.
 - pip.
 
+### 1. Clone o repositório e entre na pasta do projeto
+
+```bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/SistemaAutenticacao
+```
+
 ### 2. Abra o terminal na pasta do projeto
 
 ```bash
 cd SistemaAutenticacao
 ```
 
-### 3. Crie e ative um ambiente virtual (recomendado)
+### 4. Crie e ative um ambiente virtual (recomendado)
 
 Windows PowerShell:
 
