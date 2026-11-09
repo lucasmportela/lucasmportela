@@ -209,5 +209,17 @@ test("rejeita corpo JSON nulo sem causar erro interno", async () => {
     const body = await response.json();
 
     assert.equal(response.status, 400);
-    assert.equal(body.erro, "A matriz deve possuir exatamente 3 racks.");
+    assert.equal(body.erro, "Corpo JSON inválido.");
+});
+
+test("retorna erro JSON padronizado para conteúdo JSON malformado", async () => {
+    const response = await fetch(apiUrl + "/api/monitoramento", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: "{matriz:"
+    });
+    const body = await response.json();
+
+    assert.equal(response.status, 400);
+    assert.equal(body.erro, "Corpo JSON inválido.");
 });

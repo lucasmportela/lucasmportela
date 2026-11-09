@@ -104,6 +104,17 @@ app.post("/api/monitoramento", (req, res) => {
     });
 });
 
+// Padroniza erros de parsing do JSON para manter respostas da API em JSON.
+app.use((error, req, res, next) => {
+    if (error instanceof SyntaxError && error.status === 400 && "body" in error) {
+        return res.status(400).json({
+            erro: "Corpo JSON inválido."
+        });
+    }
+
+    next(error);
+});
+
 // Permite importar a aplicação nos testes sem abrir uma porta automaticamente.
 if (require.main === module) {
     app.listen(PORT, () => {

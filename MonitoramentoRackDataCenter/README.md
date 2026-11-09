@@ -175,7 +175,7 @@ npm install
 npm test
 ```
 
-A suíte cobre 16 cenários, incluindo:
+A suíte cobre 17 cenários, incluindo:
 
 - Rota de status da API.
 - Processamento de matriz 3×3 e cálculo das médias.
