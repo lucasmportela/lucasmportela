@@ -55,13 +55,20 @@ AuditoriaEnergeticaIndustrial/
 - Python 3.10 ou superior.
 - pip.
 
+### 1. Clone o repositório e entre na pasta do projeto
+
+```bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/AuditoriaEnergeticaIndustrial
+```
+
 ### 2. Abra o terminal na pasta do projeto
 
 ```bash
 cd AuditoriaEnergeticaIndustrial
 ```
 
-### 3. (Opcional) Crie um ambiente virtual
+### 4. (Opcional) Crie um ambiente virtual
 
 Windows PowerShell:
 
