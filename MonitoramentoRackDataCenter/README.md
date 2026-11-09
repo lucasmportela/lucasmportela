@@ -36,7 +36,7 @@ Alerta exibido quando alguma temperatura de algum rack ultrapassar 75°C
 ## Estrutura do projeto
 
 ```text
-MonitoramentoRackDataCenter/
+rack-monitor/
 ├── backend/
 │   ├── DOCKERFILE
 │   ├── package.json
@@ -76,8 +76,8 @@ MonitoramentoRackDataCenter/
 ### 1. Clone o repositório e entre na pasta do projeto
 
 ```bash
-git clone https://github.com/lucasmportela/lucasmportela.git
-cd lucasmportela/MonitoramentoRackDataCenter
+git clone https://github.com/lucasmportela/rack-monitor.git
+cd rack-monitor
 ```
 
 ### 2. Iniciar o backend
@@ -196,4 +196,3 @@ No PowerShell, se preferir, use `Invoke-RestMethod` ou uma ferramenta como Postm
 
 Projeto de estudo voltado ao desenvolvimento web, integração frontend/backend e monitoramento de infraestrutura de TI.
 
-Nenhuma imagem demonstrativa foi inventada; registre a aplicação em execução para documentar a interface real.
