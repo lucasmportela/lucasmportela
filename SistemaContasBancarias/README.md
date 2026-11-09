@@ -145,7 +145,7 @@ Linux/macOS:
 python app.py
 \`\`\`
 
-### 4. Abra a aplicação
+### 5. Abra a aplicação
 
 Acesse no navegador:
 
