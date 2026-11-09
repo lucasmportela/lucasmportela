@@ -41,11 +41,7 @@ Extrato de um conta específica exibindo nome do titular, número da conta, sald
 ![Histórico Financeiro](docs/screenshots/historico-financeiro.png)
 
 
-Sugestão de imagens:
-- `prints/01-painel.png` — visão geral do sistema.
-- `prints/02-cadastro-conta.png` — formulário de criação de conta.
-- `prints/03-operacoes.png` — depósito, saque e transferência.
-- `prints/04-extrato.png` — histórico de uma conta.
+As capturas de tela utilizadas neste README estão armazenadas em `docs/screenshots/`.
 
 ## 🧰 Tecnologias utilizadas
 
@@ -63,7 +59,7 @@ Sugestão de imagens:
 ## 📁 Estrutura do projeto
 
 ```text
-sistema-contas-bancarias/
+SistemaContasBancarias/
 ├── app.py
 ├── conta.py
 ├── database.py
@@ -82,8 +78,12 @@ sistema-contas-bancarias/
 ├── tests/
 │   └── test_conta.py
 └── docs/
-    └── screenshots
-        ├── README.md
+    └── screenshots/
+        ├── tela-inicial.png
+        ├── novo-cadastro.png
+        ├── tela-operacao.png
+        ├── tela-acompanhamento.png
+        ├── historico-financeiro.png
         └── .gitkeep
 ```
 
@@ -94,36 +94,56 @@ sistema-contas-bancarias/
 - Python 3.10 ou superior.
 - pip.
 
-### 2. Clone o repositório
+### 2. Clone o repositório e entre na pasta do projeto
 
-```bash
-git clone https://github.com/lucas.m/sistema-contas-bancarias.git
-cd sistema-contas-bancarias
-```
+\`\`\`bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/SistemaContasBancarias
+\`\`\`
 
-### 3. Crie o ambiente virtual
+### 3. Crie o ambiente virtual e instale as dependências
 
-**Windows (PowerShell ou Prompt de Comando):**
+Windows PowerShell:
 
-```powershell
-python -m venv .venv
-```
-
-Se o PowerShell bloquear a ativação de scripts, não é necessário alterar a política de execução. Execute os comandos usando o Python do ambiente virtual:
-
-```powershell
+\`\`\`powershell
+py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe app.py
-```
+\`\`\`
 
-**Linux / macOS:**
+Windows Prompt de Comando:
 
-```bash
+\`\`\`cmd
+py -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+\`\`\`
+
+Linux/macOS:
+
+\`\`\`bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
+\`\`\`
+
+### 4. Inicie o servidor
+
+Windows PowerShell:
+
+\`\`\`powershell
+.\.venv\Scripts\python.exe app.py
+\`\`\`
+
+Windows Prompt de Comando:
+
+\`\`\`cmd
+.venv\Scripts\python.exe app.py
+\`\`\`
+
+Linux/macOS:
+
+\`\`\`bash
 python app.py
-```
+\`\`\`
 
 ### 4. Abra a aplicação
 
