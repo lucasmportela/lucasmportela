@@ -58,4 +58,7 @@ jobs:
           fi
 
           git commit -m "chore(profile): update GitHub statistics cards"
+
+          # Integra commits que chegaram à main enquanto os cartões eram gerados.
+          git pull --rebase origin main
           git push
