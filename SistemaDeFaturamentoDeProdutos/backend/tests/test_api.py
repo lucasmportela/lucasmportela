@@ -1,4 +1,5 @@
 """Testes de integração das rotas Flask com repositório JSON isolado."""
+import json
 import sys
 import tempfile
 import unittest
@@ -15,7 +16,7 @@ from repositorio import RepositorioProdutos
 class TestBillingAPI(unittest.TestCase):
     def setUp(self):
         self.temp_dir = tempfile.TemporaryDirectory(prefix="billing-api-tests-")
-        repositorio = RepositorioProdutos()
+        repositorio = RepositorioProdutos.__new__(RepositorioProdutos)
         repositorio.arquivo = Path(self.temp_dir.name) / "produtos_teste.json"
         repositorio.produtos = []
         repositorio._salvar([])
@@ -90,10 +91,13 @@ class TestBillingAPI(unittest.TestCase):
         self.assertEqual(remover.status_code, 200)
         self.assertEqual(remover.get_json()["quantidade"], 6)
 
-        recarregado = RepositorioProdutos()
-        recarregado.arquivo = Path(app_module.repo.arquivo)
-        recarregado.produtos = recarregado._carregar()
-        self.assertEqual(recarregado.buscar(produto_id)["quantidade"], 6)
+        dados_persistidos = json.loads(
+            Path(app_module.repo.arquivo).read_text(encoding="utf-8")
+        )
+        produto_persistido = next(
+            item for item in dados_persistidos if item["id"] == produto_id
+        )
+        self.assertEqual(produto_persistido["quantidade"], 6)
 
     def test_remocao_maior_que_estoque_nao_altera_produto(self):
         produto = self.criar_produto(quantidade=2)
