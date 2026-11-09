@@ -1,4 +1,5 @@
 """Testes de integração da camada SQLite do Conta+."""
+import sqlite3
 import sys
 import tempfile
 import unittest
@@ -76,7 +77,7 @@ class TestDatabaseIntegration(unittest.TestCase):
     def test_numero_da_conta_deve_ser_unico(self):
         self.criar_conta(numero="UNICO")
 
-        with self.assertRaises(Exception):
+        with self.assertRaises(sqlite3.IntegrityError):
             with database.conectar() as conn:
                 conn.execute(
                     "INSERT INTO contas (nome, numero, saldo) VALUES (?, ?, ?)",
