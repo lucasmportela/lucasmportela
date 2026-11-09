@@ -33,6 +33,9 @@ sentinela-auditoria-eventos/
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
+├── tests/
+│   └── test_api.py
+├── .github/workflows/ci.yml
 ├── auditoria_sistema.log  # criado automaticamente ao registrar o primeiro evento
 ├── templates/
 │   └── index.html
@@ -57,45 +60,45 @@ cd sentinela-auditoria-eventos
 
 No Windows (PowerShell):
 
-\`\`\`powershell
+```powershell
 py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-\`\`\`
+```
 
 No Windows (Prompt de Comando):
 
-\`\`\`cmd
+```cmd
 py -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
-\`\`\`
+```
 
 No Linux/macOS:
 
-\`\`\`bash
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-\`\`\`
+```
 
 ### 3. Inicie o servidor
 
 Windows PowerShell:
 
-\`\`\`powershell
+```powershell
 .\.venv\Scripts\python.exe app.py
-\`\`\`
+```
 
 Windows Prompt de Comando:
 
-\`\`\`cmd
+```cmd
 .venv\Scripts\python.exe app.py
-\`\`\`
+```
 
 Linux/macOS:
 
-\`\`\`bash
+```bash
 python app.py
-\`\`\`
+```
 
 Abra http://127.0.0.1:5000 no navegador. O arquivo `auditoria_sistema.log` será criado automaticamente no primeiro registro.
 
@@ -110,7 +113,7 @@ def registrar_evento(usuario, acao, status):
     with open("auditoria_sistema.log", "a", encoding="utf-8") as arquivo:
         arquivo.write(
             f"[{data_hora}] Usuário: {usuario} | "
-            f"Ação: {acao} | Status: {status}\\n"
+            f"Ação: {acao} | Status: {status}\n"
         )
 ```
 
