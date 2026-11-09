@@ -282,3 +282,61 @@ test("não concede permissão de preflight a uma origem não autorizada", async 
 
     assert.equal(response.headers.get("access-control-allow-origin"), null);
 });
+
+test("inclui cabeçalhos HTTP de segurança nas respostas da API", async () => {
+    const response = await fetch(apiUrl + "/");
+
+    assert.equal(response.headers.get("x-content-type-options"), "nosniff");
+    assert.equal(response.headers.get("x-frame-options"), "DENY");
+    assert.equal(
+        response.headers.get("referrer-policy"),
+        "strict-origin-when-cross-origin"
+    );
+    assert.equal(
+        response.headers.get("permissions-policy"),
+        "camera=(), geolocation=(), microphone=()"
+    );
+    assert.equal(response.headers.get("x-powered-by"), null);
+});
+
+test("rejeita corpos JSON maiores que 10 KB", async () => {
+    const response = await fetch(apiUrl + "/api/monitoramento", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ matriz: criarMatriz(), extra: "x".repeat(11 * 1024) })
+    });
+    const body = await response.json();
+
+    assert.equal(response.status, 413);
+    assert.equal(body.erro, "Corpo da requisição excede o limite de 10 KB.");
+});
+
+test("limita requisições por IP e retorna 429 ao exceder o limite", async () => {
+    const config = app.locals.rateLimitConfig;
+    const maxOriginal = config.max;
+    const windowOriginal = config.windowMs;
+
+    app.locals.rateLimitStore.clear();
+    config.max = 2;
+    config.windowMs = 60000;
+
+    try {
+        const primeira = await requisitarJson({ matriz: criarMatriz() });
+        const segunda = await requisitarJson({ matriz: criarMatriz() });
+        const terceira = await requisitarJson({ matriz: criarMatriz() });
+
+        assert.equal(primeira.response.status, 200);
+        assert.equal(segunda.response.status, 200);
+        assert.equal(terceira.response.status, 429);
+        assert.equal(
+            terceira.body.erro,
+            "Limite de requisições excedido. Tente novamente mais tarde."
+        );
+        assert.ok(Number(terceira.response.headers.get("retry-after")) >= 1);
+        assert.equal(terceira.response.headers.get("ratelimit-limit"), "2");
+    } finally {
+        config.max = maxOriginal;
+        config.windowMs = windowOriginal;
+        app.locals.rateLimitStore.clear();
+    }
+});
