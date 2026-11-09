@@ -75,7 +75,7 @@ class TestAuditoriaAPI(unittest.TestCase):
         self.assertFalse(app_module.ARQUIVO_LOG.exists())
 
     def test_rejeita_usuario_com_delimitador_ou_quebra_de_linha(self):
-        for usuario in ("Lucas|admin", "Lucas\\nadmin", "x" * 101):
+        for usuario in ("Lucas|admin", "Lucas\nadmin", "x" * 101):
             with self.subTest(usuario=usuario):
                 response = self.client.post(
                     "/api/eventos",
