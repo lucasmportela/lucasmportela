@@ -53,23 +53,18 @@ CalculadoraSimples/
 Antes de executar o projeto, instale:
 
 - [Node.js](https://nodejs.org/) (que já inclui o npm).
-- Git (opcional, para enviar o projeto ao GitHub).
+- Git (necessário para clonar o repositório; opcional se você baixar o projeto como ZIP).
 
 ## 🚀 Como executar localmente
 
-### 1. Clone o repositório
+### 1. Clone o repositório e entre na pasta do projeto
 
-```bash
-git clone https://github.com/SEU-USUARIO/CalculadoraSimples.git
-```
+\`\`\`bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/CalculadoraSimples
+\`\`\`
 
-Entre na pasta do projeto:
-
-```bash
-cd CalculadoraSimples
-```
-
-> Se você baixou o projeto como ZIP, extraia o arquivo e abra o terminal dentro da pasta `CalculadoraSimples`.
+> Se você baixou o projeto como ZIP, extraia o arquivo e abra o terminal dentro da pasta \`CalculadoraSimples\`.
 
 ### 2. Instale as dependências
 
