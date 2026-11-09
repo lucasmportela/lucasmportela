@@ -74,7 +74,7 @@ Windows PowerShell:
 
 ```powershell
 python -m venv .venv
-.venv\\Scripts\\Activate.ps1
+.venv\Scripts\Activate.ps1
 ```
 
 Se o PowerShell bloquear a ativação, você pode executar diretamente o pip e o Python do ambiente virtual, ou usar o Prompt de Comando.
