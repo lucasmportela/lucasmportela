@@ -1,0 +1,74 @@
+name: CI - Portfólio
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    name: Python - Sintaxe e testes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: SistemaContasBancarias/requirements.txt
+
+      - name: Verificar sintaxe de todos os arquivos Python
+        run: python -m compileall -q .
+
+      - name: Instalar dependências do Conta+
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r SistemaContasBancarias/requirements.txt
+
+      - name: Executar testes unitários do Conta+
+        run: python -m unittest discover -s SistemaContasBancarias/tests -v
+
+  frontend:
+    name: Build - ${{ matrix.project }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - project: Rack Monitor
+            directory: MonitoramentoRackDataCenter/frontend
+          - project: Sistema de Faturamento
+            directory: SistemaDeFaturamentoDeProdutos/frontend
+
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências
+        working-directory: ${{ matrix.directory }}
+        run: npm install --no-audit --no-fund
+
+      - name: Gerar build de produção
+        working-directory: ${{ matrix.directory }}
+        run: npm run build
