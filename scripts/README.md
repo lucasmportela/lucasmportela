@@ -1,15 +1,15 @@
 # Publicar os projetos em repositórios individuais
 
-O portfólio mantém os projetos organizados no repositório principal. Este script publica cópias independentes dos quatro sistemas de destaque e atualiza os links correspondentes no README do perfil.
+O portfólio mantém os projetos organizados no repositório principal. Este script publica cópias independentes dos quatro sistemas de destaque e atualiza os links correspondentes no README do perfil. Os nomes abaixo são os nomes atuais dos repositórios no GitHub.
 
-## Repositórios que serão criados
+## Repositórios utilizados
 
 | Projeto | Repositório |
 |---|---|
-| Conta+ | [conta-mais](https://github.com/lucasmportela/conta-mais) |
-| Rack Monitor | [rack-monitor](https://github.com/lucasmportela/rack-monitor) |
-| Sistema de Faturamento | [sistema-faturamento-produtos](https://github.com/lucasmportela/sistema-faturamento-produtos) |
-| Sentinela — Auditoria de Eventos | [sentinela-auditoria-eventos](https://github.com/lucasmportela/sentinela-auditoria-eventos) |
+| Conta+ | [Conta-Plus-Sistema-de-Contas-Bancarias](https://github.com/lucasmportela/Conta-Plus-Sistema-de-Contas-Bancarias) |
+| Rack Monitor | [Rack-Monitor-Monitoramento-Termico-de-Data-Centers](https://github.com/lucasmportela/Rack-Monitor-Monitoramento-Termico-de-Data-Centers) |
+| Sistema de Faturamento | [Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque](https://github.com/lucasmportela/Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque) |
+| Sentinela — Auditoria de Eventos | [Sentinela-Sistema-de-Auditoria-de-Eventos](https://github.com/lucasmportela/Sentinela-Sistema-de-Auditoria-de-Eventos) |
 
 ## Pré-requisitos
 
@@ -44,7 +44,7 @@ O script:
 
 1. Confere a branch, o remote, a autenticação e a ausência de alterações locais.
 2. Copia os arquivos de cada projeto, incluindo README, screenshots, `.gitignore` e workflows.
-3. Cria os quatro repositórios como públicos na conta `lucasmportela`.
+3. Cria como públicos apenas os repositórios que ainda não existirem na conta `lucasmportela`; os existentes são preservados.
 4. Envia os arquivos para a branch `main` de cada novo repositório.
 5. Atualiza os links dos quatro projetos no README principal e envia essa alteração para o GitHub.
 
@@ -53,7 +53,7 @@ O script:
 - O script não apaga nem renomeia as pastas do repositório principal.
 - Os repositórios existentes nunca são sobrescritos; se algum já existir, o script o ignora.
 - A criação é pública porque estes projetos fazem parte do portfólio.
-- Se o processo for interrompido, execute novamente. Repositórios que já tiverem sido criados serão ignorados e o processo continuará com os demais.
+- Se o processo for interrompido, execute novamente. Repositórios que já existirem serão ignorados e o processo continuará com os demais, sem sobrescrever seu conteúdo.
 - Revise os arquivos e remova qualquer segredo ou dado pessoal antes de publicar.
 
 ## Observação sobre o histórico
