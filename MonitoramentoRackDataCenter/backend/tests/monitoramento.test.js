@@ -223,3 +223,62 @@ test("retorna erro JSON padronizado para conteúdo JSON malformado", async () =>
     assert.equal(response.status, 400);
     assert.equal(body.erro, "Corpo JSON inválido.");
 });
+
+test("permite CORS para a origem local autorizada", async () => {
+    const response = await fetch(apiUrl + "/", {
+        headers: { Origin: "http://localhost:5173" }
+    });
+
+    assert.equal(response.status, 200);
+    assert.equal(
+        response.headers.get("access-control-allow-origin"),
+        "http://localhost:5173"
+    );
+});
+
+test("não libera CORS para uma origem externa não autorizada", async () => {
+    const response = await fetch(apiUrl + "/", {
+        headers: { Origin: "https://origem-nao-autorizada.example" }
+    });
+
+    assert.equal(response.status, 200);
+    assert.equal(response.headers.get("access-control-allow-origin"), null);
+});
+
+test("permite preflight POST somente para uma origem autorizada", async () => {
+    const response = await fetch(apiUrl + "/api/monitoramento", {
+        method: "OPTIONS",
+        headers: {
+            Origin: "http://127.0.0.1:5173",
+            "Access-Control-Request-Method": "POST",
+            "Access-Control-Request-Headers": "Content-Type"
+        }
+    });
+
+    assert.equal(response.status, 204);
+    assert.equal(
+        response.headers.get("access-control-allow-origin"),
+        "http://127.0.0.1:5173"
+    );
+    assert.match(
+        response.headers.get("access-control-allow-methods") || "",
+        /POST/
+    );
+    assert.match(
+        response.headers.get("access-control-allow-headers") || "",
+        /Content-Type/i
+    );
+});
+
+test("não concede permissão de preflight a uma origem não autorizada", async () => {
+    const response = await fetch(apiUrl + "/api/monitoramento", {
+        method: "OPTIONS",
+        headers: {
+            Origin: "https://origem-nao-autorizada.example",
+            "Access-Control-Request-Method": "POST",
+            "Access-Control-Request-Headers": "Content-Type"
+        }
+    });
+
+    assert.equal(response.headers.get("access-control-allow-origin"), null);
+});
