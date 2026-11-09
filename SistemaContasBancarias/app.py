@@ -1,5 +1,6 @@
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
+import os
 import sqlite3
 
 from flask import Flask, jsonify, render_template, request
@@ -9,7 +10,14 @@ from database import conectar, inicializar_banco, obter_conta, listar_contas, sa
 
 BASE_DIR = Path(__file__).resolve().parent
 app = Flask(__name__, template_folder="templates", static_folder="static")
-app.config["JSON_AS_ASCII"] = False
+
+APP_ENV = os.getenv("APP_ENV", "development").strip().lower()
+DEBUG = (
+    APP_ENV != "production"
+    and os.getenv("FLASK_DEBUG", "false").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
+app.config.update(JSON_AS_ASCII=False, DEBUG=DEBUG)
 
 inicializar_banco()
 
@@ -232,4 +240,8 @@ def nao_encontrado(_erro):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(
+        host=os.getenv("FLASK_HOST", "127.0.0.1"),
+        port=int(os.getenv("PORT", "5000")),
+        debug=DEBUG,
+    )
