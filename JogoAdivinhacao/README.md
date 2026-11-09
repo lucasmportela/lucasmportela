@@ -45,9 +45,10 @@ JogoAdivinhacao/
 
 Requer Python 3.10 ou superior.
 
-1. Entre na pasta do projeto:
+1. Clone o repositório e entre na pasta do projeto:
    ```bash
-   cd JogoAdivinhacao
+   git clone https://github.com/lucasmportela/lucasmportela.git
+   cd lucasmportela/JogoAdivinhacao
    ```
 2. (Opcional) Crie e ative um ambiente virtual no Windows:
    ```powershell
