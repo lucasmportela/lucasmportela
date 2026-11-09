@@ -40,11 +40,11 @@ MonitoramentoRackDataCenter/
 ├── backend/
 │   ├── tests/
 │   │   └── monitoramento.test.js
-│   ├── Dockerfile
+│   ├── DOCKERFILE
 │   ├── package.json
 │   └── server.js
 ├── frontend/
-│   ├── Dockerfile
+│   ├── DOCKERFILE
 │   ├── index.html
 │   ├── nginx.conf
 │   ├── package.json
@@ -175,7 +175,7 @@ npm install
 npm test
 ```
 
-A suíte cobre 17 cenários, incluindo:
+A suíte cobre **17 cenários**, incluindo:
 
 - Rota de status da API.
 - Processamento de matriz 3×3 e cálculo das médias.
@@ -183,7 +183,7 @@ A suíte cobre 17 cenários, incluindo:
 - Temperaturas nos limites permitidos e valores inválidos.
 - Alerta abaixo, exatamente em e acima de 75 °C.
 - Matrizes e racks com quantidades incorretas de sensores.
-- Corpo JSON nulo e campos ausentes.
+- Corpos JSON nulos ou malformados e campos ausentes.
 
 ## Melhorias futuras
 
