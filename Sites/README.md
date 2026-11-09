@@ -6,7 +6,7 @@ Coleção de quatro sites demonstrativos desenvolvidos com **HTML5, CSS3 e JavaS
 
 | Projeto | Segmento | Pasta |
 |---|---|---|
-| **Jurupizza** | Pizzaria e petiscaria | [`Juripizza/`](Jurupizza/) |
+| **Jurupizza** | Pizzaria e petiscaria | [`Jurupizza/`](Jurupizza/) |
 | **Leal & Freitas Advocacia** | Serviços jurídicos | [`Leal&FreitasAdvocacia/`](Leal&FreitasAdvocacia/) |
 | **Aurea Dental Studio** | Clínica odontológica | [`AureaDentalStudio/`](AureaDentalStudio/) |
 | **Casa Norte Imóveis** | Mercado imobiliário | [`CasaNorteImóveis/`](CasaNorteImóveis/) |

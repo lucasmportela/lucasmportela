@@ -1,0 +1,220 @@
+# Conta+ — Sistema de Contas Bancárias
+
+Aplicação web demonstrativa para gerenciamento de contas bancárias, desenvolvida a partir de um exercício de Programação Orientada a Objetos em Python. O projeto permite cadastrar contas, realizar depósitos, saques e transferências, além de consultar o extrato de movimentações.
+
+> **Aviso:** este é um projeto educacional para portfólio. Não é um sistema bancário real e não deve ser utilizado para armazenar dinheiro ou dados financeiros verdadeiros.
+
+## ✨ Funcionalidades
+
+- Cadastro de contas com titular, número e saldo inicial.
+- Validação de nomes, números de conta e valores.
+- Depósitos com atualização automática do saldo.
+- Saques com bloqueio de saldo insuficiente.
+- Transferências entre contas diferentes.
+- Bloqueio de transferência para a própria conta.
+- Extrato individual com histórico das movimentações.
+- Painel com total de contas, saldo consolidado e quantidade de movimentações.
+- Persistência local dos dados em SQLite.
+- Interface responsiva para desktop e dispositivos móveis.
+
+## 📸 Demonstração Visual
+
+### Tela Inicial (Vazia)
+Tela inicial do programa aguardando as primeiras entradas de dados para serem processados com a exibição de total de contas cadastradas, saldo consolidado de todas as contas e número total de movimentações registradas.
+![Tela Inicial](docs/screenshots/tela-inicial.png)
+
+### Tela Cadastro
+Seção cadastro aguardando os dados nome do titular, número da conta e saldo inicial para cadastrar uma nova conta.
+![Tela Cadastro](docs/screenshots/novo-cadastro.png)
+
+### Tela Operação
+Operação de movimentação de conta com as opções saque, depósito ou transferência para outra conta com especificação de conta e valor da operação.
+![Tela Operação](docs/screenshots/tela-operacao.png)
+
+### Tela Acompanhamento
+Informações das contas cadastradas como saldo, nome do titular e número de conta.
+![Tela Acompanhamento](docs/screenshots/tela-acompanhamento.png)
+
+
+### Histórico Financeiro
+Extrato de um conta específica exibindo nome do titular, número da conta, saldo atual e transações realizadas com detalhes, data e horário.
+![Histórico Financeiro](docs/screenshots/historico-financeiro.png)
+
+
+Sugestão de imagens:
+- `prints/01-painel.png` — visão geral do sistema.
+- `prints/02-cadastro-conta.png` — formulário de criação de conta.
+- `prints/03-operacoes.png` — depósito, saque e transferência.
+- `prints/04-extrato.png` — histórico de uma conta.
+
+## 🧰 Tecnologias utilizadas
+
+**Back-end**
+- Python
+- Flask
+- SQLite
+- Decimal para cálculos monetários
+
+**Front-end**
+- HTML5
+- CSS3
+- JavaScript (Fetch API)
+
+## 📁 Estrutura do projeto
+
+```text
+sistema-contas-bancarias/
+├── app.py
+├── conta.py
+├── database.py
+├── requirements.txt
+├── .gitignore
+├── README.md
+├── instance/
+│   └── contas.db             # Criado automaticamente ao iniciar
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── app.js
+├── tests/
+│   └── test_conta.py
+└── prints/
+    ├── README.md
+    └── .gitkeep
+```
+
+## ⚙️ Como executar
+
+### 1. Pré-requisitos
+
+- Python 3.10 ou superior.
+- pip.
+
+### 2. Clone o repositório
+
+```bash
+git clone https://github.com/SEU-USUARIO/sistema-contas-bancarias.git
+cd sistema-contas-bancarias
+```
+
+### 3. Crie o ambiente virtual
+
+**Windows (PowerShell ou Prompt de Comando):**
+
+```powershell
+python -m venv .venv
+```
+
+Se o PowerShell bloquear a ativação de scripts, não é necessário alterar a política de execução. Execute os comandos usando o Python do ambiente virtual:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe app.py
+```
+
+**Linux / macOS:**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
+```
+
+### 4. Abra a aplicação
+
+Acesse no navegador:
+
+```text
+http://127.0.0.1:5000
+```
+
+O banco SQLite e as tabelas são criados automaticamente na primeira execução.
+
+## 🔌 API REST
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/api/health` | Verifica se a API está ativa |
+| GET | `/api/resumo` | Retorna os indicadores do painel |
+| GET | `/api/contas` | Lista todas as contas |
+| POST | `/api/contas` | Cria uma conta |
+| POST | `/api/contas/<id>/depositos` | Realiza depósito |
+| POST | `/api/contas/<id>/saques` | Realiza saque |
+| POST | `/api/contas/<id>/transferencias` | Realiza transferência |
+| GET | `/api/contas/<id>/extrato` | Consulta o extrato |
+
+### Exemplo de criação de conta
+
+```json
+{
+  "nome": "Lucas Martins",
+  "numero": "00001",
+  "saldo_inicial": "150.00"
+}
+```
+
+### Exemplo de depósito ou saque
+
+```json
+{
+  "valor": "50.00"
+}
+```
+
+### Exemplo de transferência
+
+```json
+{
+  "conta_destino_id": 2,
+  "valor": "25.00"
+}
+```
+
+## 🧪 Testes
+
+Execute os testes das regras da classe `Conta`:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+No Windows, caso não tenha ativado o ambiente virtual:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+```
+
+## 🧠 Regras de negócio
+
+- O nome do titular deve conter pelo menos 3 caracteres.
+- O número da conta deve ser único.
+- O saldo inicial pode ser zero ou positivo.
+- Depósitos, saques e transferências exigem valores maiores que zero.
+- Não é permitido sacar ou transferir um valor superior ao saldo disponível.
+- Uma conta não pode transferir para ela mesma.
+- Os valores monetários são tratados com `Decimal` para evitar imprecisões comuns de ponto flutuante.
+- Cada movimentação é registrada no extrato da conta correspondente.
+
+## 🔒 Limitações e segurança
+
+Este projeto foi criado para fins de estudo. Antes de qualquer uso real, seriam necessários, entre outros pontos:
+- autenticação e autorização de usuários;
+- proteção contra CSRF e outras ameaças web;
+- controle de concorrência e auditoria mais robusta;
+- criptografia e gestão segura de dados;
+- testes de integração e implantação com servidor de produção.
+
+## 👨‍💻 Autor
+
+**Lucas Martins Portela**  
+Desenvolvedor Back-end Júnior
+
+- GitHub: [@lucasmportela](https://github.com/lucasmportela)
+
+---
+
+Desenvolvido para praticar Python, orientação a objetos, APIs REST, persistência de dados e integração entre front-end e back-end.

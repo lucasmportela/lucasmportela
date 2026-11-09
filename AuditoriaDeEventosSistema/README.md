@@ -130,19 +130,3 @@ Exemplo de linha gravada:
 
 ## Nota de segurança
 Projeto para estudo. Um arquivo local editável não garante uma trilha de auditoria inviolável. Em produção, implemente autenticação e controle de acesso, armazenamento centralizado, proteção contra adulteração, rotação e retenção de logs, sincronização de horário e monitoração. O servidor Flask deste projeto usa modo de desenvolvimento e não deve ser exposto diretamente à internet.    
-
-## 📸 Demonstração Visual
-
-Aqui estão algumas telas da aplicação em funcionamento:
-
-### Tela Inicial
-Aguardando o registro do primeiro veículo.
-![Tela Inicial](docs/screenshots/tela-inicial.png)
-
-### Resultado do Veículo
-Painel de desempenho exibindo o cálculo e a classificação do veículo.
-![Resultado do Veículo](docs/screenshots/tela-resultado.png)
-
-### Fechamento do Turno
-Resumo geral da frota após encerrar o expediente.
-![Fechamento do Turno](docs/screenshots/tela-fechamento.png)

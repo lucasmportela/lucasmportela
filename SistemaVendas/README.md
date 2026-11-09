@@ -27,7 +27,7 @@ Tela com o total de faturamento acumulado de todas as vendas, quantidade total d
 
 ### Tela Pagamento
 Desconto automático de compras e quantidade de parcelas a serem efetuadas no pagamento, subtotal, valor do desconto adequado e o total da venda com as quantidade e valor de parcelas.
-![Tela Pagamento](docs/screenshots/tela-Pagamento.png)
+![Tela Pagamento](docs/screenshots/tela-pagamento.png)
 
 ## Tecnologias
 

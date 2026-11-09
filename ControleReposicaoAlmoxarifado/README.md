@@ -27,7 +27,7 @@ Todos os campos preenchidos com o código e quantidade para o processamento dos 
 
 ### Diagnóstico 
 Resultado do diagnóstico com o relatório do almoxarifado indicando maior e menor saldo e quantidade de produtos abaixo do estoque mínimo e quais são. Inventário analisado com os nomes, códigos , quantidade e situação de todos os produtos
-![Diagnóstico](docs/screenshots/tela-Diagnóstico.png)
+![Diagnóstico](docs/screenshots/tela-diagnóstico.png)
 
 ## Tecnologias utilizadas
 
