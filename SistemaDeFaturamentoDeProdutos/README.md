@@ -36,7 +36,7 @@ Os dados cadastrados são gravados em `backend/data/produtos.json`, criado autom
 ## Estrutura
 
 ```text
-sistema-faturamento-produtos/
+Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque/
 ├── backend/
 │   ├── data/                # criado automaticamente pelo backend
 │   ├── app.py
@@ -75,8 +75,8 @@ sistema-faturamento-produtos/
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/lucasmportela/sistema-faturamento-produtos.git
-cd sistema-faturamento-produtos
+git clone https://github.com/lucasmportela/Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque.git
+cd Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque
 ```
 
 ### 2. Iniciar o backend
