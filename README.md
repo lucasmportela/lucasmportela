@@ -155,13 +155,15 @@ Aplicação para registrar e analisar informações de consumo de combustível.
 
 ## 📊 Estatísticas do GitHub | GitHub stats
 
+<!-- Os cartões SVG são atualizados automaticamente pelo workflow update-readme-stats.yml. -->
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=lucasmportela&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" alt="Estatísticas do GitHub" />
-
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucasmportela&layout=compact&theme=tokyonight&hide_border=true" alt="Linguagens mais utilizadas" />
+<img height="165" src="./assets/github-stats.svg" alt="Estatísticas do GitHub de Lucas Martins Portela" />
+<img height="165" src="./assets/top-languages.svg" alt="Linguagens mais utilizadas nos repositórios públicos" />
 
 </div>
+
+<sub>Estatísticas atualizadas diariamente pelo GitHub Actions. Os dados consideram os repositórios públicos.</sub>
 
 ## 🎯 Objetivos | Goals
 
