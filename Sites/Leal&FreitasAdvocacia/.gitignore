@@ -1,0 +1,19 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+
+# Dependências e ambientes
+node_modules/
+.venv/
+venv/
+
+# Arquivos locais e logs
+.env
+.env.*
+!.env.example
+*.log
