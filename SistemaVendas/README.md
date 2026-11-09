@@ -64,7 +64,7 @@ git clone https://github.com/lucasmportela/lucasmportela.git
 cd lucasmportela/SistemaVendas
 ```
 
-### 3. (Opcional) Crie e ative um ambiente virtual
+### 2. (Opcional) Crie e ative um ambiente virtual
 
 Windows PowerShell:
 
@@ -73,19 +73,19 @@ python -m venv .venv
 .venv\Scripts\Activate.ps1
 ```
 
-### 4. Instale as dependências
+### 3. Instale as dependências
 
 ```bash
 pip install -r backend/requirements.txt
 ```
 
-### 5. Inicie o servidor
+### 4. Inicie o servidor
 
 ```bash
 python backend/app.py
 ```
 
-### 6. Abra no navegador
+### 5. Abra no navegador
 
 ```text
 http://127.0.0.1:5000
