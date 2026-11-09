@@ -33,6 +33,25 @@ Alerta exibido quando alguma temperatura atinge 75 °C ou mais.
 **Backend:** Node.js, Express e CORS.  
 **Infraestrutura:** Docker, Docker Compose e Nginx.
 
+## Configuração de CORS
+
+A API não libera acesso CORS para qualquer origem. Por padrão, somente as origens locais do Vite abaixo são autorizadas:
+
+- `http://localhost:5173`
+- `http://127.0.0.1:5173`
+
+Para permitir o frontend hospedado em outro endereço, configure a variável de ambiente `CORS_ORIGINS` com a origem exata, incluindo protocolo e porta quando necessário. Para múltiplas origens, separe os endereços por vírgula.
+
+Exemplo para produção:
+
+```env
+CORS_ORIGINS=https://app.seu-dominio.com
+```
+
+No Docker Compose, copie `.env.example` para `.env` e ajuste essa variável. Não use curingas (`*`) nem inclua domínios que não controlam o frontend.
+
+O frontend local e a versão Docker utilizam proxies do Vite e do Nginx para encaminhar as chamadas `/api`; quando a chamada é feita pela mesma origem da página, não é necessário liberar um domínio adicional no CORS.
+
 ## Estrutura do projeto
 
 ```text
