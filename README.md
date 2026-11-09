@@ -2,7 +2,7 @@
 
 <img src="assets/banner-github-minimalista.png" alt="Lucas Martins Portela — Desenvolvedor Back-end Júnior" width="100%" />
 
-# Olá! Eu sou Lucas Martins Portela 👋
+# Olá! Eu sou Lucas Martins Portela 
 
 ### Desenvolvedor Back-end Júnior | Junior Back-end Developer
 
@@ -15,7 +15,7 @@
 
 ---
 
-## 👨‍💻 Sobre mim | About me
+## Sobre mim | About me
 
 **Português**
 
@@ -29,7 +29,7 @@ I'm an aspiring developer focused on back-end development and interested in buil
 
 I work on practical projects to improve my programming logic, data handling, REST API development, and integration between back-end services and web interfaces.
 
-## 🧰 Tecnologias e ferramentas | Tech stack
+## Tecnologias e ferramentas | Tech stack
 
 **Linguagens | Languages**
 
@@ -55,7 +55,7 @@ I work on practical projects to improve my programming logic, data handling, RES
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-## 🚀 Projetos em destaque | Featured projects
+## Projetos em destaque | Featured projects
 
 Projetos selecionados do meu portfólio. Acesse os repositórios para consultar o código, a documentação e as instruções de execução.
 
@@ -141,7 +141,7 @@ Aplicação para registrar e analisar informações de consumo de combustível.
 <sub><a href="AuditoriaConsumoCombustivel/docs/screenshots/">Ver capturas de tela</a></sub>
 </div>
 
-## 📂 Outros projetos | Other projects
+## Outros projetos | Other projects
 
 | Projeto | Descrição |
 |---|---|
@@ -153,7 +153,7 @@ Aplicação para registrar e analisar informações de consumo de combustível.
 | [Sites e interfaces web](https://github.com/lucasmportela/lucasmportela/tree/main/Sites) | Coleção de sites demonstrativos. |
 | [Lógica de Programação](https://github.com/lucasmportela/LogicaProgramacao) | Exercícios e estudos de fundamentos de programação. |
 
-## 📊 Estatísticas do GitHub | GitHub stats
+## Estatísticas do GitHub | GitHub stats
 
 <!-- Os cartões SVG são atualizados automaticamente pelo workflow update-readme-stats.yml. -->
 <div align="center">
@@ -165,7 +165,7 @@ Aplicação para registrar e analisar informações de consumo de combustível.
 
 <sub>Estatísticas atualizadas diariamente pelo GitHub Actions. Os dados consideram os repositórios públicos.</sub>
 
-## 🎯 Objetivos | Goals
+## Objetivos | Goals
 
 - Aprofundar meus conhecimentos em Python e desenvolvimento back-end.  
   *Deepen my knowledge of Python and back-end development.*
@@ -176,7 +176,7 @@ Aplicação para registrar e analisar informações de consumo de combustível.
 - Colaborar em projetos e evoluir como profissional.  
   *Contribute to projects and grow as a software developer.*
 
-## 📫 Contato | Contact
+## Contato | Contact
 
 - **GitHub:** [@lucasmportela](https://github.com/lucasmportela)
 - **LinkedIn:** [Lucas Martins Portela](https://www.linkedin.com/in/lucasmartinsportela/)
