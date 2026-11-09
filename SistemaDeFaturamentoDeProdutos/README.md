@@ -34,7 +34,7 @@ Contém a quantidade de tipos de produtos, unidades e valor total de estoque. Re
 ## Estrutura
 
 ```text
-SistemaDeFaturamentoDeProdutos/
+sistema-faturamento-produtos/
 ├── backend/
 │   ├── data/
 │   │   └── produtos.json
@@ -74,8 +74,8 @@ SistemaDeFaturamentoDeProdutos/
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/lucasmportela/lucasmportela.git
-cd lucasmportela/SistemaDeFaturamentoDeProdutos
+git clone https://github.com/lucasmportela/sistema-faturamento-produtos.git
+cd sistema-faturamento-produtos
 ```
 
 ### 2. Iniciar o backend
@@ -90,13 +90,13 @@ py -m venv .venv
 Instale as dependências:
 
 ```powershell
-.\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
 Inicie a API:
 
 ```powershell
-.\\.venv\\Scripts\\python.exe app.py
+.\.venv\Scripts\python.exe app.py
 ```
 
 Backend: `http://127.0.0.1:5000`
