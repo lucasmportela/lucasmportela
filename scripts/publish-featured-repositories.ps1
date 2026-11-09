@@ -42,6 +42,16 @@ if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
     throw "GitHub CLI não encontrado. Instale com: winget install --id GitHub.cli -e"
 }
 
+# Lista os repositórios existentes uma única vez. Não usa "gh repo view" para
+# nomes inexistentes, pois algumas versões/configurações do PowerShell tratam
+# a resposta GraphQL 404 como NativeCommandError e interrompem o script.
+$ExistingRepositoryNames = @(
+    & gh repo list $Owner --limit 1000 --json name --jq '.[].name'
+)
+if ($LASTEXITCODE -ne 0) {
+    throw "Não foi possível consultar os repositórios de $Owner. Verifique gh auth status."
+}
+
 & gh auth status *> $null
 if ($LASTEXITCODE -ne 0) {
     throw "Faça login no GitHub CLI primeiro, executando: gh auth login"
@@ -69,8 +79,7 @@ foreach ($Project in $Projects) {
     Write-Host ""
     Write-Host "==> Verificando $FullName" -ForegroundColor Cyan
 
-    & gh repo view $FullName --json name *> $null
-    if ($LASTEXITCODE -eq 0) {
+    if ($ExistingRepositoryNames -contains $Project.Repository) {
         Write-Warning "O repositório $FullName já existe. Não será sobrescrito."
         $RepositoriesToLink += $Project
         continue
