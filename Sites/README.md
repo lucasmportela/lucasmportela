@@ -20,16 +20,23 @@ Coleção de quatro sites demonstrativos desenvolvidos com **HTML5, CSS3 e JavaS
 
 ## Como executar
 
-Entre na pasta do projeto desejado e abra `index.html` no navegador.
-
-Ou inicie um servidor local com Python:
+### 1. Clone o repositório e entre na pasta Sites
 
 ```bash
-cd jurupizza
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/Sites
+```
+
+### 2. Escolha o site que deseja executar
+
+Exemplo com o Jurupizza:
+
+```bash
+cd Jurupizza
 python -m http.server 5500
 ```
 
-Acesse `http://localhost:5500`. Para testar outro projeto, entre na pasta correspondente e repita o comando.
+Acesse `http://localhost:5500`. Para testar outro site, encerre o servidor com `Ctrl+C`, volte para a pasta `Sites` com `cd ..` e entre na pasta desejada. Use aspas em nomes que contenham espaços, acentos ou caracteres especiais, por exemplo: `cd "Leal&FreitasAdvocacia"`.
 
 ## Organização
 
