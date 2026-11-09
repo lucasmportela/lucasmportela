@@ -1,0 +1,61 @@
+name: Atualizar estatísticas do perfil
+
+on:
+  schedule:
+    - cron: "23 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - .github/workflows/update-readme-stats.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-profile-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Gerar cartões de estatísticas
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Gerar cartão de estatísticas
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=lucasmportela&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true
+          path: assets/github-stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Gerar cartão de linguagens
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=lucasmportela&layout=compact&langs_count=6&theme=tokyonight&hide_border=true
+          path: assets/top-languages.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Salvar cartões no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/github-stats.svg assets/top-languages.svg
+
+          if git diff --cached --quiet; then
+            echo "Os cartões já estão atualizados."
+            exit 0
+          fi
+
+          git commit -m "chore(profile): update GitHub statistics cards"
+          git push
