@@ -177,6 +177,7 @@ Aplicação para registrar e analisar informações de consumo de combustível.
 ## 📫 Contato | Contact
 
 - **GitHub:** [@lucasmportela](https://github.com/lucasmportela)
+- **LinkedIn:** [Lucas Martins Portela](https://www.linkedin.com/in/lucasmartinsportela/)
 
 <div align="center">
 
