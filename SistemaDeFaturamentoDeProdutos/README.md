@@ -157,6 +157,18 @@ Frontend: `http://localhost:3000`
 }
 ```
 
+## Testes automatizados
+
+Os testes usam `unittest` e o cliente de testes do Flask. A API utiliza um arquivo JSON temporário por teste, evitando alterar os dados locais do projeto.
+
+Execute na raiz do projeto:
+
+```bash
+python -m unittest discover -s backend/tests -v
+```
+
+A suíte verifica a configuração de segurança e as rotas de saúde, cadastro, listagem, validação, movimentação de estoque, atualização, exclusão e persistência. O GitHub Actions executa os testes, a verificação de sintaxe Python e o build do frontend.
+
 ## Conceitos praticados
 
 - Classes e objetos.
