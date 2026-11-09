@@ -195,19 +195,29 @@ O banco SQLite e as tabelas são criados automaticamente na primeira execução.
 }
 ```
 
-## 🧪 Testes
+## 🧪 Testes automatizados
 
-Execute os testes das regras da classe `Conta`:
+A suíte utiliza `unittest` e o cliente de testes do Flask. Os testes de integração criam bancos SQLite temporários, isolados dos dados locais da aplicação.
+
+**Cobertura atual:**
+
+- **Testes unitários (`test_conta.py`):** regras de depósito, saque, transferência e validação de valores.
+- **Testes das rotas (`test_api.py`):** página inicial, health check, cadastro, duplicidade de conta, depósitos, saques, transferências, extratos, resumo e respostas de erro.
+- **Testes do banco (`test_database.py`):** criação das tabelas, persistência, commit, rollback, unicidade do número da conta e integridade referencial.
+
+Execute toda a suíte a partir da pasta `SistemaContasBancarias`:
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-No Windows, caso não tenha ativado o ambiente virtual:
+No Windows, sem ativar o ambiente virtual:
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
+
+Os mesmos testes são executados automaticamente pelo GitHub Actions a cada push ou pull request direcionado à branch `main`.
 
 ## 🧠 Regras de negócio
 
