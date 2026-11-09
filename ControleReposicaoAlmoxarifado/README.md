@@ -56,13 +56,20 @@ ControleReposicaoAlmoxarifado/
 - Python 3.10 ou superior.
 - pip.
 
-### 1. Entre na pasta do projeto
+### 1. Clone o repositório e entre na pasta do projeto
+
+```bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd lucasmportela/ControleReposicaoAlmoxarifado
+```
+
+### 2. Entre na pasta do projeto
 
 ```bash
 cd ControleReposicaoAlmoxarifado
 ```
 
-### 2. (Opcional) Crie um ambiente virtual
+### 3. (Opcional) Crie um ambiente virtual
 
 No Windows PowerShell:
 
