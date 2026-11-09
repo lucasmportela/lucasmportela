@@ -78,6 +78,11 @@ Sistema de monitoramento térmico de racks e sensores, com visualização de tem
 
 **Tecnologias:** JavaScript, Node.js, React, API REST e Docker.
 
+<div align="center">
+<img src="MonitoramentoRackDataCenter/docs/screenshots/tela-inicial.png" alt="Tela inicial do Rack Monitor" width="80%" />
+<sub><a href="MonitoramentoRackDataCenter/docs/screenshots/">Ver capturas de tela</a></sub>
+</div>
+
 ### 3. [Sistema de Faturamento de Produtos](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaDeFaturamentoDeProdutos)
 
 Aplicação para cadastro e gerenciamento de produtos, com regras de negócio e operações de faturamento.
@@ -95,13 +100,28 @@ Projeto para registrar, consultar e acompanhar eventos do sistema, com operaçõ
 
 **Tecnologias:** Python e Flask.
 
+<div align="center">
+<img src="AuditoriaDeEventosSistema/docs/screenshots/tela-inicial.png" alt="Tela inicial da Auditoria de Eventos do Sistema" width="80%" />
+<sub><a href="AuditoriaDeEventosSistema/docs/screenshots/">Ver capturas de tela</a></sub>
+</div>
+
 ### 5. [Controle de Reposição de Almoxarifado](https://github.com/lucasmportela/lucasmportela/tree/main/ControleReposicaoAlmoxarifado)
 
 Sistema de apoio ao controle de estoque e identificação de necessidades de reposição.
 
+<div align="center">
+<img src="ControleReposicaoAlmoxarifado/docs/screenshots/tela-inicial.png" alt="Tela inicial do Controle de Reposição de Almoxarifado" width="80%" />
+<sub><a href="ControleReposicaoAlmoxarifado/docs/screenshots/">Ver capturas de tela</a></sub>
+</div>
+
 ### 6. [Sistema de Autenticação](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaAutenticacao)
 
 Aplicação demonstrativa de autenticação, validação de senha e controle de tentativas de acesso.
+
+<div align="center">
+<img src="SistemaAutenticacao/docs/screenshots/tela-inicial.png" alt="Tela inicial do Sistema de Autenticação" width="80%" />
+<sub><a href="SistemaAutenticacao/docs/screenshots/">Ver capturas de tela</a></sub>
+</div>
 
 ### 7. [Monitoramento de Baterias](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoDeBaterias)
 
