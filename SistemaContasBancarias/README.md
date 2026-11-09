@@ -81,9 +81,10 @@ sistema-contas-bancarias/
 │       └── app.js
 ├── tests/
 │   └── test_conta.py
-└── prints/
-    ├── README.md
-    └── .gitkeep
+└── docs/
+    └── screenshots
+        ├── README.md
+        └── .gitkeep
 ```
 
 ## ⚙️ Como executar
