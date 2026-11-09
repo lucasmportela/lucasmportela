@@ -4,7 +4,28 @@ const cors = require("cors");
 const app = express();
 const PORT = Number(process.env.PORT) || 3001;
 
-app.use(cors());
+// Origens que podem acessar a API diretamente pelo navegador.
+// Em produção, configure CORS_ORIGINS com a origem exata do frontend.
+const DEFAULT_CORS_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173"
+];
+
+const corsOrigins = (
+    process.env.CORS_ORIGINS === undefined
+        ? DEFAULT_CORS_ORIGINS.join(",")
+        : process.env.CORS_ORIGINS
+)
+    .split(",")
+    .map((origin) => origin.trim())
+    .filter(Boolean);
+
+app.use(cors({
+    origin: corsOrigins,
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+    optionsSuccessStatus: 204
+}));
 app.use(express.json());
 
 // Rota inicial da API
