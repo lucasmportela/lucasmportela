@@ -154,11 +154,18 @@ def api_sacar(conta_id):
 def api_transferir(conta_id):
     dados = request.get_json(silent=True) or {}
     destino_id = dados.get("conta_destino_id")
+    if destino_id is None or str(destino_id).strip() == "":
+        return resposta_erro("Informe uma conta de destino válida.")
+
     try:
         destino_id = int(destino_id)
+    except (TypeError, ValueError):
+        return resposta_erro("Informe uma conta de destino válida.")
+
+    try:
         valor = validar_valor(dados.get("valor"))
-    except (TypeError, ValueError) as erro:
-        return resposta_erro(str(erro) if str(erro) else "Informe uma conta de destino válida.")
+    except ValueError as erro:
+        return resposta_erro(str(erro))
 
     if destino_id == conta_id:
         return resposta_erro("A conta de origem e destino devem ser diferentes.")
