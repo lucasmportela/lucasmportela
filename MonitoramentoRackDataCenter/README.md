@@ -66,7 +66,6 @@ $env:CORS_ORIGINS = "https://app.seu-dominio.com"
 export CORS_ORIGINS="https://app.seu-dominio.com"
 ```
 
-Para Docker Compose, copie `.env.example` para `.env` na raiz do projeto e ajuste o valor de `CORS_ORIGINS`.
 
 ## Estrutura do projeto
 
