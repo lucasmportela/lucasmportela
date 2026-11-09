@@ -3,12 +3,44 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from pathlib import Path
 import re
 import os
+import secrets
 
 ROOT = Path(__file__).resolve().parent.parent
 FRONTEND = ROOT / "frontend"
 
 app = Flask(__name__, static_folder=str(FRONTEND), static_url_path="")
-app.secret_key = os.environ.get("SECRET_KEY", "chave-temporaria-apenas-para-estudo")
+
+APP_ENV = os.getenv("APP_ENV", "development").strip().lower()
+SECRET_KEY = os.getenv("SECRET_KEY")
+
+if not SECRET_KEY:
+    if APP_ENV == "production":
+        raise RuntimeError(
+            "A variável SECRET_KEY é obrigatória quando APP_ENV=production."
+        )
+    SECRET_KEY = secrets.token_urlsafe(32)
+    print(
+        "AVISO: SECRET_KEY não definida. Uma chave temporária foi gerada "
+        "para desenvolvimento; as sessões serão invalidadas ao reiniciar."
+    )
+elif APP_ENV == "production" and len(SECRET_KEY) < 32:
+    raise RuntimeError(
+        "Em produção, SECRET_KEY deve ter pelo menos 32 caracteres."
+    )
+
+DEBUG = (
+    APP_ENV != "production"
+    and os.getenv("FLASK_DEBUG", "false").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
+
+app.config.update(
+    SECRET_KEY=SECRET_KEY,
+    DEBUG=DEBUG,
+    SESSION_COOKIE_HTTPONLY=True,
+    SESSION_COOKIE_SAMESITE="Lax",
+    SESSION_COOKIE_SECURE=(APP_ENV == "production"),
+)
 
 MAX_ATTEMPTS = 3
 
@@ -100,4 +132,8 @@ def reset():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(
+        host=os.getenv("FLASK_HOST", "127.0.0.1"),
+        port=int(os.getenv("PORT", "5000")),
+        debug=DEBUG,
+    )
