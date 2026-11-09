@@ -34,6 +34,15 @@ jurupizza/
     └── .gitkeep
 ```
 
+## Como obter o projeto
+
+Clone o repositório principal e entre diretamente na pasta deste site:
+
+```bash
+git clone https://github.com/lucasmportela/lucasmportela.git
+cd "lucasmportela/Sites/Jurupizza"
+```
+
 ## Como executar localmente
 
 Não é necessário instalar dependências.
