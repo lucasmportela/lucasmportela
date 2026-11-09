@@ -29,6 +29,9 @@ class TestApiIntegration(unittest.TestCase):
     def setUpClass(cls):
         app_module.app.config.update(TESTING=True)
 
+    def test_debug_desativado_por_padrao(self):
+        self.assertFalse(app_module.app.debug)
+
     @classmethod
     def tearDownClass(cls):
         database.DB_PATH = _ORIGINAL_DB_PATH
