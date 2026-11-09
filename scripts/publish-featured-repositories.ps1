@@ -4,10 +4,10 @@ Set-StrictMode -Version Latest
 $Owner = "lucasmportela"
 $BaseBranch = "main"
 $Projects = @(
-    @{ Folder = "SistemaContasBancarias"; Repository = "conta-mais"; Description = "Conta+ - aplicação educacional de contas bancárias com Flask, SQLite e testes automatizados." },
-    @{ Folder = "MonitoramentoRackDataCenter"; Repository = "rack-monitor"; Description = "Rack Monitor - monitoramento térmico de racks de servidores com React, Node.js e Docker." },
-    @{ Folder = "SistemaDeFaturamentoDeProdutos"; Repository = "sistema-faturamento-produtos"; Description = "Sistema de faturamento e controle de estoque com Python, Flask e React." },
-    @{ Folder = "AuditoriaDeEventosSistema"; Repository = "sentinela-auditoria-eventos"; Description = "Sentinela - aplicação educacional para registro e consulta de eventos de auditoria." }
+    @{ Folder = "SistemaContasBancarias"; Repository = "Conta-Plus-Sistema-de-Contas-Bancarias"; Description = "Conta+ - aplicação educacional de contas bancárias com Flask, SQLite e testes automatizados." },
+    @{ Folder = "MonitoramentoRackDataCenter"; Repository = "Rack-Monitor-Monitoramento-Termico-de-Data-Centers"; Description = "Rack Monitor - monitoramento térmico de racks de servidores com React, Node.js e Docker." },
+    @{ Folder = "SistemaDeFaturamentoDeProdutos"; Repository = "Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque"; Description = "Sistema de faturamento e controle de estoque com Python, Flask e React." },
+    @{ Folder = "AuditoriaDeEventosSistema"; Repository = "Sentinela-Sistema-de-Auditoria-de-Eventos"; Description = "Sentinela - aplicação educacional para registro e consulta de eventos de auditoria." }
 )
 
 function Invoke-CheckedCommand {
@@ -95,7 +95,7 @@ foreach ($Project in $Projects) {
         }
 
         # Não publica o arquivo de dados local do faturamento; ele é recriado pelo backend.
-        if ($Project.Repository -eq "sistema-faturamento-produtos") {
+        if ($Project.Repository -eq "Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque") {
             $LocalData = Join-Path $TempPath "backend/data/produtos.json"
             if (Test-Path -LiteralPath $LocalData) {
                 Remove-Item -LiteralPath $LocalData -Force
