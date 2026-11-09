@@ -62,7 +62,7 @@ git clone https://github.com/lucasmportela/lucasmportela.git
 cd lucasmportela/AuditoriaEnergeticaIndustrial
 ```
 
-### 3. (Opcional) Crie um ambiente virtual
+### 2. (Opcional) Crie um ambiente virtual
 
 Windows PowerShell:
 
@@ -71,19 +71,19 @@ python -m venv .venv
 .venv\Scripts\Activate.ps1
 ```
 
-### 4. Instale as dependências
+### 3. Instale as dependências
 
 ```bash
 pip install -r backend/requirements.txt
 ```
 
-### 5. Inicie o backend
+### 4. Inicie o backend
 
 ```bash
 python backend/app.py
 ```
 
-### 6. Acesse no navegador
+### 5. Acesse no navegador
 
 ```text
 http://127.0.0.1:5000
