@@ -77,7 +77,7 @@ Selected projects from my portfolio. Visit the repositories to explore the sourc
 
 ### 1. [Conta+ — Sistema de Contas Bancárias](https://github.com/lucasmportela/Conta-Plus-Sistema-de-Contas-Bancarias)
 
-Aplicação web para cadastro e gerenciamento de contas bancárias, com depósitos, saques, transferências e consulta de extratos. Inclui validações, painel de indicadores e persistência local em SQLite.
+Aplicação web para cadastro e gerenciamento de contas bancárias, com depósitos, saques, transferências e consulta de extratos. Inclui validações de regras financeiras, bloqueio de operações com saldo insuficiente, painel de indicadores e persistência local em SQLite. Possui **27 testes automatizados** cobrindo regras de negócio, API e banco de dados.
 
 **Tecnologias:** Python, Flask, SQLite, HTML5, CSS3 e JavaScript.
 
@@ -88,7 +88,7 @@ Aplicação web para cadastro e gerenciamento de contas bancárias, com depósit
 
 ### 2. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/Rack-Monitor-Monitoramento-Termico-de-Data-Centers)
 
-Sistema de monitoramento térmico de racks e sensores, com visualização de temperaturas, alertas e API REST validada por 24 testes automatizados, incluindo verificações de segurança HTTP, CORS e limitação de requisições.
+Sistema de monitoramento térmico de racks e sensores, com visualização de temperaturas, alertas e API REST protegida por cabeçalhos HTTP de segurança, CORS restrito e limitação de requisições. Possui **29 testes automatizados**: 24 de integração da API e 5 de interface.
 
 **Tecnologias:** JavaScript, Node.js, React, API REST e Docker.
 
@@ -99,7 +99,7 @@ Sistema de monitoramento térmico de racks e sensores, com visualização de tem
 
 ### 3. [Sistema de Faturamento de Produtos](https://github.com/lucasmportela/Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque)
 
-Aplicação para cadastro e gerenciamento de produtos, com regras de negócio e operações de faturamento.
+Aplicação full stack para cadastro e gerenciamento de produtos, controle de entradas e saídas de estoque e cálculo do valor armazenado. Possui **17 testes automatizados**, sendo 10 de backend e 7 de interface React.
 
 **Tecnologias:** Python, Flask, React e JSON.
 
@@ -110,7 +110,7 @@ Aplicação para cadastro e gerenciamento de produtos, com regras de negócio e 
 
 ### 4. [Auditoria de Eventos do Sistema](https://github.com/lucasmportela/Sentinela-Sistema-de-Auditoria-de-Eventos)
 
-Projeto para registrar, consultar e acompanhar eventos do sistema, com operações de API e validações.
+Aplicação de auditoria com autenticação individual, autorização por papéis (`operator` e `admin`), proteção CSRF, bloqueio temporário após cinco tentativas de login incorretas e trilha de auditoria encadeada com HMAC-SHA256 para detectar adulterações. Utiliza persistência relacional com SQLite ou PostgreSQL e possui **20 testes automatizados** cobrindo autenticação, autorização e integridade dos registros.
 
 **Tecnologias:** Python e Flask.
 
