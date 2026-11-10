@@ -15,7 +15,7 @@ Aplicação web desenvolvida a partir de um exercício de Programação Orientad
 - Cancelar a venda atual sem alterar o faturamento já registrado.
 - Interface responsiva para desktop e dispositivos móveis.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 ### Tela Inicial (Vazia)
 Aguardando o cadastro do valor do primeiro produto.

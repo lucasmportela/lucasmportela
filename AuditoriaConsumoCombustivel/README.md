@@ -18,7 +18,7 @@ O projeto transforma um exercício de lógica em Python em uma aplicação com f
 - Fechamento do turno com média geral de consumo da frota.
 - Opção para iniciar uma nova auditoria.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 Aqui estão algumas telas da aplicação em funcionamento:
 

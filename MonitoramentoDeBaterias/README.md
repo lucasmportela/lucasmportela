@@ -12,7 +12,7 @@ Aplicação web para cadastrar baterias industriais, acompanhar o nível de carg
 - Remoção de baterias cadastradas.
 - Validações realizadas no backend em Python.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 ### Tela Inicial (Vazia)
 Aguardando as identificações das baterias, carga máxima e carga atual.

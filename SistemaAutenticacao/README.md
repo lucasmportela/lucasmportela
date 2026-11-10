@@ -14,7 +14,7 @@ O usuário cadastra uma senha numérica de quatro dígitos. Em seguida, o sistem
 - Reinicialização da demonstração.
 - Senha armazenada como hash, sem texto puro.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 ### Tela Inicial (Vazia)
 Aguardando o cadastro da senha.
@@ -168,7 +168,7 @@ Exemplo de corpo JSON para cadastro e login:
 - Ao chegar a zero, a sessão fica bloqueada.
 - A contagem regressiva só acontece depois da autenticação bem-sucedida.
 
-## 🔒 Segurança e limitações
+## Segurança e limitações
 
 Este projeto é educacional e não deve ser utilizado para proteger contas reais.
 

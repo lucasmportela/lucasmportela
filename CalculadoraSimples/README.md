@@ -1,10 +1,10 @@
-# 🧮 Calculadora React
+# Calculadora React
 
 Uma calculadora web desenvolvida com **React**, **JavaScript** e **Webpack**, com interface responsiva e operações matemáticas básicas.
 
 O projeto foi criado para praticar desenvolvimento frontend, componentização com React, gerenciamento de estado com Hooks e configuração de ambiente com Webpack e Babel.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - Adição, subtração, multiplicação e divisão.
 - Validação para impedir divisão por zero.
@@ -15,7 +15,7 @@ O projeto foi criado para praticar desenvolvimento frontend, componentização c
 - Opção para limpar o histórico.
 - Interface responsiva para diferentes tamanhos de tela.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 ### Tela Inicial (Vazia)
 Aguardando o registro do primeiro e segundo número e a operação a ser efetuada.
@@ -25,7 +25,7 @@ Aguardando o registro do primeiro e segundo número e a operação a ser efetuad
 Resultado do cálculo atual com histórico de cálculos realizados.
 ![Resultado](docs/screenshots/tela-resultado.png)
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - [React](https://react.dev/) — construção da interface.
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) — lógica da aplicação.
@@ -33,7 +33,7 @@ Resultado do cálculo atual com histórico de cálculos realizados.
 - [Babel](https://babeljs.io/) — transformação de JSX e JavaScript.
 - HTML5 e CSS3 — estrutura e estilização.
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```text
 CalculadoraSimples/
@@ -48,14 +48,14 @@ CalculadoraSimples/
 └── README.md
 ```
 
-## ⚙️ Pré-requisitos
+## Pré-requisitos
 
 Antes de executar o projeto, instale:
 
 - [Node.js](https://nodejs.org/) (que já inclui o npm).
 - Git (necessário para clonar o repositório; opcional se você baixar o projeto como ZIP).
 
-## 🚀 Como executar localmente
+## Como executar localmente
 
 ### 1. Clone o repositório e entre na pasta do projeto
 
@@ -100,7 +100,7 @@ O Webpack iniciará o servidor de desenvolvimento. Abra no navegador:
 http://localhost:3000
 ```
 
-## 📦 Gerar versão de produção
+## Gerar versão de produção
 
 Para gerar os arquivos otimizados para produção:
 
@@ -118,7 +118,7 @@ npm run build
 
 Os arquivos gerados ficarão na pasta `dist/`.
 
-## 🧠 Lógica da calculadora
+## Lógica da calculadora
 
 A aplicação recebe dois números e uma operação matemática. O cálculo é realizado de acordo com o operador selecionado:
 
@@ -131,7 +131,7 @@ A aplicação recebe dois números e uma operação matemática. O cálculo é r
 
 A aplicação verifica se os campos foram preenchidos, valida os valores numéricos e impede a divisão por zero. Quando o cálculo é concluído, o resultado é apresentado na tela e a operação é adicionada ao histórico.
 
-## 📚 Objetivos de aprendizado
+## Objetivos de aprendizado
 
 Este projeto permite praticar:
 
@@ -143,7 +143,7 @@ Este projeto permite praticar:
 - Organização de arquivos em um projeto frontend.
 - Configuração de Webpack e Babel.
 
-## 👨‍💻 Autor
+##  Autor
 
 Desenvolvido como projeto de estudo e prática de desenvolvimento frontend.
 

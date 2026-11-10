@@ -15,7 +15,7 @@ O projeto transforma um exercício de lógica de programação em uma aplicaçã
 - Relatório visual com a situação individual de cada produto.
 - Validação dos dados no backend.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 ### Tela Inicial (Vazia)
 Aguardando o registro dos primeiros códigos de produtos, saldo de estoque e estoque mínimo de segurança.

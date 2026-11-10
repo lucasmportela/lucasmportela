@@ -11,7 +11,7 @@ Jogo web em que o usuário disputa três rodadas contra a máquina para descobri
 - Soma da pontuação e classificação final: Excelente (acima de 200), Bom (100 a 200) ou Tente Novamente (abaixo de 100).
 - Reinício da partida.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 ### Tela Inicial (Vazia)
 Aguardando o início do jogo e seu primero palpite.

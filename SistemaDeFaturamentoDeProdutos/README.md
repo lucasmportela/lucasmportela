@@ -1,4 +1,4 @@
-# 💼 Sistema de Faturamento Comercial — Cadastro e Controle de Estoque
+# Sistema de Faturamento Comercial — Cadastro e Controle de Estoque
 
 Aplicação Full Stack desenvolvida a partir de um exercício de Python sobre Programação Orientada a Objetos. O sistema permite cadastrar produtos, controlar entradas e saídas de estoque e calcular o valor total armazenado.
 
@@ -16,7 +16,7 @@ As regras de negócio são protegidas no backend por meio de encapsulamento, `@p
 - Busca por nome e exclusão de produtos.
 - Persistência dos dados em arquivo JSON.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 ### Tela Inicial (Vazia)
 Aguardando o registro do produto com o seu nome, valor unitário e quantidade.
@@ -116,7 +116,7 @@ Frontend: `http://localhost:3000`
 
 > No PowerShell do Windows, use `npm.cmd` para evitar o bloqueio de execução do arquivo `npm.ps1`.
 
-## 🔒 Configuração de segurança
+## Configuração de segurança
 
 - O CORS não aceita qualquer origem. Por padrão, somente `http://localhost:3000` e `http://127.0.0.1:3000` podem acessar a API por chamadas cross-origin.
 - Para autorizar outro endereço, defina `CORS_ORIGINS` com uma lista separada por vírgulas contendo apenas as origens confiáveis. Exemplo no PowerShell: `$env:CORS_ORIGINS = "https://meu-frontend.example.com"`.

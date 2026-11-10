@@ -2,7 +2,7 @@
 
 Aplicação web para cadastrar e consultar funcionários de uma escola. O projeto foi desenvolvido a partir de um exercício de Programação Orientada a Objetos em Python.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 ### Tela Inicial (Vazia)
 Aguardando o registro dos primeiros nomes de funcionários, salários e cargos.

@@ -13,7 +13,7 @@ Aplicação web baseada no exercício de lógica de programação que audita o c
 - Relatório visual com situação individual de cada máquina.
 - Mensagem **“Operação Dentro dos Parâmetros de Eficiência”** quando nenhuma máquina ultrapassa o teto.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 ### Tela Inicial (Vazia)
 Aguardando o registro das primeiras máquinas, seus respectivos consumos e o teto operacional.

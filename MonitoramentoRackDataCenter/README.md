@@ -1,4 +1,4 @@
-# 🌡️ Rack Monitor — Monitoramento Térmico de Data Centers
+# Rack Monitor — Monitoramento Térmico de Data Centers
 
 Aplicação web para simular o monitoramento térmico de três racks de servidores, com três sensores por rack. O sistema recebe as temperaturas, calcula a média de cada rack, identifica a maior leitura e alerta quando algum sensor atinge **75 °C ou mais**.
 
@@ -13,7 +13,7 @@ Aplicação web para simular o monitoramento térmico de três racks de servidor
 - API REST para processar a matriz de temperaturas.
 - Execução local ou com Docker Compose.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 ### Tela Inicial (Vazia)
 Aguardando o registro dos valores de temperatura dos sensores dos racks.
