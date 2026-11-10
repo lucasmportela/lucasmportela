@@ -88,9 +88,15 @@ Aplicação web para cadastro e gerenciamento de contas bancárias, com depósit
 
 ### 2. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/Rack-Monitor-Monitoramento-Termico-de-Data-Centers)
 
-Sistema de monitoramento térmico de racks e sensores, com visualização de temperaturas, alertas e API REST protegida por cabeçalhos HTTP de segurança, CORS restrito e limitação de requisições. Possui **29 testes automatizados**: 24 de integração da API e 5 de interface.
+[![Acessar demonstração online](https://img.shields.io/badge/Demonstra%C3%A7%C3%A3o-online-brightgreen?style=for-the-badge)](https://rack-monitor-demo.onrender.com)
+
+**[Acessar o Rack Monitor ao vivo](https://rack-monitor-demo.onrender.com)**
+
+Sistema de monitoramento térmico simulado de racks e sensores, com visualização de temperaturas, alertas e API REST protegida por cabeçalhos HTTP de segurança, CORS restrito e limitação de requisições. Possui **29 testes automatizados**: 24 de integração da API e 5 de interface.
 
 **Tecnologias:** JavaScript, Node.js, React, API REST e Docker.
+
+<sub>Hospedado gratuitamente no Render. A primeira abertura após um período sem acessos pode levar alguns instantes. As temperaturas são simuladas e não representam sensores físicos.</sub>
 
 <div align="center">
 <img src="MonitoramentoRackDataCenter/docs/screenshots/tela-inicial.png" alt="Tela inicial do Rack Monitor" width="80%" />
