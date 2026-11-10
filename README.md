@@ -77,7 +77,7 @@ Selected projects from my portfolio. Visit the repositories to explore the sourc
 
 ### 1. [Conta+ — Sistema de Contas Bancárias](https://github.com/lucasmportela/Conta-Plus-Sistema-de-Contas-Bancarias)
 
-Aplicação web para cadastro e gerenciamento individual de contas bancárias, com autenticação, sessões protegidas, isolamento de dados por usuário, proteção CSRF e bloqueio temporário após cinco tentativas de login incorretas. Inclui depósitos, saques, transferências, consulta de extratos, validações de regras financeiras e persistência em SQLite. Possui **36 testes automatizados** cobrindo regras de negócio, autenticação, limitação de tentativas, autorização, API e banco de dados.
+Aplicação web para cadastro e gerenciamento individual de contas bancárias, com autenticação, sessões protegidas, isolamento de dados por usuário, proteção CSRF e bloqueio temporário após cinco tentativas de login incorretas. Inclui depósitos, saques, transferências, consulta de extratos, validações de regras financeiras e persistência em SQLite. Possui **37 testes automatizados** cobrindo regras de negócio, autenticação, limitação de tentativas, concorrência, autorização, API e banco de dados.
 
 **Tecnologias:** Python, Flask, SQLite, HTML5, CSS3 e JavaScript.
 
