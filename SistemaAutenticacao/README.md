@@ -73,7 +73,7 @@ Acesse http://127.0.0.1:5000.
 
 ## Criar o primeiro administrador
 
-O cadastro pela interface cria exclusivamente usuários comuns. Para criar uma conta administrativa, pare o servidor e execute na raiz do repositório:
+O cadastro pela interface cria exclusivamente usuários comuns. Para criar uma conta administrativa, pare o servidor e execute o comando de dentro da pasta `SistemaAutenticacao`:
 
 \`\`\`powershell
 flask --app backend.app create-admin
