@@ -29,6 +29,16 @@ I'm an aspiring developer focused on back-end development and interested in buil
 
 I work on practical projects to improve my programming logic, data handling, REST API development, and integration between back-end services and web interfaces.
 
+## Objetivo profissional | Career objective
+
+**Português**
+
+Busco uma oportunidade como **Desenvolvedor Back-end Júnior**, na qual eu possa contribuir com o desenvolvimento e a manutenção de aplicações e APIs, aplicar boas práticas de programação e continuar evoluindo profissionalmente em colaboração com a equipe.
+
+**English**
+
+I'm seeking an opportunity as a **Junior Back-end Developer**, where I can contribute to building and maintaining applications and APIs, apply software development best practices, and continue growing professionally as part of a team.
+
 ## Tecnologias e ferramentas | Tech stack
 
 **Linguagens | Languages**
