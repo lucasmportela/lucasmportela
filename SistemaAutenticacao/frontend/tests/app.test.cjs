@@ -194,7 +194,8 @@ test("login de administrador carrega a lista e permite solicitar alteração de 
   targetRow.querySelector("select").value = "admin";
   targetRow.querySelector("button").click();
 
-  await waitFor(() => roleUpdated && calls.some((call) => call.method === "PATCH"));
+  await waitFor(() => roleUpdated && calls.some((call) => call.method === "PATCH")
+    && document.querySelector("#dashboard-message").textContent === "Permissão atualizada.");
   const patch = calls.find((call) => call.method === "PATCH");
   assert.equal(patch.options.headers["X-CSRF-Token"], "csrf-admin");
   assert.deepEqual(patch.body, { role: "admin" });
