@@ -7,35 +7,35 @@ BACKEND_DIR = Path(__file__).resolve().parents[1]
 if str(BACKEND_DIR) not in sys.path:
     sys.path.insert(0, str(BACKEND_DIR))
 
-from app import create_app
+from app import User, create_app, db
 from werkzeug.security import generate_password_hash
 
 
 class TestUserAuthenticationAndAuthorization(unittest.TestCase):
     def setUp(self):
         self.temp_dir = tempfile.TemporaryDirectory()
-        database = str(Path(self.temp_dir.name) / "test-auth.db")
+        self.database = str(Path(self.temp_dir.name) / "test-auth.db")
         self.app = create_app({
             "TESTING": True,
             "SECRET_KEY": "test-secret-key-that-is-long-enough-123456",
-            "DATABASE": database,
+            "DATABASE": self.database,
             "SESSION_COOKIE_SECURE": False,
         })
         self.client = self.app.test_client()
         self.csrf = self.client.get("/api/status").get_json()["csrf_token"]
 
         with self.app.app_context():
-            from flask import current_app
-            import sqlite3
-            connection = sqlite3.connect(current_app.config["DATABASE"])
-            connection.execute(
-                "INSERT INTO users (name, email, password_hash, role) VALUES (?, ?, ?, ?)",
-                ("Admin", "admin@example.com", generate_password_hash("AdminPassword123"), "admin"),
-            )
-            connection.commit()
-            connection.close()
+            db.session.add(User(
+                name="Admin",
+                email="admin@example.com",
+                password_hash=generate_password_hash("AdminPassword123"),
+                role="admin",
+            ))
+            db.session.commit()
 
     def tearDown(self):
+        with self.app.app_context():
+            db.session.remove()
         self.temp_dir.cleanup()
 
     def post(self, path, body=None):
@@ -64,17 +64,13 @@ class TestUserAuthenticationAndAuthorization(unittest.TestCase):
         response = self.register()
         self.assertEqual(response.status_code, 201)
         with self.app.app_context():
-            from flask import current_app
-            import sqlite3
-            connection = sqlite3.connect(current_app.config["DATABASE"])
-            user = connection.execute(
-                "SELECT role, password_hash FROM users WHERE email = ?",
-                ("user@example.com",),
-            ).fetchone()
-            connection.close()
-        self.assertEqual(user[0], "user")
-        self.assertNotEqual(user[1], "UserPassword123")
-        self.assertTrue(user[1].startswith("scrypt:") or user[1].startswith("pbkdf2:"))
+            user = db.session.query(User).filter_by(email="user@example.com").one()
+            self.assertEqual(user.role, "user")
+            self.assertNotEqual(user.password_hash, "UserPassword123")
+            self.assertTrue(
+                user.password_hash.startswith("scrypt:")
+                or user.password_hash.startswith("pbkdf2:")
+            )
 
     def test_registration_rejects_short_password_and_invalid_email(self):
         short = self.register(password="123456")
@@ -86,6 +82,21 @@ class TestUserAuthenticationAndAuthorization(unittest.TestCase):
         self.register()
         duplicate = self.register(email="USER@example.com")
         self.assertEqual(duplicate.status_code, 409)
+
+    def test_registration_persists_user_between_app_instances(self):
+        response = self.register()
+        self.assertEqual(response.status_code, 201)
+
+        second_app = create_app({
+            "TESTING": True,
+            "SECRET_KEY": "another-test-secret-key-that-is-long-enough",
+            "DATABASE": self.database,
+            "SESSION_COOKIE_SECURE": False,
+        })
+        with second_app.app_context():
+            persisted = db.session.query(User).filter_by(email="user@example.com").one()
+            self.assertEqual(persisted.name, "Pessoa Usuária")
+            self.assertEqual(persisted.role, "user")
 
     def test_state_changing_request_requires_csrf_token(self):
         response = self.client.post("/api/register", json={
@@ -133,7 +144,10 @@ class TestUserAuthenticationAndAuthorization(unittest.TestCase):
         self.login()
         users = self.client.get("/api/admin/users")
         self.assertEqual(users.status_code, 200)
-        target = next(user for user in users.get_json()["users"] if user["email"] == "user@example.com")
+        target = next(
+            user for user in users.get_json()["users"]
+            if user["email"] == "user@example.com"
+        )
         changed = self.client.patch(
             f"/api/admin/users/{target['id']}/role",
             json={"role": "admin"},
@@ -179,12 +193,9 @@ class TestUserAuthenticationAndAuthorization(unittest.TestCase):
     def test_inactive_user_cannot_reuse_existing_session(self):
         self.login()
         with self.app.app_context():
-            from flask import current_app
-            import sqlite3
-            connection = sqlite3.connect(current_app.config["DATABASE"])
-            connection.execute("UPDATE users SET is_active = 0 WHERE email = ?", ("admin@example.com",))
-            connection.commit()
-            connection.close()
+            user = db.session.query(User).filter_by(email="admin@example.com").one()
+            user.is_active = False
+            db.session.commit()
         response = self.client.get("/api/me")
         self.assertEqual(response.status_code, 401)
 

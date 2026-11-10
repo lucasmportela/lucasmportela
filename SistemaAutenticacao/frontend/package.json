@@ -1,0 +1,12 @@
+{
+  "name": "sistema-autenticacao-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Testes automatizados da interface do Sistema de Autenticação",
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  }
+}

@@ -84,6 +84,27 @@ jobs:
         working-directory: MonitoramentoRackDataCenter/backend
         run: npm test
 
+  auth-frontend-tests:
+    name: Sistema de Autenticação - testes do frontend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências dos testes
+        working-directory: SistemaAutenticacao/frontend
+        run: npm install --no-audit --no-fund
+
+      - name: Executar testes da interface
+        working-directory: SistemaAutenticacao/frontend
+        run: npm test
+
   frontend:
     name: Build - ${{ matrix.project }}
     runs-on: ubuntu-latest
