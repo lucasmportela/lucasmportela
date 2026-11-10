@@ -115,7 +115,7 @@ Aplicação de auditoria com autenticação individual, autorização por papéi
 **Tecnologias:** Python e Flask.
 
 <div align="center">
-<img src="AuditoriaDeEventosSistema/docs/screenshots/tela-inicial.png" alt="Tela inicial da Auditoria de Eventos do Sistema" width="80%" />
+<img src="AuditoriaDeEventosSistema/docs/screenshots/tela-login.png" alt="Tela inicial da Auditoria de Eventos do Sistema" width="80%" />
 <sub><a href="AuditoriaDeEventosSistema/docs/screenshots/">Ver capturas de tela</a></sub>
 </div>
 
