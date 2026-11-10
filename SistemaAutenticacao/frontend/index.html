@@ -3,56 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de autenticação com cadastro, login e autorização por perfil.">
   <title>Sistema de Autenticação</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="shell">
-    <section class="panel">
-      <div class="eyebrow"><span class="status-dot"></span> CENTRAL DE SEGURANÇA</div>
-      <h1>Sistema de <span>Autenticação</span></h1>
-      <p class="subtitle">Cadastre sua senha e confirme sua identidade para inicializar o sistema.</p>
+    <header class="brand">
+      <div class="brand-mark" aria-hidden="true">S</div>
+      <div>
+        <p class="eyebrow">CENTRAL DE SEGURANÇA</p>
+        <h1>Sistema de <span>Autenticação</span></h1>
+      </div>
+    </header>
 
-      <div class="step" id="setup-section">
-        <div class="step-number">01</div>
-        <div class="step-content">
-          <h2>Definir senha</h2>
-          <p>Escolha uma senha numérica de 4 dígitos.</p>
-          <form id="setup-form">
-            <label for="new-password">Nova senha</label>
-            <input id="new-password" type="password" inputmode="numeric" maxlength="4"
-                   pattern="[0-9]{4}" placeholder="••••" autocomplete="new-password" required>
-            <button type="submit">Cadastrar senha <span>→</span></button>
-          </form>
-        </div>
+    <section class="panel" id="auth-panel">
+      <div class="panel-heading">
+        <p class="eyebrow">ACESSO PROTEGIDO</p>
+        <h2>Entre na sua conta</h2>
+        <p>Crie uma conta ou entre para acessar sua área individual.</p>
       </div>
 
-      <div class="step locked" id="login-section">
-        <div class="step-number">02</div>
-        <div class="step-content">
-          <h2>Confirmar acesso</h2>
-          <p>O sistema está bloqueado. Confirme sua senha para continuar.</p>
-          <form id="login-form">
-            <label for="password">Senha cadastrada</label>
-            <input id="password" type="password" inputmode="numeric" maxlength="4"
-                   pattern="[0-9]{4}" placeholder="••••" autocomplete="current-password" required disabled>
-            <div class="attempts" id="attempts">3 tentativas disponíveis</div>
-            <button type="submit" id="login-button" disabled>Desbloquear sistema <span>→</span></button>
-          </form>
-        </div>
+      <div id="login-view">
+        <form id="login-form">
+          <label for="login-email">E-mail</label>
+          <input id="login-email" name="email" type="email" autocomplete="username" maxlength="254" placeholder="voce@exemplo.com" required>
+          <label for="login-password">Senha</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" maxlength="128" placeholder="Sua senha" required>
+          <button class="primary-button" type="submit">Entrar na conta <span>→</span></button>
+        </form>
+        <p class="switch">Ainda não tem conta? <button type="button" class="text-button" id="show-register">Cadastre-se</button></p>
       </div>
 
-      <div class="feedback" id="feedback" role="status" aria-live="polite">Aguardando cadastro da senha.</div>
-      <div class="boot" id="boot" hidden>
-        <div class="boot-heading">INICIALIZANDO SISTEMA</div>
-        <div class="count" id="count">5</div>
-        <div class="boot-track"><div class="boot-progress" id="progress"></div></div>
-        <p id="boot-message">Preparando ambiente seguro...</p>
+      <div id="register-view" hidden>
+        <form id="register-form">
+          <label for="register-name">Nome</label>
+          <input id="register-name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" placeholder="Seu nome" required>
+          <label for="register-email">E-mail</label>
+          <input id="register-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="voce@exemplo.com" required>
+          <label for="register-password">Senha</label>
+          <input id="register-password" name="password" type="password" autocomplete="new-password" minlength="10" maxlength="128" placeholder="Mínimo de 10 caracteres" required>
+          <button class="primary-button" type="submit">Criar conta <span>→</span></button>
+        </form>
+        <p class="switch">Já tem uma conta? <button type="button" class="text-button" id="show-login">Fazer login</button></p>
       </div>
 
-      <button class="reset" id="reset-button" type="button">Reiniciar demonstração</button>
+      <input id="csrf-token" type="hidden" value="">
+      <div class="message" id="auth-message" role="status" aria-live="polite"></div>
     </section>
-    <footer>PROJETO EDUCACIONAL · PYTHON + FLASK</footer>
+
+    <section class="panel dashboard" id="dashboard" hidden>
+      <div class="dashboard-top">
+        <div>
+          <p class="eyebrow">ÁREA AUTENTICADA</p>
+          <h2 id="welcome">Olá!</h2>
+          <p class="subtle">Sua sessão está ativa e protegida.</p>
+        </div>
+        <button class="outline-button" id="logout-button" type="button">Sair</button>
+      </div>
+
+      <div class="account-card">
+        <div class="avatar" aria-hidden="true">✓</div>
+        <div>
+          <span class="card-label">CONTA CONECTADA</span>
+          <strong id="account-email"></strong>
+          <span class="role" id="account-role"></span>
+        </div>
+      </div>
+
+      <section id="admin-panel" hidden>
+        <div class="section-heading">
+          <p class="eyebrow">CONTROLE DE ACESSO</p>
+          <h3>Gerenciar usuários</h3>
+          <p class="subtle">Somente administradores podem consultar usuários e alterar seus perfis.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Nome</th><th>E-mail</th><th>Perfil</th><th>Ação</th></tr></thead>
+            <tbody id="user-list"></tbody>
+          </table>
+        </div>
+      </section>
+      <div class="message" id="dashboard-message" role="status" aria-live="polite"></div>
+    </section>
+
+    <footer>PROJETO EDUCACIONAL · PYTHON + FLASK + SQLITE</footer>
   </main>
   <script src="app.js"></script>
 </body>

@@ -1,185 +1,154 @@
 # Sistema de Autenticação
 
-Aplicação web que transforma um exercício de autenticação feito em Python no terminal em uma interface web com frontend e backend.
-
-O usuário cadastra uma senha numérica de quatro dígitos. Em seguida, o sistema solicita a confirmação da senha, permite até três tentativas e, quando o acesso é liberado, executa uma contagem regressiva de inicialização de 5 até 1.
+Aplicação web de autenticação e autorização por usuário, desenvolvida com Python, Flask e SQLite. Cada pessoa possui sua própria conta, e as permissões são verificadas pelo backend em todas as rotas protegidas.
 
 ## Funcionalidades
 
-- Cadastro de senha numérica com exatamente 4 dígitos.
-- Validação no backend.
-- Até 3 tentativas para confirmar a senha.
-- Bloqueio após 3 tentativas incorretas.
-- Contagem regressiva de inicialização após autenticação bem-sucedida.
-- Reinicialização da demonstração.
-- Senha armazenada como hash, sem texto puro.
+- Cadastro de usuários com nome, e-mail e senha individual.
+- Senhas armazenadas com hash seguro do Werkzeug; nunca são salvas em texto puro.
+- Login, logout e consulta da sessão autenticada.
+- Sessões individuais com cookie \`HttpOnly\`, \`SameSite=Lax\`, expiração e \`Secure\` em produção.
+- Proteção CSRF para operações que alteram dados.
+- Autorização baseada em papéis (**RBAC**): \`user\` e \`admin\`.
+- Painel administrativo para listar usuários e alterar seus papéis.
+- Contas comuns não podem acessar endpoints administrativos.
+- Bloqueio temporário da conta após cinco tentativas incorretas.
+- Proteção para impedir que o último administrador ativo seja rebaixado.
+- Criação do primeiro administrador por comando CLI; o cadastro público nunca concede privilégios administrativos.
+- Cabeçalhos HTTP de segurança e respostas sem cache.
 
-## Demonstração Visual
+## Demonstração visual
 
-### Tela Inicial (Vazia)
-Aguardando o cadastro da senha.
-![Tela Inicial](docs/screenshots/tela-inicial.png)
-
-### Tela Cadastro
-Tela após o cadastramento da senha.
-![Tela Cadastro](docs/screenshots/tela-cadastro.png)
-
-### Tela Sucesso
-Sucesso ao colocar a senha correspondente e inicializar o sistema.
-![Tela Sucesso](docs/screenshots/tela-sucesso.png)
-
-### Tela Bloqueio
-Bloqueamento de conta após 3 tentativas sem exito ao digitar a senha.
-![Tela Bloqueio](docs/screenshots/tela-bloqueio.png)
+As capturas de tela existentes registram a versão demonstrativa anterior. A interface foi atualizada para cadastro, login e painel por perfil; atualize as imagens da pasta \`docs/screenshots\` após executar a nova versão.
 
 ## Tecnologias
 
-- **Backend:** Python e Flask.
-- **Frontend:** HTML5, CSS3 e JavaScript.
-- **Comunicação:** API HTTP com JSON.
+- **Backend:** Python 3.10+ e Flask.
+- **Banco de dados:** SQLite.
+- **Segurança:** Werkzeug password hashing, sessões Flask, CSRF token e autorização por papéis.
+- **Frontend:** HTML5, CSS3 e JavaScript puro.
+- **Testes:** \`unittest\` e Flask test client.
 
 ## Estrutura de pastas
 
-```text
+\`\`\`text
 SistemaAutenticacao/
 ├── backend/
 │   ├── app.py
 │   ├── requirements.txt
 │   └── tests/
 │       └── test_security.py
+├── docs/
+│   └── screenshots/
 ├── frontend/
 │   ├── index.html
 │   ├── style.css
 │   └── app.js
 └── README.md
-```
+\`\`\`
 
-## Como executar
+O banco \`instance/auth.db\` é criado automaticamente na primeira execução e não deve ser versionado.
 
-### Pré-requisitos
+## Como executar no Windows (PowerShell)
 
-- Python 3.10 ou superior.
-- pip.
+A partir da raiz do repositório:
 
-### 1. Clone o repositório e entre na pasta do projeto
-
-```bash
-git clone https://github.com/lucasmportela/lucasmportela.git
-cd lucasmportela/SistemaAutenticacao
-```
-
-### 2. Crie e ative um ambiente virtual (recomendado)
-
-Windows PowerShell:
-
-```powershell
+\`\`\`powershell
+cd SistemaAutenticacao
 python -m venv .venv
 .venv\Scripts\Activate.ps1
-```
-
-Se o PowerShell bloquear a ativação, você pode executar diretamente o pip e o Python do ambiente virtual, ou usar o Prompt de Comando.
-
-### 3. Instale as dependências
-
-```bash
 pip install -r backend/requirements.txt
-```
-
-### 4. Configure a chave de sessão
-
-Em desenvolvimento, se `SECRET_KEY` não estiver definida, o aplicativo gera uma chave aleatória temporária. As sessões serão invalidadas quando o servidor for reiniciado.
-
-Para manter uma chave estável durante seus testes, defina uma variável de ambiente antes de iniciar o servidor.
-
-Windows PowerShell:
-
-```powershell
-$env:SECRET_KEY = (python -c "import secrets; print(secrets.token_urlsafe(32))")
-```
-
-Linux/macOS:
-
-```bash
-export SECRET_KEY="$(python -c 'import secrets; print(secrets.token_urlsafe(32))')"
-```
-
-Não publique, envie por commit ou compartilhe o valor dessa chave.
-
-### 5. Inicie o backend
-
-A partir da pasta `SistemaAutenticacao`:
-
-```bash
+$env:SECRET_KEY = python -c "import secrets; print(secrets.token_urlsafe(48))"
 python backend/app.py
-```
+\`\`\`
 
-O modo Debug fica desativado por padrão. Para habilitá-lo apenas durante o desenvolvimento local, defina `FLASK_DEBUG=true`.
+Se a ativação do ambiente virtual for bloqueada pelo PowerShell, execute diretamente:
 
-### 6. Acesse no navegador
+\`\`\`powershell
+.venv\Scripts\python.exe -m pip install -r backend/requirements.txt
+.venv\Scripts\python.exe backend/app.py
+\`\`\`
 
-Abra:
+Acesse http://127.0.0.1:5000.
 
-```text
-http://127.0.0.1:5000
-```
+## Criar o primeiro administrador
 
-## Como testar manualmente
+O cadastro pela interface cria exclusivamente usuários comuns. Para criar uma conta administrativa, pare o servidor e execute na raiz do repositório:
 
-1. Cadastre uma senha de quatro dígitos, por exemplo `1234`.
-2. Confirme a senha na etapa de acesso.
-3. Teste uma senha incorreta para visualizar a redução das tentativas.
-4. Com a senha correta, acompanhe a contagem regressiva de 5 até 1.
-5. Use **Reiniciar demonstração** para limpar a sessão e começar novamente.
-6. Para testar o bloqueio, cadastre uma senha e erre as três tentativas.
+\`\`\`powershell
+flask --app backend.app create-admin
+\`\`\`
 
-## Testes automatizados
+Informe nome, e-mail e senha quando solicitado. A senha é digitada de forma oculta e não deve ser passada como argumento de linha de comando.
 
-Execute a partir da pasta `SistemaAutenticacao`:
+Depois, inicie novamente o servidor:
 
-```bash
-python -m unittest discover -s backend/tests -v
-```
+\`\`\`powershell
+python backend/app.py
+\`\`\`
 
-Os testes verificam a configuração segura padrão, os atributos do cookie de sessão, o cadastro de senha, a autenticação e o bloqueio após três tentativas incorretas.
+Faça login com a conta administrativa para acessar o painel de gerenciamento de usuários.
+
+## Variáveis de ambiente
+
+| Variável | Finalidade | Padrão |
+|---|---|---|
+| \`SECRET_KEY\` | Chave de assinatura das sessões | Gerada temporariamente em desenvolvimento; obrigatória em produção |
+| \`APP_ENV\` | Ambiente de execução | \`development\` |
+| \`AUTH_DATABASE\` | Caminho do arquivo SQLite | \`SistemaAutenticacao/instance/auth.db\` |
+| \`FLASK_HOST\` | Endereço de escuta | \`127.0.0.1\` |
+| \`PORT\` | Porta HTTP | \`5000\` |
+| \`FLASK_DEBUG\` | Ativa debug somente fora de produção | \`false\` |
+
+Para produção, configure \`APP_ENV=production\`, uma \`SECRET_KEY\` aleatória de pelo menos 32 caracteres, HTTPS e um servidor WSGI apropriado. O cookie passa a exigir HTTPS (\`Secure\`).
 
 ## Rotas da API
 
-| Método | Rota | Descrição |
-|---|---|---|
-| GET | `/api/status` | Consulta o estado da sessão. |
-| POST | `/api/setup` | Cadastra a senha de quatro dígitos. |
-| POST | `/api/login` | Confirma a senha e controla as tentativas. |
-| POST | `/api/reset` | Reinicia a sessão da demonstração. |
+| Método | Rota | Acesso | Descrição |
+|---|---|---|---|
+| GET | \`/api/status\` | Público | Estado da sessão e token CSRF |
+| POST | \`/api/register\` | Público + CSRF | Cadastro de usuário comum |
+| POST | \`/api/login\` | Público + CSRF | Autenticação |
+| GET | \`/api/me\` | Autenticado | Dados do usuário atual |
+| POST | \`/api/logout\` | Autenticado + CSRF | Encerramento da sessão |
+| GET | \`/api/admin/users\` | Administrador | Lista usuários |
+| PATCH | \`/api/admin/users/<id>/role\` | Administrador + CSRF | Altera papel do usuário |
 
-Exemplo de corpo JSON para cadastro e login:
+Todas as operações POST/PATCH exigem o token CSRF recebido em \`/api/status\` ou no retorno de login, enviado no cabeçalho \`X-CSRF-Token\`.
 
-```json
-{
-  "password": "1234"
-}
-```
+### Papéis e permissões
 
-## Regras de negócio implementadas
+- **user:** pode autenticar e consultar apenas os próprios dados em \`/api/me\`.
+- **admin:** possui as permissões de usuário e pode listar contas e alterar papéis no painel administrativo.
 
-- A senha deve conter exatamente quatro caracteres numéricos.
-- O backend permite três tentativas de autenticação.
-- Uma tentativa correta libera o acesso.
-- Uma tentativa incorreta reduz o total de tentativas restantes.
-- Ao chegar a zero, a sessão fica bloqueada.
-- A contagem regressiva só acontece depois da autenticação bem-sucedida.
+O backend consulta o usuário e seu papel no banco a cada requisição protegida. O frontend não é usado como mecanismo de segurança.
+
+## Testes automatizados
+
+Na raiz do repositório, execute:
+
+\`\`\`powershell
+python -m unittest discover -s SistemaAutenticacao/backend/tests -v
+\`\`\`
+
+Ou, dentro da pasta \`SistemaAutenticacao\`:
+
+\`\`\`powershell
+python -m unittest discover -s backend/tests -v
+\`\`\`
+
+Os testes cobrem cadastro, hash de senha, validações, e-mail duplicado, CSRF, login, sessão, logout, bloqueio por tentativas, rotas protegidas, permissões administrativas, alteração de papéis e cabeçalhos de segurança.
 
 ## Segurança e limitações
 
-Este projeto é educacional e não deve ser utilizado para proteger contas reais.
+Este é um projeto educacional, não uma solução pronta para proteger sistemas críticos.
 
-- A chave Flask não é mais fixa no código. Em desenvolvimento, uma chave aleatória temporária é gerada quando `SECRET_KEY` não está definida. Em produção, `APP_ENV=production` exige uma chave configurada com pelo menos 32 caracteres.
-- O modo Debug fica desativado por padrão e é forçado a permanecer desligado quando `APP_ENV=production`.
-- Os cookies de sessão usam `HttpOnly` e `SameSite=Lax`; em produção, também usam `Secure`, exigindo HTTPS.
-- **Limitação importante:** a sessão padrão do Flask é assinada, mas não criptografada. Portanto, o hash da senha armazenado na sessão pode ser lido pelo cliente. Como a senha tem apenas quatro dígitos, este fluxo não é adequado para autenticação real. Uma aplicação de produção deve usar armazenamento de sessão no servidor, credenciais mais fortes, proteção contra CSRF, limitação de tentativas por usuário/IP e HTTPS.
-- O bloqueio deste exemplo é por sessão/navegador, não um mecanismo de proteção para contas reais.
-
-Para produção, configure `APP_ENV=production`, forneça `SECRET_KEY` por um gerenciador de segredos e utilize um servidor WSGI apropriado em HTTPS. Não use o servidor de desenvolvimento do Flask em produção.
+- Use HTTPS em produção e mantenha a chave \`SECRET_KEY\` fora do código e do Git.
+- O projeto utiliza sessões assinadas padrão do Flask; apenas o identificador do usuário e o token CSRF são armazenados na sessão, nunca a senha ou seu hash. Para ambientes distribuídos, considere armazenamento de sessão no servidor.
+- O bloqueio por conta ajuda a reduzir tentativas repetidas, mas precisa ser complementado por limitação de requisições por IP, monitoramento e controles contra negação de serviço.
+- A recuperação de senha, confirmação de e-mail, MFA, auditoria administrativa e gestão de sessões/dispositivos não fazem parte desta versão.
+- O primeiro administrador deve ser criado por um operador confiável usando o comando CLI.
 
 ## Autor
 
-Desenvolvido como projeto de estudo de lógica de programação, Python, APIs e desenvolvimento web.
+Desenvolvido como projeto de portfólio para praticar Python, Flask, SQLite, autenticação, autorização, segurança web e testes automatizados.

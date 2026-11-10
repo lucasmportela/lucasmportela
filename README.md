@@ -130,7 +130,7 @@ Sistema de apoio ao controle de estoque e identificação de necessidades de rep
 
 ### 6. [Sistema de Autenticação](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaAutenticacao)
 
-Aplicação demonstrativa de autenticação, validação de senha e controle de tentativas de acesso.
+Aplicação web com cadastro e login individuais, sessões protegidas e autorização por papéis (usuário e administrador).
 
 <div align="center">
 <img src="SistemaAutenticacao/docs/screenshots/tela-inicial.png" alt="Tela inicial do Sistema de Autenticação" width="80%" />
