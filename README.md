@@ -105,20 +105,32 @@ Sistema de monitoramento térmico simulado de racks e sensores, com visualizaç�
 
 ### 3. [Sistema de Faturamento de Produtos](https://github.com/lucasmportela/Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque)
 
+[![Acessar demonstração online](https://img.shields.io/badge/Demonstra%C3%A7%C3%A3o-online-brightgreen?style=for-the-badge)](https://faturamento-comercial-demo.onrender.com)
+
+**[Acessar o Sistema de Faturamento ao vivo](https://faturamento-comercial-demo.onrender.com)**
+
 Aplicação full stack para cadastro e gerenciamento de produtos, controle de entradas e saídas de estoque e cálculo do valor armazenado. Possui **17 testes automatizados**, sendo 10 de backend e 7 de interface React.
 
 **Tecnologias:** Python, Flask, React e JSON.
+
+<sub>Hospedado gratuitamente no Render. Ambiente demonstrativo compartilhado, sem autenticação e com dados fictícios: não insira informações reais. Os dados podem ser reiniciados após reinicializações ou novos deploys.</sub>
 
 <div align="center">
 <img src="SistemaDeFaturamentoDeProdutos/docs/screenshots/tela-inicial.png" alt="Tela inicial do Sistema de Faturamento de Produtos" width="80%" />
 <sub><a href="SistemaDeFaturamentoDeProdutos/docs/screenshots/">Ver capturas de tela</a></sub>
 </div>
 
-### 4. [Auditoria de Eventos do Sistema](https://github.com/lucasmportela/Sentinela-Sistema-de-Auditoria-de-Eventos)
+### 4. [Sentinela — Sistema de Auditoria de Eventos](https://github.com/lucasmportela/Sentinela-Sistema-de-Auditoria-de-Eventos)
 
-Aplicação de auditoria com autenticação individual, autorização por papéis (`operator` e `admin`), proteção CSRF, bloqueio temporário após cinco tentativas de login incorretas e trilha de auditoria encadeada com HMAC-SHA256 para detectar adulterações. Utiliza persistência relacional com SQLite ou PostgreSQL e possui **20 testes automatizados** cobrindo autenticação, autorização e integridade dos registros.
+[![Acessar demonstração online](https://img.shields.io/badge/Demonstra%C3%A7%C3%A3o-online-brightgreen?style=for-the-badge)](https://sentinela-auditoria-demo-ygtj.onrender.com)
 
-**Tecnologias:** Python e Flask.
+**[Acessar o Sentinela ao vivo](https://sentinela-auditoria-demo-ygtj.onrender.com)**
+
+Aplicação de auditoria com autenticação individual, autorização por papéis (`operator` e `admin`), proteção CSRF, bloqueio temporário após cinco tentativas de login incorretas e trilha de auditoria encadeada com HMAC-SHA256 para detectar adulterações. Utiliza persistência relacional com SQLite ou PostgreSQL e possui **22 testes automatizados** cobrindo autenticação, autorização e integridade dos registros.
+
+**Tecnologias:** Python, Flask, SQLAlchemy e SQLite/PostgreSQL.
+
+<sub>Hospedado gratuitamente no Render. Ambiente compartilhado com contas e eventos fictícios; as credenciais públicas para avaliação estão no README do projeto. Os dados podem ser reiniciados após suspensão ou novo deploy. Não insira informações pessoais ou confidenciais.</sub>
 
 <div align="center">
 <img src="AuditoriaDeEventosSistema/docs/screenshots/tela-login.png" alt="Tela inicial da Auditoria de Eventos do Sistema" width="80%" />
