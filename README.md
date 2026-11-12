@@ -28,14 +28,15 @@ I'm an aspiring back-end developer building practical projects with REST APIs, d
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 
-**Também utilizo:** SQL • SQLite • Git
+**Também utilizo:** SQL • SQLite • PostgreSQL • Git
 
-**Em estudo | Currently learning:** TypeScript • MySQL • PostgreSQL
+**Em estudo | Currently learning:** TypeScript • MySQL
 
 ## Projetos em destaque | Featured projects
 
-Quatro projetos que representam meu trabalho com back-end, APIs, segurança, persistência de dados e integração com interfaces web. Juntos, reúnem **150 testes automatizados** documentados.
+Quatro projetos que representam meu trabalho com back-end, APIs, segurança, persistência de dados e integração com interfaces web. Juntos, reúnem **153 testes automatizados** documentados.
 
 ### 1. [Conta+ — Sistema de Contas Bancárias](https://github.com/lucasmportela/Conta-Plus-Sistema-de-Contas-Bancarias)
 
@@ -57,11 +58,11 @@ Sistema de auditoria com autenticação, controle de acesso por papéis e trilha
 
 ### 3. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/Rack-Monitor-Monitoramento-Termico-de-Data-Centers)
 
-[**Demonstração online**](https://rack-monitor-demo.onrender.com) · **29 testes automatizados**
+[**Demonstração online**](https://rack-monitor-demo.onrender.com) · **32 testes automatizados**
 
 Dashboard para monitoramento de racks, visualização de temperaturas e alertas, integrado a uma API REST com configurações de segurança, CORS e limitação de requisições.
 
-**Tecnologias:** JavaScript, Node.js, Express, React e Docker.  
+**Tecnologias:** JavaScript, Node.js, Express, React, PostgreSQL (Neon) e Docker.  
 <sub>As temperaturas são simuladas e não representam sensores físicos.</sub>
 
 ### 4. [Sistema de Faturamento Comercial](https://github.com/lucasmportela/Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque)
