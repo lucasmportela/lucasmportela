@@ -2,215 +2,97 @@
 
 <img src="assets/banner-github-minimalista.png" alt="Lucas Martins Portela — Desenvolvedor Back-end Júnior" width="100%" />
 
-# Olá! Eu sou Lucas Martins Portela 
+# Lucas Martins Portela
 
 ### Desenvolvedor Back-end Júnior | Junior Back-end Developer
 
-**Transformando ideias em soluções através da programação.**  
-*Turning ideas into solutions through programming.*
+**Python • APIs REST • Bancos de dados • Testes automatizados**
 
-[![GitHub](https://img.shields.io/badge/GitHub-lucasmportela-181717?style=for-the-badge&logo=github)](https://github.com/lucasmportela)
+[![GitHub](https://img.shields.io/badge/GitHub-lucasmportela-181717?style=flat&logo=github)](https://github.com/lucasmportela)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/lucasmartinsportela/)
 
 </div>
-
----
 
 ## Sobre mim | About me
 
-**Português**
+Sou desenvolvedor em formação, com foco em back-end. Crio projetos práticos para desenvolver APIs REST, trabalhar com bancos de dados, implementar autenticação e aplicar testes automatizados e boas práticas.
 
-Sou desenvolvedor em formação, com foco em desenvolvimento back-end e interesse em construir aplicações úteis, organizadas e bem documentadas.
+I'm an aspiring back-end developer building practical projects with REST APIs, databases, authentication, automated tests, and software development best practices.
 
-Desenvolvo projetos práticos para aprimorar minha lógica de programação, manipulação de dados, criação de APIs REST e integração entre back-end e interfaces web. Gosto de aprender colocando a mão no código, investigar problemas e transformar requisitos em funcionalidades.
+**Objetivo | Career goal:** busco uma oportunidade como **Desenvolvedor Back-end Júnior** para contribuir com aplicações reais e evoluir profissionalmente em equipe.
 
-**English**
+## Tecnologias | Tech stack
 
-I'm an aspiring developer focused on back-end development and interested in building useful, well-organized, and well-documented applications.
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
-I work on practical projects to improve my programming logic, data handling, REST API development, and integration between back-end services and web interfaces.
-
-## Objetivo profissional | Career objective
-
-**Português**
-
-Busco uma oportunidade como **Desenvolvedor Back-end Júnior**, na qual eu possa contribuir com o desenvolvimento e a manutenção de aplicações e APIs, aplicar boas práticas de programação e continuar evoluindo profissionalmente em colaboração com a equipe.
-
-**English**
-
-I'm seeking an opportunity as a **Junior Back-end Developer**, where I can contribute to building and maintaining applications and APIs, apply software development best practices, and continue growing professionally as part of a team.
-
-## Tecnologias e ferramentas | Tech stack
-
-**Linguagens | Languages**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-**Back-end, banco de dados e ferramentas | Back-end, databases & tools**
-
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![REST API](https://img.shields.io/badge/REST%20API-005571?style=for-the-badge)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-
-**Em estudo | Currently learning**
-
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-
-**Front-end | Interface**
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+**Em estudo | Currently learning:** TypeScript • MySQL • PostgreSQL
 
 ## Projetos em destaque | Featured projects
 
-Projetos selecionados do meu portfólio. Acesse os repositórios para consultar o código, a documentação e as instruções de execução.
-
-Selected projects from my portfolio. Visit the repositories to explore the source code, documentation, and setup instructions.
+Quatro projetos que representam meu trabalho com back-end, APIs, segurança, persistência de dados e integração com interfaces web.
 
 ### 1. [Conta+ — Sistema de Contas Bancárias](https://github.com/lucasmportela/Conta-Plus-Sistema-de-Contas-Bancarias)
 
-[![Acessar demonstração online](https://img.shields.io/badge/Demonstra%C3%A7%C3%A3o-online-brightgreen?style=for-the-badge)](https://conta-plus-demo-doxa.onrender.com)
+[**Demonstração online**](https://conta-plus-demo-doxa.onrender.com) · **80 testes automatizados**
 
-**[Acessar o Conta+ ao vivo](https://conta-plus-demo-doxa.onrender.com)**
+Aplicação web com autenticação, isolamento de dados por usuário, depósitos, saques, transferências, extratos, exportação de dados e exclusão segura de conta. Inclui proteções CSRF e limitação de tentativas de login.
 
-Aplicação web para cadastro e gerenciamento individual de contas bancárias, com autenticação, sessões protegidas, isolamento de dados por usuário, exportação JSON dos próprios dados, exclusão segura da conta, proteção CSRF e bloqueio temporário após cinco tentativas de login incorretas. Inclui depósitos, saques, transferências, consulta de extratos, validações de regras financeiras e persistência em SQLite. Possui **80 testes automatizados**.
+**Tecnologias:** Python, Flask, SQLite/Turso, HTML, CSS e JavaScript.  
+<sub>Projeto demonstrativo: não é um serviço bancário real. Utilize apenas dados fictícios.</sub>
 
-**Tecnologias:** Python, Flask, SQLite, HTML5, CSS3 e JavaScript.
+### 2. [Sentinela — Sistema de Auditoria de Eventos](https://github.com/lucasmportela/Sentinela-Sistema-de-Auditoria-de-Eventos)
 
-<div align="center">
-<img src="SistemaContasBancarias/docs/screenshots/tela-inicial.png" alt="Painel inicial do Conta+" width="80%" />
-<sub><a href="SistemaContasBancarias/docs/screenshots/">Ver capturas de tela</a></sub>
-</div>
+[**Demonstração online**](https://sentinela-auditoria-demo-ygtj.onrender.com) · **22 testes automatizados**
 
-### 2. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/Rack-Monitor-Monitoramento-Termico-de-Data-Centers)
+Sistema de auditoria com autenticação, controle de acesso por papéis e trilha de eventos encadeada com HMAC-SHA256 para detectar alterações nos registros.
 
-[![Acessar demonstração online](https://img.shields.io/badge/Demonstra%C3%A7%C3%A3o-online-brightgreen?style=for-the-badge)](https://rack-monitor-demo.onrender.com)
+**Tecnologias:** Python, Flask, SQLAlchemy, SQLite e PostgreSQL.  
+<sub>Ambiente compartilhado com dados fictícios. Não insira informações pessoais ou confidenciais.</sub>
 
-**[Acessar o Rack Monitor ao vivo](https://rack-monitor-demo.onrender.com)**
+### 3. [Rack Monitor — Monitoramento Térmico de Data Centers](https://github.com/lucasmportela/Rack-Monitor-Monitoramento-Termico-de-Data-Centers)
 
-Sistema de monitoramento térmico simulado de racks e sensores, com visualização de temperaturas, alertas e API REST protegida por cabeçalhos HTTP de segurança, CORS restrito e limitação de requisições. Possui **29 testes automatizados**: 24 de integração da API e 5 de interface.
+[**Demonstração online**](https://rack-monitor-demo.onrender.com) · **29 testes automatizados**
 
-**Tecnologias:** JavaScript, Node.js, React, API REST e Docker.
+Dashboard para monitoramento de racks, visualização de temperaturas e alertas, integrado a uma API REST com configurações de segurança, CORS e limitação de requisições.
 
-<sub>Hospedado gratuitamente no Render. A primeira abertura após um período sem acessos pode levar alguns instantes. As temperaturas são simuladas e não representam sensores físicos.</sub>
+**Tecnologias:** JavaScript, Node.js, Express, React e Docker.  
+<sub>As temperaturas são simuladas e não representam sensores físicos.</sub>
 
-<div align="center">
-<img src="MonitoramentoRackDataCenter/docs/screenshots/tela-inicial.png" alt="Tela inicial do Rack Monitor" width="80%" />
-<sub><a href="MonitoramentoRackDataCenter/docs/screenshots/">Ver capturas de tela</a></sub>
-</div>
+### 4. [Sistema de Faturamento Comercial](https://github.com/lucasmportela/Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque)
 
-### 3. [Sistema de Faturamento de Produtos](https://github.com/lucasmportela/Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque)
+[**Demonstração online**](https://faturamento-comercial-demo.onrender.com) · **17 testes automatizados**
 
-[![Acessar demonstração online](https://img.shields.io/badge/Demonstra%C3%A7%C3%A3o-online-brightgreen?style=for-the-badge)](https://faturamento-comercial-demo.onrender.com)
+Aplicação full stack para cadastro de produtos, controle de entradas e saídas de estoque e cálculo de valores de faturamento.
 
-**[Acessar o Sistema de Faturamento ao vivo](https://faturamento-comercial-demo.onrender.com)**
-
-Aplicação full stack para cadastro e gerenciamento de produtos, controle de entradas e saídas de estoque e cálculo do valor armazenado. Possui **17 testes automatizados**, sendo 10 de backend e 7 de interface React.
-
-**Tecnologias:** Python, Flask, React e JSON.
-
-<sub>Hospedado gratuitamente no Render. Ambiente demonstrativo compartilhado, sem autenticação e com dados fictícios: não insira informações reais. Os dados podem ser reiniciados após reinicializações ou novos deploys.</sub>
-
-<div align="center">
-<img src="SistemaDeFaturamentoDeProdutos/docs/screenshots/tela-inicial.png" alt="Tela inicial do Sistema de Faturamento de Produtos" width="80%" />
-<sub><a href="SistemaDeFaturamentoDeProdutos/docs/screenshots/">Ver capturas de tela</a></sub>
-</div>
-
-### 4. [Sentinela — Sistema de Auditoria de Eventos](https://github.com/lucasmportela/Sentinela-Sistema-de-Auditoria-de-Eventos)
-
-[![Acessar demonstração online](https://img.shields.io/badge/Demonstra%C3%A7%C3%A3o-online-brightgreen?style=for-the-badge)](https://sentinela-auditoria-demo-ygtj.onrender.com)
-
-**[Acessar o Sentinela ao vivo](https://sentinela-auditoria-demo-ygtj.onrender.com)**
-
-Aplicação de auditoria com autenticação individual, autorização por papéis (`operator` e `admin`), proteção CSRF, bloqueio temporário após cinco tentativas de login incorretas e trilha de auditoria encadeada com HMAC-SHA256 para detectar adulterações. Utiliza persistência relacional com SQLite ou PostgreSQL e possui **22 testes automatizados** cobrindo autenticação, autorização e integridade dos registros.
-
-**Tecnologias:** Python, Flask, SQLAlchemy e SQLite/PostgreSQL.
-
-<sub>Hospedado gratuitamente no Render. Ambiente compartilhado com contas e eventos fictícios; as credenciais públicas para avaliação estão no README do projeto. Os dados podem ser reiniciados após suspensão ou novo deploy. Não insira informações pessoais ou confidenciais.</sub>
-
-<div align="center">
-<img src="AuditoriaDeEventosSistema/docs/screenshots/tela-login.png" alt="Tela inicial da Auditoria de Eventos do Sistema" width="80%" />
-<sub><a href="AuditoriaDeEventosSistema/docs/screenshots/">Ver capturas de tela</a></sub>
-</div>
-
-### 5. [Controle de Reposição de Almoxarifado](https://github.com/lucasmportela/lucasmportela/tree/main/ControleReposicaoAlmoxarifado)
-
-Sistema de apoio ao controle de estoque e identificação de necessidades de reposição.
-
-<div align="center">
-<img src="ControleReposicaoAlmoxarifado/docs/screenshots/tela-inicial.png" alt="Tela inicial do Controle de Reposição de Almoxarifado" width="80%" />
-<sub><a href="ControleReposicaoAlmoxarifado/docs/screenshots/">Ver capturas de tela</a></sub>
-</div>
-
-### 6. [Sistema de Autenticação](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaAutenticacao)
-
-Aplicação web com cadastro e login individuais, sessões protegidas e autorização por papéis (usuário e administrador).
-
-<div align="center">
-<img src="SistemaAutenticacao/docs/screenshots/tela-inicial.png" alt="Tela inicial do Sistema de Autenticação" width="80%" />
-<sub><a href="SistemaAutenticacao/docs/screenshots/">Ver capturas de tela</a></sub>
-</div>
-
-### 7. [Monitoramento de Baterias](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoDeBaterias)
-
-Projeto de monitoramento de carga de baterias, com validação de valores e regras de negócio.
-
-<div align="center">
-<img src="MonitoramentoDeBaterias/docs/screenshots/tela-inicial.png" alt="Tela inicial do Monitoramento de Baterias" width="80%" />
-<sub><a href="MonitoramentoDeBaterias/docs/screenshots/">Ver capturas de tela</a></sub>
-</div>
-
-### 8. [Auditoria de Consumo de Combustível](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaConsumoCombustivel)
-
-Aplicação para registrar e analisar informações de consumo de combustível.
-
-<div align="center">
-<img src="AuditoriaConsumoCombustivel/docs/screenshots/tela-inicial.png" alt="Tela inicial da Auditoria de Consumo de Combustível" width="80%" />
-<sub><a href="AuditoriaConsumoCombustivel/docs/screenshots/">Ver capturas de tela</a></sub>
-</div>
+**Tecnologias:** Python, Flask, React e JSON.  
+<sub>Ambiente demonstrativo compartilhado, sem autenticação. Utilize somente dados fictícios.</sub>
 
 ## Outros projetos | Other projects
 
-| Projeto | Descrição |
-|---|---|
-| [Auditoria Energética Industrial](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaEnergeticaIndustrial) | Projeto de análise e controle de consumo energético. |
-| [Cadastro de Funcionários da Escola](https://github.com/lucasmportela/lucasmportela/tree/main/CadastroFuncionariosEscola) | Cadastro e gerenciamento de funcionários com SQLite. |
-| [Calculadora Simples](https://github.com/lucasmportela/lucasmportela/tree/main/CalculadoraSimples) | Operações matemáticas e prática de lógica de programação. |
-| [Jogo de Adivinhação](https://github.com/lucasmportela/lucasmportela/tree/main/JogoAdivinhacao) | Jogo de lógica com número secreto e rodadas. |
-| [Sistema de Vendas](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaVendas) | Projeto de vendas e aplicação de regras de negócio. |
-| [Sites e interfaces web](https://github.com/lucasmportela/lucasmportela/tree/main/Sites) | Coleção de sites demonstrativos. |
-| [Lógica de Programação](https://github.com/lucasmportela/LogicaProgramacao) | Exercícios e estudos de fundamentos de programação. |
+Também desenvolvi projetos de lógica, automação e aplicações web:
+
+- [Lógica de Programação](https://github.com/lucasmportela/LogicaProgramacao) · [Controle de Reposição de Almoxarifado](https://github.com/lucasmportela/lucasmportela/tree/main/ControleReposicaoAlmoxarifado) · [Sistema de Autenticação](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaAutenticacao)
+- [Monitoramento de Baterias](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoDeBaterias) · [Auditoria de Consumo de Combustível](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaConsumoCombustivel) · [Auditoria Energética Industrial](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaEnergeticaIndustrial)
+- [Cadastro de Funcionários](https://github.com/lucasmportela/lucasmportela/tree/main/CadastroFuncionariosEscola) · [Calculadora](https://github.com/lucasmportela/lucasmportela/tree/main/CalculadoraSimples) · [Jogo de Adivinhação](https://github.com/lucasmportela/lucasmportela/tree/main/JogoAdivinhacao) · [Sistema de Vendas](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaVendas) · [Sites e interfaces](https://github.com/lucasmportela/lucasmportela/tree/main/Sites)
 
 ## Estatísticas do GitHub | GitHub stats
 
-<!-- Os cartões SVG são atualizados automaticamente pelo workflow update-readme-stats.yml. -->
 <div align="center">
 
-<img height="165" src="./assets/github-stats.svg" alt="Estatísticas do GitHub de Lucas Martins Portela" />
-<img height="165" src="./assets/top-languages.svg" alt="Linguagens mais utilizadas nos repositórios públicos" />
+<img height="150" src="./assets/github-stats.svg" alt="Estatísticas do GitHub de Lucas Martins Portela" />
+<img height="150" src="./assets/top-languages.svg" alt="Linguagens mais utilizadas nos repositórios públicos" />
 
 </div>
 
-<sub>Estatísticas atualizadas diariamente pelo GitHub Actions. Os dados consideram os repositórios públicos.</sub>
-
-## Objetivos | Goals
-
-- Aprofundar meus conhecimentos em Python e desenvolvimento back-end.  
-  *Deepen my knowledge of Python and back-end development.*
-- Desenvolver APIs organizadas, seguras e documentadas.  
-  *Build well-structured, secure, and documented APIs.*
-- Praticar bancos de dados, testes automatizados e boas práticas.  
-  *Practice databases, automated testing, and software engineering best practices.*
-- Colaborar em projetos e evoluir como profissional.  
-  *Contribute to projects and grow as a software developer.*
+<sub>Cartões atualizados diariamente pelo GitHub Actions. Dados dos repositórios públicos.</sub>
 
 ## Contato | Contact
 
@@ -219,9 +101,6 @@ Aplicação para registrar e analisar informações de consumo de combustível.
 
 <div align="center">
 
-### Obrigado pela visita! | Thanks for visiting!
-
-**"Grandes conquistas começam com um bom código."**  
-*“Great achievements begin with good code.”*
+**Obrigado pela visita! | Thanks for visiting!**
 
 </div>
