@@ -8,8 +8,7 @@
 
 **Python • APIs REST • Bancos de dados • Testes automatizados**
 
-[![GitHub](https://img.shields.io/badge/GitHub-lucasmportela-181717?style=flat&logo=github)](https://github.com/lucasmportela)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/lucasmartinsportela/)
+[GitHub](https://github.com/lucasmportela) · [LinkedIn](https://www.linkedin.com/in/lucasmartinsportela/)
 
 </div>
 
@@ -28,10 +27,9 @@ I'm an aspiring back-end developer building practical projects with REST APIs, d
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+
+**Também utilizo:** SQL • SQLite • Git
 
 **Em estudo | Currently learning:** TypeScript • MySQL • PostgreSQL
 
@@ -79,7 +77,8 @@ Aplicação full stack para cadastro de produtos, controle de entradas e saídas
 
 Também desenvolvi projetos de lógica, automação e aplicações web:
 
-- [Lógica de Programação](https://github.com/lucasmportela/LogicaProgramacao) · [Controle de Reposição de Almoxarifado](https://github.com/lucasmportela/lucasmportela/tree/main/ControleReposicaoAlmoxarifado) · [Sistema de Autenticação](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaAutenticacao)
+- [Lógica de Programação](https://github.com/lucasmportela/LogicaProgramacao) · **185 casos de teste** (Python: 102 · Java: 33 · C#: 50)
+- [Controle de Reposição de Almoxarifado](https://github.com/lucasmportela/lucasmportela/tree/main/ControleReposicaoAlmoxarifado) · [Sistema de Autenticação](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaAutenticacao)
 - [Monitoramento de Baterias](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoDeBaterias) · [Auditoria de Consumo de Combustível](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaConsumoCombustivel) · [Auditoria Energética Industrial](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaEnergeticaIndustrial)
 - [Cadastro de Funcionários](https://github.com/lucasmportela/lucasmportela/tree/main/CadastroFuncionariosEscola) · [Calculadora](https://github.com/lucasmportela/lucasmportela/tree/main/CalculadoraSimples) · [Jogo de Adivinhação](https://github.com/lucasmportela/lucasmportela/tree/main/JogoAdivinhacao) · [Sistema de Vendas](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaVendas) · [Sites e interfaces](https://github.com/lucasmportela/lucasmportela/tree/main/Sites)
 
