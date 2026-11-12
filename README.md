@@ -37,7 +37,7 @@ I'm an aspiring back-end developer building practical projects with REST APIs, d
 
 ## Projetos em destaque | Featured projects
 
-Quatro projetos que representam meu trabalho com back-end, APIs, segurança, persistência de dados e integração com interfaces web.
+Quatro projetos que representam meu trabalho com back-end, APIs, segurança, persistência de dados e integração com interfaces web. Juntos, reúnem **150 testes automatizados** documentados.
 
 ### 1. [Conta+ — Sistema de Contas Bancárias](https://github.com/lucasmportela/Conta-Plus-Sistema-de-Contas-Bancarias)
 
@@ -68,7 +68,7 @@ Dashboard para monitoramento de racks, visualização de temperaturas e alertas,
 
 ### 4. [Sistema de Faturamento Comercial](https://github.com/lucasmportela/Sistema-de-Faturamento-Comercial-Cadastro-e-Controle-de-Estoque)
 
-[**Demonstração online**](https://faturamento-comercial-demo.onrender.com) · **17 testes automatizados**
+[**Demonstração online**](https://faturamento-comercial-demo.onrender.com) · **19 testes automatizados**
 
 Aplicação full stack para cadastro de produtos, controle de entradas e saídas de estoque e cálculo de valores de faturamento.
 
