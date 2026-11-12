@@ -75,9 +75,10 @@ Aplicação full stack para cadastro de produtos, controle de entradas e saídas
 
 ## Outros projetos | Other projects
 
-Também desenvolvi projetos de lógica, automação e aplicações web:
+**Lógica de Programação:** [repositório](https://github.com/lucasmportela/LogicaProgramacao) com **185 casos de teste automatizados** — Python: 102 · Java: 33 · C#: 50.
 
-- [Lógica de Programação](https://github.com/lucasmportela/LogicaProgramacao) · **185 casos de teste** (Python: 102 · Java: 33 · C#: 50)
+Também desenvolvi projetos de automação e aplicações web:
+
 - [Controle de Reposição de Almoxarifado](https://github.com/lucasmportela/lucasmportela/tree/main/ControleReposicaoAlmoxarifado) · [Sistema de Autenticação](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaAutenticacao)
 - [Monitoramento de Baterias](https://github.com/lucasmportela/lucasmportela/tree/main/MonitoramentoDeBaterias) · [Auditoria de Consumo de Combustível](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaConsumoCombustivel) · [Auditoria Energética Industrial](https://github.com/lucasmportela/lucasmportela/tree/main/AuditoriaEnergeticaIndustrial)
 - [Cadastro de Funcionários](https://github.com/lucasmportela/lucasmportela/tree/main/CadastroFuncionariosEscola) · [Calculadora](https://github.com/lucasmportela/lucasmportela/tree/main/CalculadoraSimples) · [Jogo de Adivinhação](https://github.com/lucasmportela/lucasmportela/tree/main/JogoAdivinhacao) · [Sistema de Vendas](https://github.com/lucasmportela/lucasmportela/tree/main/SistemaVendas) · [Sites e interfaces](https://github.com/lucasmportela/lucasmportela/tree/main/Sites)
